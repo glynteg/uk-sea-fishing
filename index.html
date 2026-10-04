@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0b2d3a">
 <title>UK Sea Fishing</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -29,7 +30,7 @@
   <div class="section-head"><div><p class="eyebrow">FISHING MARKS</p><h2>Explore the coast</h2></div></div>
   <div class="notice"><span>✓</span><div><b>Trust matters</b><p>Verified marks are checked. Community submissions are clearly labelled until independently verified.</p></div></div>
   <div class="mark-card">
-    <div class="map-placeholder"><span>🗺️</span><b>Fishing map</b><small>Verified marks will appear here</small></div>
+    <div id="fishing-map" class="map-container"></div>
     <div class="mark-body">
       <span class="badge verified">✓ VERIFIED</span>
       <div class="marks-list"><div class="empty-state"><strong>Loading fishing marks…</strong></div></div>
@@ -54,6 +55,7 @@
   <button data-section="weather">☁️<small>Weather</small></button>
   <button data-section="submit">＋<small>Submit</small></button>
 </nav>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
