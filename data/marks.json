@@ -384,6 +384,292 @@
       "access_difficulty": "difficult",
       "easy_access": false,
       "accessible_access": false
+    },
+    {
+      "id": "wales-rhos-on-sea",
+      "name": "Rhos-on-Sea",
+      "status": "verified",
+      "location": {
+        "latitude": 53.30959,
+        "longitude": -3.73631,
+        "area": "Rhos-on-Sea, Conwy",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "SeaAngler published Rhos-on-Sea as a popular bass mark at the site of an old pier.",
+      "species": [
+        "Bass",
+        "Dogfish",
+        "Whiting",
+        "Codling",
+        "Plaice",
+        "Strap conger"
+      ],
+      "tips": [
+        "SeaAngler recommends a rising tide around dawn or dusk.",
+        "SeaAngler reports September and October as the best period for bass."
+      ],
+      "access": "SeaAngler directs anglers along the promenade to Rhos Point and reports ample car parking with a short walk to the beach.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Rhos-on-Sea Sea Fishing Mark, published 2021",
+        "url": "https://www.seaangler.co.uk/spot/rhos-on-sea-sea-fishing-mark/",
+        "location_reference": "Venue or access-area coordinates independently checked against geographic sources; not an exact fishing position unless explicitly stated",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "SeaAngler reports ample car parking along the promenade near Rhos Point.",
+      "parking_cost": "not stated",
+      "access_difficulty": "easy",
+      "easy_access": true,
+      "accessible_access": false
+    },
+    {
+      "id": "wales-llandudno-pier",
+      "name": "Llandudno Pier",
+      "status": "verified",
+      "location": {
+        "latitude": 53.33009,
+        "longitude": -3.82656,
+        "area": "Llandudno, Conwy",
+        "accuracy": "pier_location"
+      },
+      "description": "SeaAngler published Llandudno Pier as a sea-fishing mark with safe angling areas on the pier.",
+      "species": [
+        "Bass",
+        "Pollack",
+        "Plaice",
+        "Thornback ray",
+        "Conger eel",
+        "Scad",
+        "Mullet",
+        "Mackerel",
+        "Wrasse",
+        "Codling",
+        "Whiting",
+        "Dab",
+        "Coalfish",
+        "Dogfish",
+        "Flounder"
+      ],
+      "tips": [],
+      "access": "SeaAngler describes safe angling from the pier platform and surrounding railings. Visit Wales lists mobility accessibility facilities at the pier, but this does not by itself verify wheelchair access to fishing positions.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Llandudno Pier Sea Fishing Mark, published 2021",
+        "url": "https://www.seaangler.co.uk/spot/llandudno-pier-sea-fishing-mark/",
+        "location_reference": "Venue or access-area coordinates independently checked against geographic sources; not an exact fishing position unless explicitly stated",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Seafront/pier parking arrangements apply; current charges should be checked before travel.",
+      "parking_cost": "check current local charges",
+      "access_difficulty": "unknown",
+      "easy_access": false,
+      "accessible_access": false
+    },
+    {
+      "id": "wales-llanddulas",
+      "name": "Llanddulas",
+      "status": "verified",
+      "location": {
+        "latitude": 53.28966,
+        "longitude": -3.64146,
+        "area": "Llanddulas, Conwy",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "SeaAngler published Llanddulas as a steep shingle-backed beach mark with deeper water around high tide.",
+      "species": [
+        "Plaice",
+        "Thornback ray",
+        "Bass",
+        "Conger eel",
+        "Coalfish",
+        "Flounder",
+        "Whiting",
+        "Dab",
+        "Dogfish",
+        "Codling"
+      ],
+      "tips": [
+        "SeaAngler reports the middle flood through high water as the best period.",
+        "SeaAngler reports rougher north-west to northerly weather can improve bass and cod fishing.",
+        "Longer casts can be important for plaice."
+      ],
+      "access": "SeaAngler says the beach is clearly signposted from the A55 and that car parking is directly above the beach.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Llanddulas Sea Fishing Mark, published 2021",
+        "url": "https://www.seaangler.co.uk/spot/llanddulas-sea-fishing-mark/",
+        "location_reference": "Venue or access-area coordinates independently checked against geographic sources; not an exact fishing position unless explicitly stated",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Car parking directly above the beach, according to SeaAngler.",
+      "parking_cost": "not stated",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false
+    },
+    {
+      "id": "wales-pendine-beach",
+      "name": "Pendine Beach",
+      "status": "verified",
+      "location": {
+        "latitude": 51.74178,
+        "longitude": -4.55705,
+        "area": "Pendine, Carmarthenshire",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "SeaAngler published Pendine as a classic Welsh storm beach that fishes best after a good onshore blow with reasonable surf and coloured water.",
+      "species": [
+        "Flounder",
+        "Bass",
+        "Dogfish",
+        "Silver eel",
+        "Golden-grey mullet"
+      ],
+      "tips": [
+        "SeaAngler reports flounder from autumn through spring and summer.",
+        "SeaAngler reports bass in spring, autumn and early winter."
+      ],
+      "access": "Visit Wales reports parking adjacent to the beach entrance. SeaAngler describes the beach as a classic storm beach.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Pendine Beach Sea Fishing Mark, published 2021",
+        "url": "https://www.seaangler.co.uk/spot/pendine-beach-sea-fishing-mark/",
+        "location_reference": "Venue or access-area coordinates independently checked against geographic sources; not an exact fishing position unless explicitly stated",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Parking adjacent to the beach, according to Visit Wales.",
+      "parking_cost": "not stated",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false
+    },
+    {
+      "id": "wales-the-knap",
+      "name": "The Knap",
+      "status": "verified",
+      "location": {
+        "latitude": 51.39083,
+        "longitude": -3.29222,
+        "area": "Barry, Vale of Glamorgan",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "SeaAngler published The Knap as a productive shingle beach and specifically describes it as easily accessible and suitable for junior or less-able anglers.",
+      "species": [
+        "Dogfish",
+        "Strap conger",
+        "Pouting",
+        "Whiting",
+        "Bass",
+        "Rays",
+        "Smoothhound",
+        "Cod"
+      ],
+      "tips": [
+        "SeaAngler recommends two to three hours over high water on mid-range to spring tides, especially at night.",
+        "SeaAngler reports a light to moderate west to south-westerly wind can create productive surf."
+      ],
+      "access": "SeaAngler describes the mark as easily accessible and suitable for junior or less-able anglers. This does not establish wheelchair access to the fishing position.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "The Knap Sea Fishing Mark, published 2021",
+        "url": "https://www.seaangler.co.uk/spot/the-knap-sea-fishing-mark/",
+        "location_reference": "Venue or access-area coordinates independently checked against geographic sources; not an exact fishing position unless explicitly stated",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Parking/access arrangements should be checked locally before travel.",
+      "parking_cost": "not stated",
+      "access_difficulty": "easy",
+      "easy_access": true,
+      "accessible_access": false
+    },
+    {
+      "id": "wales-goldcliff-beach",
+      "name": "Goldcliff Beach",
+      "status": "verified",
+      "location": {
+        "latitude": 51.54339,
+        "longitude": -2.91513,
+        "area": "Goldcliff, Newport",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "SeaAngler published Goldcliff as a Welsh fishing location with fishing from the sea wall on larger tides and from exposed mud and peat beds on smaller tides.",
+      "species": [
+        "Eel",
+        "Flounder",
+        "Thornback ray",
+        "Bass",
+        "Conger eel",
+        "Dover sole"
+      ],
+      "tips": [
+        "SeaAngler warns that the tide can run very hard and that anglers fishing the mud and peat must avoid being cut off by the incoming tide.",
+        "SeaAngler reports night fishing is favoured by local anglers."
+      ],
+      "access": "SeaAngler directs anglers to park at the end of the lane behind the sea wall without blocking private drives or access points.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Goldcliff Beach Sea Fishing Mark, published 2021",
+        "url": "https://www.seaangler.co.uk/spot/goldcliff-beach-sea-fishing-mark/",
+        "location_reference": "Venue or access-area coordinates independently checked against geographic sources; not an exact fishing position unless explicitly stated",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "SeaAngler reports free parking at the end of the lane behind the sea wall; do not block private drives or access points.",
+      "parking_cost": "free",
+      "access_difficulty": "difficult",
+      "easy_access": false,
+      "accessible_access": false
+    },
+    {
+      "id": "wales-talacre",
+      "name": "Talacre",
+      "status": "verified",
+      "location": {
+        "latitude": 53.34784,
+        "longitude": -3.32663,
+        "area": "Talacre, Flintshire",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "SeaAngler published Talacre at the mouth of the River Dee, noting both shallow and very deep water and the need to beware of the incoming tide.",
+      "species": [
+        "Dab",
+        "Whiting",
+        "Codling",
+        "Flounder",
+        "Plaice",
+        "Bass"
+      ],
+      "tips": [
+        "SeaAngler reports plaice, silver eels, school bass and flounder from April to June.",
+        "SeaAngler reports dab, flounder, whiting and codling from late October to February.",
+        "Beware of the incoming tide."
+      ],
+      "access": "SeaAngler directs anglers to Talacre village, the dead-end embankment and then a walk back towards the green light. It advises finding a safe place to park.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Talacre Sea Fishing Mark, published 2021",
+        "url": "https://www.seaangler.co.uk/spot/talacre-sea-fishing-mark/",
+        "location_reference": "Venue or access-area coordinates independently checked against geographic sources; not an exact fishing position unless explicitly stated",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "SeaAngler advises finding a safe place to park near the Talacre embankment and not obstructing access.",
+      "parking_cost": "not stated",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false
     }
   ]
 }
