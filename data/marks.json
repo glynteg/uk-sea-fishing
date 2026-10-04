@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "rules": {
+    "verified": "Independently checked before being shown as a verified mark.",
+    "community_unverified": "Submitted by an angler but not independently checked.",
+    "rejected": "Not suitable for publication."
+  },
+  "marks": []
+}
