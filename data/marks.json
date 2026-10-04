@@ -10,73 +10,250 @@
       "id": "anglesey-benllech-bay",
       "name": "Benllech Bay",
       "status": "verified",
-      "location": {"latitude": 53.3180556, "longitude": -4.2147222, "area": "Benllech, Anglesey", "accuracy": "approximate_venue_midpoint"},
+      "location": {
+        "latitude": 53.3180556,
+        "longitude": -4.2147222,
+        "area": "Benllech, Anglesey",
+        "accuracy": "approximate_venue_midpoint"
+      },
       "description": "Published SeaAngler fishing mark at Benllech Bay. The publication describes fishing close in and advises care around the higher ledges.",
-      "species": ["Whiting","Flounder","Codling","Mackerel","Flatfish","Dogfish","Wrasse","Pollack","Conger eel"],
-      "tips": ["SeaAngler reports that many fish can be taken close in.","SeaAngler advises particular care from the higher ledges."],
-      "access": "SeaAngler directions approach Benllech from Menai Bridge via the A5025.",
+      "species": [
+        "Whiting",
+        "Flounder",
+        "Codling",
+        "Mackerel",
+        "Flatfish",
+        "Dogfish",
+        "Wrasse",
+        "Pollack",
+        "Conger eel"
+      ],
+      "tips": [
+        "SeaAngler reports that many fish can be taken close in.",
+        "SeaAngler advises particular care from the higher ledges."
+      ],
+      "access": "Visit Anglesey reports disabled facilities and access for disabled visitors. Fishing Wales reports fishing from the sand and promenade.",
       "photos": [],
-      "source": {"type": "fishing_publication","publication": "SeaAngler","reference": "Benllech Bay Sea Fishing Mark, published 17 June 2021","url": "https://www.seaangler.co.uk/spot/benllech-bay-sea-fishing-mark/","location_reference": "British Beaches, Benllech Beach, approximate beach midpoint","checked_at": "2026-10-04"}
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Benllech Bay Sea Fishing Mark, published 17 June 2021",
+        "url": "https://www.seaangler.co.uk/spot/benllech-bay-sea-fishing-mark/",
+        "location_reference": "British Beaches, Benllech Beach, approximate beach midpoint",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Visit Anglesey confirms parking at Benllech Beach; parking charges may apply.",
+      "parking_cost": "charges may apply",
+      "access_difficulty": "easy",
+      "easy_access": true,
+      "accessible_access": false,
+      "access_what3words": "fewest.campfires.product"
     },
     {
       "id": "anglesey-cemlyn-beach",
       "name": "Cemlyn Beach",
       "status": "verified",
-      "location": {"latitude": 53.4086111, "longitude": -4.5058333, "area": "Cemlyn, Anglesey", "accuracy": "approximate_venue_midpoint"},
+      "location": {
+        "latitude": 53.4086111,
+        "longitude": -4.5058333,
+        "area": "Cemlyn, Anglesey",
+        "accuracy": "approximate_venue_midpoint"
+      },
       "description": "SeaAngler published Cemlyn Beach as an easily accessible Anglesey mark, reporting codling, whiting and pouting and noting that the rocks at the end of the beach can also be worth trying.",
-      "species": ["Codling","Whiting","Pouting"],
-      "tips": ["SeaAngler reported fish between approximately 30 and 100 yards out.","SeaAngler reported that evening was the better time in that report.","The rocks at the end of the beach were reported as worth trying during the day."],
-      "access": "SeaAngler described Cemlyn Beach as an easily accessible mark. Visit Anglesey identifies two car parks at either end of Cemlyn Bay.",
+      "species": [
+        "Codling",
+        "Whiting",
+        "Pouting"
+      ],
+      "tips": [
+        "SeaAngler reported fish between approximately 30 and 100 yards out.",
+        "SeaAngler reported that evening was the better time in that report.",
+        "The rocks at the end of the beach were reported as worth trying during the day."
+      ],
+      "access": "National Trust and AccessAble report a step-free entrance from the far end of the car park, but the wider coastal route includes gravel, shingle, uneven ground and gates. The shingle ridge is not suitable for wheelchairs.",
       "photos": [],
-      "source": {"type": "fishing_publication","publication": "SeaAngler","reference": "UK Sea Fishing Catch Reports 5.1.10, Anglesey section","url": "https://www.seaangler.co.uk/fishing-news/uk-sea-fishing-catch-reports-5-1-10/","location_reference": "British Beaches, Cemlyn Beach, approximate beach midpoint","access_reference": "Visit Anglesey, Countryside and coast at Cemlyn","checked_at": "2026-10-04"}
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "UK Sea Fishing Catch Reports 5.1.10, Anglesey section",
+        "url": "https://www.seaangler.co.uk/fishing-news/uk-sea-fishing-catch-reports-5-1-10/",
+        "location_reference": "British Beaches, Cemlyn Beach, approximate beach midpoint",
+        "access_reference": "Visit Anglesey, Countryside and coast at Cemlyn",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Bryn Aber car park at Cemlyn. National Trust says the car park is affected by tides and should be checked against tide times.",
+      "parking_cost": "free",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false,
+      "access_what3words": "shaky.clubbing.absorb"
     },
     {
       "id": "bangor-garth-pier",
       "name": "Garth Pier",
       "status": "verified",
-      "location": {"latitude": 53.2384944, "longitude": -4.1241, "area": "Bangor, Gwynedd", "accuracy": "pier_location"},
+      "location": {
+        "latitude": 53.2384944,
+        "longitude": -4.1241,
+        "area": "Bangor, Gwynedd",
+        "accuracy": "pier_location"
+      },
       "description": "SeaAngler published Garth Pier as a sea-fishing venue, reporting bass to double figures along with cod, pollack, wrasse, mackerel and dogfish. The pier's current official visitor information confirms that fishing is currently permitted with a fishing pass.",
-      "species": ["Bass","Cod","Pollack","Wrasse","Mackerel","Dogfish"],
+      "species": [
+        "Bass",
+        "Cod",
+        "Pollack",
+        "Wrasse",
+        "Mackerel",
+        "Dogfish"
+      ],
       "tips": [],
-      "access": "Current official Garth Pier information lists a fishing pass at £3 for a day or £10 annually. Current opening times are published by the pier and should be checked before travelling.",
+      "access": "Fishing is permitted with a fishing pass. Current official information lists £3 for a day fishing pass and £10 annually.",
       "photos": [],
-      "source": {"type": "fishing_publication","publication": "SeaAngler","reference": "Book This Pier for Just a Quid, published 9 September 2009","url": "https://www.seaangler.co.uk/fishing-news/book-this-pier-for-just-a-quid/","location_reference": "Garth Pier coordinates independently checked against published geographic sources","current_access_reference": "Garth Pier official visiting information","current_access_url": "https://bangorpier.org/visiting-the-pier/","checked_at": "2026-10-04"}
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Book This Pier for Just a Quid, published 9 September 2009",
+        "url": "https://www.seaangler.co.uk/fishing-news/book-this-pier-for-just-a-quid/",
+        "location_reference": "Garth Pier coordinates independently checked against published geographic sources",
+        "current_access_reference": "Garth Pier official visiting information",
+        "current_access_url": "https://bangorpier.org/visiting-the-pier/",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Garth Pier has on-site car parking. The official pier information lists £2 car parking and free parking for Blue Badge holders.",
+      "parking_cost": "£2; Blue Badge holders free",
+      "access_difficulty": "unknown",
+      "easy_access": false,
+      "accessible_access": false
     },
     {
       "id": "hampshire-calshot-beach",
       "name": "Calshot",
       "status": "verified",
-      "location": {"latitude": 50.8080556, "longitude": -1.3166667, "area": "Calshot, Hampshire", "accuracy": "approximate_venue_midpoint"},
+      "location": {
+        "latitude": 50.8080556,
+        "longitude": -1.3166667,
+        "area": "Calshot, Hampshire",
+        "accuracy": "approximate_venue_midpoint"
+      },
       "description": "SeaAngler published Calshot as a shallow sea-fishing venue at the mouth of Southampton Water.",
-      "species": ["Black bream","Silver eel","Bass","Pouting","Smoothhound","Dover sole","Plaice","Flounder","Dogfish"],
-      "tips": ["SeaAngler reports the venue generally fishes during the last three hours of the flood and first couple of hours of the ebb.","SeaAngler recommends night sessions."],
-      "access": "SeaAngler reports several pay-and-display car parks and some free parking near the access point close to the best fishing at the eastern end of the venue. Current local access conditions should be checked before travelling.",
+      "species": [
+        "Black bream",
+        "Silver eel",
+        "Bass",
+        "Pouting",
+        "Smoothhound",
+        "Dover sole",
+        "Plaice",
+        "Flounder",
+        "Dogfish"
+      ],
+      "tips": [
+        "SeaAngler reports the venue generally fishes during the last three hours of the flood and first couple of hours of the ebb.",
+        "SeaAngler recommends night sessions."
+      ],
+      "access": "The venue includes shingle beaches. Hampshire County Council confirms accessible parking and wheelchair access at the Activities Centre, but this does not establish wheelchair access to the fishing position.",
       "photos": [],
-      "source": {"type": "fishing_publication","publication": "SeaAngler","reference": "Calshot Sea Fishing Mark, published 18 May 2021","url": "https://www.seaangler.co.uk/spot/calshot-sea-fishing-mark/","location_reference": "British Beaches, Calshot Beach, approximate beach midpoint","current_location_reference": "Hampshire County Council Calshot visitor information","checked_at": "2026-10-04"}
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Calshot Sea Fishing Mark, published 18 May 2021",
+        "url": "https://www.seaangler.co.uk/spot/calshot-sea-fishing-mark/",
+        "location_reference": "British Beaches, Calshot Beach, approximate beach midpoint",
+        "current_location_reference": "Hampshire County Council Calshot visitor information",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Hampshire County Council confirms parking at Calshot Activities Centre; current local parking arrangements should be checked before travel.",
+      "parking_cost": "check current local charges",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false
     },
     {
       "id": "kent-sandwich-bay",
       "name": "Sandwich Bay",
       "status": "verified",
-      "location": {"latitude": 51.2813889, "longitude": 1.3808333, "area": "Sandwich Bay, Kent", "accuracy": "approximate_venue_midpoint"},
+      "location": {
+        "latitude": 51.2813889,
+        "longitude": 1.3808333,
+        "area": "Sandwich Bay, Kent",
+        "accuracy": "approximate_venue_midpoint"
+      },
       "description": "SeaAngler published Sandwich Bay as a sea-fishing mark and identifies the 10th green near the slipway as a popular mark.",
-      "species": ["Thornback ray","Smoothhound","Dover sole","Eel","Bass","Cod","Codling","Whiting","Pouting"],
-      "tips": ["SeaAngler reports fishing from low water up to high water can produce catches.","SeaAngler reports coloured water, especially after a south-westerly blow, can be productive."],
-      "access": "SeaAngler describes access via a right of way at The Chequers public house or along the sea wall from Deal. Current access conditions should be checked before travelling.",
+      "species": [
+        "Thornback ray",
+        "Smoothhound",
+        "Dover sole",
+        "Eel",
+        "Bass",
+        "Cod",
+        "Codling",
+        "Whiting",
+        "Pouting"
+      ],
+      "tips": [
+        "SeaAngler reports fishing from low water up to high water can produce catches.",
+        "SeaAngler reports coloured water, especially after a south-westerly blow, can be productive."
+      ],
+      "access": "The beachfront includes sandy, unsurfaced paths and sand/shingle. Access conditions vary and some areas are restricted.",
       "photos": [],
-      "source": {"type": "fishing_publication","publication": "SeaAngler","reference": "Sandwich Bay Sea Fishing Mark, published 18 June 2021","url": "https://www.seaangler.co.uk/spot/sandwich-bay-sea-fishing-mark/","location_reference": "British Beaches, Sandwich Bay, approximate beach midpoint","checked_at": "2026-10-04"}
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Sandwich Bay Sea Fishing Mark, published 18 June 2021",
+        "url": "https://www.seaangler.co.uk/spot/sandwich-bay-sea-fishing-mark/",
+        "location_reference": "British Beaches, Sandwich Bay, approximate beach midpoint",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Sandwich Bay Estate operates paid vehicle access and an unpaved parking area near the beachfront. Charges and access restrictions apply.",
+      "parking_cost": "paid estate access",
+      "access_difficulty": "difficult",
+      "easy_access": false,
+      "accessible_access": false
     },
     {
       "id": "somerset-blue-anchor",
       "name": "Blue Anchor",
       "status": "verified",
-      "location": {"latitude": 51.1827, "longitude": -3.3980, "area": "Blue Anchor, Somerset", "accuracy": "approximate_venue_midpoint"},
+      "location": {
+        "latitude": 51.1827,
+        "longitude": -3.398,
+        "area": "Blue Anchor, Somerset",
+        "accuracy": "approximate_venue_midpoint"
+      },
       "description": "SeaAngler published Blue Anchor as a group of shore marks covering the wall beside the road, the beach in front of the chalets and rocky reefs.",
-      "species": ["Cod","Whiting","Pouting","Rockling","Flounder","Thornback ray","Dogfish","Conger eel","Bass","Silver eel","Pollack"],
-      "tips": ["SeaAngler reports the wall and beach fish best on tides over five metres, with larger tides more productive.","SeaAngler warns that the tide retreats a long distance at low water and that mud and quicksand are present."],
-      "access": "SeaAngler reports parking along the seafront and access to the wall, beach and reefs. The publication warns that anglers fishing the reefs should leave well before high water.",
+      "species": [
+        "Cod",
+        "Whiting",
+        "Pouting",
+        "Rockling",
+        "Flounder",
+        "Thornback ray",
+        "Dogfish",
+        "Conger eel",
+        "Bass",
+        "Silver eel",
+        "Pollack"
+      ],
+      "tips": [
+        "SeaAngler reports the wall and beach fish best on tides over five metres, with larger tides more productive.",
+        "SeaAngler warns that the tide retreats a long distance at low water and that mud and quicksand are present."
+      ],
+      "access": "The seafront promenade is long and flat, but Blue Anchor beach access includes steep steps that are not suitable for wheelchairs. The published fishing mark also includes rocky reefs, so accessibility to the fishing positions varies.",
       "photos": [],
-      "source": {"type": "fishing_publication","publication": "SeaAngler","reference": "Blue Anchor Sea Fishing Marks, published 16 June 2021","url": "https://www.seaangler.co.uk/spot/blue-anchor-sea-fishing-marks/","location_reference": "British Beaches, Blue Anchor Beach, approximate beach midpoint","checked_at": "2026-10-04"}
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Blue Anchor Sea Fishing Marks, published 16 June 2021",
+        "url": "https://www.seaangler.co.uk/spot/blue-anchor-sea-fishing-marks/",
+        "location_reference": "British Beaches, Blue Anchor Beach, approximate beach midpoint",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Somerset Council lists Blue Anchor Car Park as free, long-stay, 24-hour parking with four disabled bays.",
+      "parking_cost": "free",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false
     }
   ]
 }
