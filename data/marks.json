@@ -1101,6 +1101,51 @@
       "access_difficulty": "moderate",
       "easy_access": false,
       "accessible_access": false
+    },
+    {
+      "id": "dorset-bridging-camp-chesil",
+      "name": "Bridging Camp, Chesil Beach",
+      "status": "verified",
+      "location": {
+        "latitude": null,
+        "longitude": null,
+        "area": "Chesil Beach, Dorset",
+        "accuracy": "area_only"
+      },
+      "description": "Published SeaAngler fishing mark on the Bridging Camp section of Chesil Beach. The published mark is a stretch of beach rather than a single casting point, so the app deliberately does not assign an invented GPS position.",
+      "species": [
+        "Codling",
+        "Cod",
+        "Whiting",
+        "Dogfish",
+        "Pouting",
+        "Poor cod",
+        "Pollack"
+      ],
+      "tips": [
+        "SeaAngler reports the first two hours of a young flood can produce codling.",
+        "SeaAngler reports other species around two hours either side of high water.",
+        "SeaAngler warns that a big swell sweeping up the shingle can make the venue dangerous."
+      ],
+      "access": "SeaAngler describes the fishing area as a half-mile hike from Ferry Bridge car park along the shingle. The whole section can produce, so the fishing position is intentionally recorded as an area rather than an exact pin.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Bridging Camp, Chesil Beach Sea Fishing Mark, published 17 June 2021",
+        "url": "https://www.seaangler.co.uk/spot/bridging-camp-section-sea-fishing-mark/",
+        "location_reference": "SeaAngler identifies the Bridging Camp section and describes the route from Ferry Bridge car park; no exact fishing coordinate is being inferred.",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Ferry Bridge car park is the access point described by SeaAngler. The fishing mark itself is approximately a half-mile walk along the shingle from the car park.",
+      "parking_cost": "check current local charges",
+      "access_difficulty": "difficult",
+      "easy_access": false,
+      "accessible_access": false,
+      "rating": {
+        "average": 0,
+        "count": 0
+      }
     }
   ]
 }
