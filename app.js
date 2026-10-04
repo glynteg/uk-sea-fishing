@@ -5,7 +5,7 @@ let allMarks=[], fishingMap=null, mapMarkers=[], radiusCentre=null;
 
 function navigate(section){
  document.querySelectorAll(".bottom-nav button").forEach(b=>b.classList.toggle("active",b.dataset.section===section));
- const target={marks:"marks",tides:"conditions",weather:"conditions",submit:"submit",gallery:"gallery",home:null}[section];
+ const target={marks:"marks",tides:"conditions",weather:"conditions",submit:"submit",gallery:"gallery","fish-id":"fish-id",home:null}[section];
  if(target){document.getElementById(target).scrollIntoView({behavior:"smooth"});if(section==="marks"&&fishingMap)setTimeout(()=>fishingMap.invalidateSize(),250)}
  else window.scrollTo({top:0,behavior:"smooth"});
 }
@@ -147,6 +147,29 @@ document.getElementById("mark-form")?.addEventListener("submit",e=>{
 });
 
 initialiseMap();loadMarks();
+const fishRules=[
+ {name:"Bass",scientific:"Dicentrarchus labrax",size:"42 cm",catch:"3 retained fish per person per day outside 1 February–31 March in the covered UK waters.",season:"1 February–31 March: recreational rod-and-handline fishing is catch-and-release in the covered UK areas.",notes:"Bass nursery areas and local restrictions can also apply.",source:"MMO MCRS guidance"},
+ {name:"Cod",scientific:"Gadus morhua",size:"35 cm",catch:"No national recreational daily bag limit stated in the MMO MCRS guidance.",season:"Check current local and seasonal rules before retaining.",notes:"Rules can vary by area and fishery.",source:"MMO MCRS guidance"},
+ {name:"Haddock",scientific:"Melanogrammus aeglefinus",size:"30 cm",catch:"No national recreational daily bag limit stated in the MMO MCRS guidance.",season:"Check current local and seasonal rules before retaining.",notes:"Rules can vary by area and fishery.",source:"MMO MCRS guidance"},
+ {name:"Hake",scientific:"Merluccius merluccius",size:"27 cm",catch:"No national recreational daily bag limit stated in the MMO MCRS guidance.",season:"Check current local and seasonal rules before retaining.",notes:"Rules can vary by area and fishery.",source:"MMO MCRS guidance"},
+ {name:"Herring",scientific:"Clupea harengus",size:"20 cm",catch:"No national recreational daily bag limit stated in the MMO MCRS guidance.",season:"Check current local and seasonal rules before retaining.",notes:"Rules can vary by area and fishery.",source:"MMO MCRS guidance"},
+ {name:"Horse mackerel / Scad",scientific:"Trachurus trachurus",size:"15 cm",catch:"No national recreational daily bag limit stated in the MMO MCRS guidance.",season:"Check current local and seasonal rules before retaining.",notes:"Rules can vary by area and fishery.",source:"MMO MCRS guidance"},
+ {name:"Plaice",scientific:"Pleuronectes platessa",size:"27 cm",catch:"No national recreational daily bag limit stated in the MMO MCRS guidance.",season:"Check current local and seasonal rules before retaining.",notes:"Rules can vary by area and fishery.",source:"MMO MCRS guidance"},
+ {name:"Pollack",scientific:"Pollachius pollachius",size:"30 cm",catch:"No national recreational daily bag limit stated in the MMO MCRS guidance.",season:"Check current local and seasonal rules before retaining.",notes:"Rules can vary by area and fishery.",source:"MMO MCRS guidance"},
+ {name:"Whiting",scientific:"Merlangius merlangus",size:"27 cm",catch:"No national recreational daily bag limit stated in the MMO MCRS guidance.",season:"Check current local and seasonal rules before retaining.",notes:"Rules can vary by area and fishery.",source:"MMO MCRS guidance"},
+ {name:"Ling",scientific:"Molva molva",size:"63 cm",catch:"No national recreational daily bag limit stated in the MMO MCRS guidance.",season:"Check current local and seasonal rules before retaining.",notes:"Rules can vary by area and fishery.",source:"MMO MCRS guidance"},
+ {name:"Brill",scientific:"Scophthalmus rhombus",size:"30 cm in ICES 7d/7e",catch:"No national recreational daily bag limit stated in the MMO MCRS guidance.",season:"Check current local and seasonal rules before retaining.",notes:"The listed size applies to ICES areas 7d/7e.",source:"MMO MCRS guidance"},
+ {name:"Mackerel",scientific:"Scomber scombrus",size:"20 cm generally; 30 cm in the North Sea",catch:"No national recreational daily bag limit stated in the MMO MCRS guidance.",season:"Check current local and seasonal rules before retaining.",notes:"Minimum size varies by area.",source:"MMO MCRS guidance"}
+];
+function renderFishId(){
+ const c=document.getElementById("fish-results"); if(!c)return;
+ const q=document.getElementById("fish-search")?.value.trim().toLowerCase()||"";
+ const rows=fishRules.filter(f=>[f.name,f.scientific,f.notes].join(" ").toLowerCase().includes(q));
+ c.innerHTML=rows.map(f=>'<article class="fish-result"><div><span class="fish-name">'+escapeHtml(f.name)+'</span><small>'+escapeHtml(f.scientific)+'</small></div><p><strong>Minimum size:</strong> '+escapeHtml(f.size)+'</p><p><strong>Recreational catch:</strong> '+escapeHtml(f.catch)+'</p><p><strong>Season / timing:</strong> '+escapeHtml(f.season)+'</p><p><strong>Notes:</strong> '+escapeHtml(f.notes)+'</p></article>').join("")||'<div class="empty-state"><strong>No species found</strong><p>Try another fish name.</p></div>';
+}
+document.getElementById("fish-search")?.addEventListener("input",renderFishId);
+renderFishId();
+
 
 
 function renderGallery(){
