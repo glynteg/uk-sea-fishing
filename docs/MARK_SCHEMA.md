@@ -38,6 +38,12 @@ Where reliably established, a mark may contain both latitude/longitude and a Wha
   "species": [],
   "tips": [],
   "access": "Verified access information",
+  "parking": "Verified parking information",
+  "parking_cost": "Free / Pay & Display / Permit / Unknown",
+  "access_difficulty": "easy / moderate / difficult / unknown",
+  "easy_access": false,
+  "accessible_access": false,
+  "access_what3words": "///word.word.word",
   "photos": [],
   "source": {
     "type": "fishing_publication",
@@ -47,6 +53,10 @@ Where reliably established, a mark may contain both latitude/longitude and a Wha
   }
 }
 ```
+
+### Parking and access
+
+Parking and access are first-class mark information. Record them separately when reliable information is available. `easy_access` means the route to the fishing position has been checked as relatively easy. `accessible_access` should only be true when there is reliable evidence that the fishing position and route are suitable for anglers with accessibility needs. Do not infer accessibility from nearby parking alone.
 
 ### What3words rule
 
