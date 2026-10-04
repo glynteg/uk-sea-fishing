@@ -28,8 +28,10 @@ function renderMapMarkers(marks){
  mapMarkers.forEach(marker=>marker.remove());
  mapMarkers=[];
  marks.filter(mark=>mark.status==="verified" && Number.isFinite(Number(mark.location?.latitude)) && Number.isFinite(Number(mark.location?.longitude))).forEach(mark=>{
+  const accuracy=mark.location?.accuracy==="approximate_venue_midpoint" ? "<br><em>Map position is an approximate venue midpoint.</em>" : "";
+  const source=mark.source?.publication ? "<br><br><strong>Source:</strong> "+escapeHtml(mark.source.publication) : "";
   const marker=L.marker([Number(mark.location.latitude),Number(mark.location.longitude)]).addTo(fishingMap);
-  marker.bindPopup("<strong>"+escapeHtml(mark.name||"Verified mark")+"</strong><br>"+escapeHtml(mark.location?.area||"")+(mark.description?"<br><br>"+escapeHtml(mark.description):""));
+  marker.bindPopup("<strong>"+escapeHtml(mark.name||"Verified mark")+"</strong><br>"+escapeHtml(mark.location?.area||"")+accuracy+(mark.description?"<br><br>"+escapeHtml(mark.description):"")+source);
   mapMarkers.push(marker);
  });
 }
@@ -59,7 +61,11 @@ function renderMarks(marks){
  container.innerHTML=marks.map(mark=>{
   const label=mark.status==="verified"?"Verified mark":"Community submission — unverified";
   const className=mark.status==="verified"?"verified":"unverified";
-  return '<article class="mark-result"><span class="badge '+className+'">'+label+'</span><h3>'+escapeHtml(mark.name||"Unnamed mark")+'</h3><p>'+escapeHtml(mark.description||"No description provided.")+'</p></article>';
+  const species=(mark.species||[]).length ? "<p><strong>Species:</strong> "+escapeHtml(mark.species.join(", "))+"</p>" : "";
+  const source=mark.source?.publication ? "<p><strong>Verified source:</strong> "+escapeHtml(mark.source.publication)+"</p>" : "";
+  const w3w=mark.location?.what3words ? "<p><strong>What3words:</strong> "+escapeHtml(mark.location.what3words)+"</p>" : "";
+  const accuracy=mark.location?.accuracy==="approximate_venue_midpoint" ? "<p><em>Map location is an approximate venue midpoint, not an exact casting position.</em></p>" : "";
+  return '<article class="mark-result"><span class="badge '+className+'">'+label+'</span><h3>'+escapeHtml(mark.name||"Unnamed mark")+'</h3><p>'+escapeHtml(mark.description||"No description provided.")+'</p>'+species+source+w3w+accuracy+'</article>';
  }).join("");
 }
 
