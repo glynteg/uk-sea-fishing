@@ -4,6 +4,7 @@ Each mark must have a clear publication status.
 
 ## Status
 - `verified` — suitable to display as an official verified mark. A recognised fishing publication (for example *Sea Angler* or *Boat Fishing*) may be used as the verification source for a published mark.
+- `historical` — a genuine previously documented fishing mark whose current conditions, access or restrictions have not been confirmed recently. Keep it searchable, label it clearly as historical, and do not present it as currently verified.
 - `community_unverified` — submitted by an angler and not yet independently checked.
 - `rejected` — not suitable for publication.
 
@@ -16,7 +17,8 @@ Each mark must have a clear publication status.
 - Never guess coordinates.
 - Never invent a mark name, species, access information or fishing advice.
 - A community submission must remain clearly labelled as unverified until checked.
-- Verification should record who/what source was used and when it was checked.
+- Verification should record who/what source was used and when it was checked. Store this date in `source.checked_at` and display it as **Last checked**. Do not add a “next review” date.
+- Use `historical` when a genuine older mark has not had its current details confirmed; never invent a last-checked date. If no check date is recorded, display “Last checked: Not recorded”.
 - Publication of a mark verifies the published mark itself; it does not automatically verify additional details that were not published.
 
 ## Location information
