@@ -17,7 +17,7 @@ Each mark must have a clear publication status.
 - Never guess coordinates.
 - Never invent a mark name, species, access information or fishing advice.
 - A community submission must remain clearly labelled as unverified until checked.
-- Verification should record who/what source was used and when it was checked. Store this date in `source.checked_at` and display it as **Last checked**. Do not add a “next review” date.
+- Verification should record who/what source was used and when it was checked. Store this date in `source.checked_at` and display it as **Last checked**. This means the information was last checked against its recorded sources; it does not imply someone physically visited the mark. Do not add a “next review” date.
 - Use `historical` when a genuine older mark has not had its current details confirmed; never invent a last-checked date. If no check date is recorded, display “Last checked: Not recorded”.
 - Publication of a mark verifies the published mark itself; it does not automatically verify additional details that were not published.
 
