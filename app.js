@@ -5,7 +5,7 @@ let allMarks=[], fishingMap=null, mapMarkers=[], radiusCentre=null;
 
 function navigate(section){
  document.querySelectorAll(".bottom-nav button").forEach(b=>b.classList.toggle("active",b.dataset.section===section));
- const target={marks:"marks",tides:"conditions",weather:"conditions",submit:"submit",home:null}[section];
+ const target={marks:"marks",tides:"conditions",weather:"conditions",submit:"submit",gallery:"gallery",home:null}[section];
  if(target){document.getElementById(target).scrollIntoView({behavior:"smooth"});if(section==="marks"&&fishingMap)setTimeout(()=>fishingMap.invalidateSize(),250)}
  else window.scrollTo({top:0,behavior:"smooth"});
 }
@@ -147,3 +147,25 @@ document.getElementById("mark-form")?.addEventListener("submit",e=>{
 });
 
 initialiseMap();loadMarks();
+
+
+function renderGallery(){
+ const grid=document.getElementById("gallery-grid"); if(!grid)return;
+ const photos=JSON.parse(localStorage.getItem("ukSeaFishingGallery")||"[]");
+ if(!photos.length){grid.innerHTML='<div class="empty-state"><strong>No gallery photos yet</strong><p>Be one of the first anglers to share a catch or location photo.</p></div>';return}
+ grid.innerHTML=photos.map(p=>'<figure class="gallery-item"><img src="'+p.dataUrl+'" alt="'+escapeHtml(p.caption||"Angler gallery photo")+'"><figcaption>'+escapeHtml(p.caption||"UK coastal fishing photo")+'</figcaption></figure>').join("");
+}
+document.getElementById("gallery-upload")?.addEventListener("click",async()=>{
+ const input=document.getElementById("gallery-files"), caption=document.getElementById("gallery-caption"), msg=document.getElementById("gallery-message");
+ if(!input?.files?.length){if(msg){msg.hidden=false;msg.textContent="Choose at least one photo first."}return}
+ if(msg){msg.hidden=false;msg.textContent="Gallery uploads are currently a local prototype. Premium access and central photo storage will be connected later."}
+ const photos=JSON.parse(localStorage.getItem("ukSeaFishingGallery")||"[]");
+ for(const file of [...input.files].slice(0,6)){
+  if(!file.type.startsWith("image/"))continue;
+  const dataUrl=await new Promise(resolve=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.readAsDataURL(file)});
+  photos.unshift({dataUrl,caption:caption?.value.trim()||"",uploaded_at:new Date().toISOString()});
+ }
+ localStorage.setItem("ukSeaFishingGallery",JSON.stringify(photos.slice(0,60)));
+ input.value="";if(caption)caption.value="";renderGallery();
+});
+renderGallery();
