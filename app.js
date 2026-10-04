@@ -170,8 +170,8 @@ const fishRules=[
 function renderFishId(){
  const c=document.getElementById("fish-results"); if(!c)return;
  const q=document.getElementById("fish-search")?.value.trim().toLowerCase()||"";
- const rows=fishRules.filter(f=>[f.name,f.scientific,f.notes].join(" ").toLowerCase().includes(q));
- c.innerHTML=rows.map(f=>'<article class="fish-result"><div><span class="fish-name">'+escapeHtml(f.name)+'</span><small>'+escapeHtml(f.scientific)+'</small></div><p><strong>Minimum size:</strong> '+escapeHtml(f.size)+'</p><p><strong>Recreational catch:</strong> '+escapeHtml(f.catch)+'</p><p><strong>Season / timing:</strong> '+escapeHtml(f.season)+'</p><p><strong>Notes:</strong> '+escapeHtml(f.notes)+'</p></article>').join("")||'<div class="empty-state"><strong>No species found</strong><p>Try another fish name.</p></div>';
+ const rows=fishRules.filter(f=>[f.name,f.scientific,f.notes,f.protection].join(" ").toLowerCase().includes(q));
+ c.innerHTML=rows.map(f=>'<article class="fish-result '+(f.protection?"protected-fish":"")+'">'+(f.protection?'<div class="fish-protection">'+escapeHtml(f.protection)+'</div>':"")+'<div><span class="fish-name">'+escapeHtml(f.name)+'</span><small>'+escapeHtml(f.scientific)+'</small></div><p><strong>Minimum size:</strong> '+escapeHtml(f.size)+'</p><p><strong>Recreational catch:</strong> '+escapeHtml(f.catch)+'</p><p><strong>Season / timing:</strong> '+escapeHtml(f.season)+'</p><p><strong>Notes:</strong> '+escapeHtml(f.notes)+'</p></article>').join("")||'<div class="empty-state"><strong>No species found</strong><p>Try another fish name.</p></div>';
 }
 document.getElementById("fish-search")?.addEventListener("input",renderFishId);
 renderFishId();
