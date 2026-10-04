@@ -18,17 +18,7 @@
         "accuracy": "approximate_venue_midpoint"
       },
       "description": "Published SeaAngler fishing mark at Benllech Bay. The publication describes fishing close in and advises care around the higher ledges.",
-      "species": [
-        "Whiting",
-        "Flounder",
-        "Codling",
-        "Mackerel",
-        "Flatfish",
-        "Dogfish",
-        "Wrasse",
-        "Pollack",
-        "Conger eel"
-      ],
+      "species": ["Whiting","Flounder","Codling","Mackerel","Flatfish","Dogfish","Wrasse","Pollack","Conger eel"],
       "tips": [
         "SeaAngler reports that many fish can be taken close in.",
         "SeaAngler advises particular care from the higher ledges."
@@ -56,11 +46,7 @@
         "accuracy": "approximate_venue_midpoint"
       },
       "description": "SeaAngler published Cemlyn Beach as an easily accessible Anglesey mark, reporting codling, whiting and pouting and noting that the rocks at the end of the beach can also be worth trying.",
-      "species": [
-        "Codling",
-        "Whiting",
-        "Pouting"
-      ],
+      "species": ["Codling","Whiting","Pouting"],
       "tips": [
         "SeaAngler reported fish between approximately 30 and 100 yards out.",
         "SeaAngler reported that evening was the better time in that report.",
@@ -75,6 +61,32 @@
         "url": "https://www.seaangler.co.uk/fishing-news/uk-sea-fishing-catch-reports-5-1-10/",
         "location_reference": "British Beaches, Cemlyn Beach, approximate beach midpoint",
         "access_reference": "Visit Anglesey, Countryside and coast at Cemlyn",
+        "checked_at": "2026-10-04"
+      }
+    },
+    {
+      "id": "bangor-garth-pier",
+      "name": "Garth Pier",
+      "status": "verified",
+      "location": {
+        "latitude": 53.2384944,
+        "longitude": -4.1241,
+        "area": "Bangor, Gwynedd",
+        "accuracy": "pier_location"
+      },
+      "description": "SeaAngler published Garth Pier as a sea-fishing venue, reporting bass to double figures along with cod, pollack, wrasse, mackerel and dogfish. The pier's current official visitor information confirms that fishing is currently permitted with a fishing pass.",
+      "species": ["Bass","Cod","Pollack","Wrasse","Mackerel","Dogfish"],
+      "tips": [],
+      "access": "Current official Garth Pier information lists a fishing pass at £3 for a day or £10 annually. Current opening times are published by the pier and should be checked before travelling.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Book This Pier for Just a Quid, published 9 September 2009",
+        "url": "https://www.seaangler.co.uk/fishing-news/book-this-pier-for-just-a-quid/",
+        "location_reference": "Garth Pier coordinates independently checked against published geographic sources",
+        "current_access_reference": "Garth Pier official visiting information",
+        "current_access_url": "https://bangorpier.org/visiting-the-pier/",
         "checked_at": "2026-10-04"
       }
     }
