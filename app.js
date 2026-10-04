@@ -70,8 +70,9 @@ function renderMarks(marks){
   const difficulty=mark.access_difficulty ? "<p><strong>Access difficulty:</strong> "+escapeHtml(mark.access_difficulty)+"</p>" : "";
   const easier=mark.easy_access===true ? "<p><strong>✓ Easier access</strong></p>" : "";
   const accessible=mark.accessible_access===true ? "<p><strong>Accessible fishing position</strong></p>" : "";
+  const rating=mark.rating && Number.isFinite(Number(mark.rating.average)) && Number(mark.rating.count)>0 ? "<p><strong>⭐ Community rating:</strong> "+escapeHtml(Number(mark.rating.average).toFixed(1))+" / 5 ("+escapeHtml(mark.rating.count)+" ratings)</p>" : "<p><strong>⭐ Community rating:</strong> Not yet rated</p>";
   const accuracy=mark.location?.accuracy==="approximate_venue_midpoint" ? "<p><em>Map location is an approximate venue midpoint, not an exact casting position.</em></p>" : "";
-  return '<article class="mark-result"><span class="badge '+className+'">'+label+'</span><h3>'+escapeHtml(mark.name||"Unnamed mark")+'</h3><p>'+escapeHtml(mark.description||"No description provided.")+'</p>'+species+source+w3w+parking+access+accessW3w+difficulty+easier+accessible+accuracy+'</article>';
+  return '<article class="mark-result"><span class="badge '+className+'">'+label+'</span><h3>'+escapeHtml(mark.name||"Unnamed mark")+'</h3><p>'+escapeHtml(mark.description||"No description provided.")+'</p>'+rating+species+source+w3w+parking+access+accessW3w+difficulty+easier+accessible+accuracy+'</article>';
  }).join("");
 }
 
