@@ -254,6 +254,136 @@
       "access_difficulty": "moderate",
       "easy_access": false,
       "accessible_access": false
+    },
+    {
+      "id": "somerset-white-mark-gasworks",
+      "name": "White Mark & Gasworks",
+      "status": "verified",
+      "location": {
+        "latitude": 51.21456,
+        "longitude": -3.47655,
+        "area": "Minehead, Somerset",
+        "accuracy": "approximate_access_area"
+      },
+      "description": "SeaAngler published White Mark and Gasworks as fishing marks to the left of Minehead harbour. White Mark is described as a low-water mark, while Gasworks fishes around dead low water.",
+      "species": [
+        "Cod",
+        "Whiting",
+        "Pouting",
+        "Spotted ray",
+        "Small-eyed ray",
+        "Dogfish",
+        "Conger eel",
+        "Bass",
+        "Plaice",
+        "Pollack",
+        "Rockling"
+      ],
+      "tips": [
+        "SeaAngler reports White Mark fishes around two hours either side of low water.",
+        "SeaAngler reports the sand is uncovered at dead low water at Gasworks."
+      ],
+      "access": "SeaAngler directs anglers to the harbour and promenade, then a footpath through the woods to the beach. The White Mark is to the left and Gasworks is in front of the footpath towards the bay.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "White Mark & Gasworks sea fishing marks, published 16 June 2021",
+        "url": "https://www.seaangler.co.uk/spot/white-mark-gasworks-sea-fishing-marks/",
+        "location_reference": "Minehead harbour/promenade access area; coordinates used are for the verified access/parking area, not an exact fishing position",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "SeaAngler reports pay-and-display parking along the harbour and promenade.",
+      "parking_cost": "pay and display",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false
+    },
+    {
+      "id": "somerset-bossington",
+      "name": "Bossington",
+      "status": "verified",
+      "location": {
+        "latitude": 51.21987,
+        "longitude": -3.57995,
+        "area": "Bossington, Somerset",
+        "accuracy": "approximate_access_area"
+      },
+      "description": "SeaAngler published Bossington as a steep shingle beach fishing mark on the eastern edge of Porlock Bay.",
+      "species": [
+        "Dogfish",
+        "Smoothhound",
+        "Conger eel",
+        "Bass",
+        "Mackerel",
+        "Garfish",
+        "Pollack",
+        "Huss",
+        "Rays"
+      ],
+      "tips": [
+        "SeaAngler reports daylight bottom fishing can produce after a strong west wind when the water is coloured.",
+        "SeaAngler reports night fishing is more productive in clear conditions.",
+        "Morning and evening high tides are reported as good times for float fishing and spinning."
+      ],
+      "access": "SeaAngler says the beach is about a 10-minute walk from the Bossington car park along a rough track. It says driving the track is possible but the track is narrow and badly potholed.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Bossington Sea Fishing Mark, published 16 June 2021",
+        "url": "https://www.seaangler.co.uk/spot/bossington-sea-fishing-mark/",
+        "location_reference": "Bossington village/access area; coordinates are for the verified village area, not the exact fishing position",
+        "access_reference": "National Trust Bossington visitor information",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "National Trust Bossington car park. National Trust lists accessible parking spaces.",
+      "parking_cost": "£2 for two hours; £5 all day; free for National Trust members and Blue Badge holders",
+      "access_difficulty": "difficult",
+      "easy_access": false,
+      "accessible_access": false
+    },
+    {
+      "id": "dorset-cheyne-section",
+      "name": "Cheyne Section",
+      "status": "verified",
+      "location": {
+        "latitude": 50.531615,
+        "longitude": -2.437923,
+        "area": "Southwell, Isle of Portland, Dorset",
+        "accuracy": "approximate_access_area"
+      },
+      "description": "SeaAngler published Cheyne Section as a rugged flood-tide mark on Portland's eastern flank, with high ledges and a scramble to the water near the old pipe access.",
+      "species": [
+        "Ballan wrasse",
+        "Corkwing wrasse",
+        "Pollack",
+        "Rockling",
+        "Conger eel",
+        "Bull huss",
+        "Bass"
+      ],
+      "tips": [
+        "SeaAngler describes Cheyne Section as a flood-tide venue.",
+        "SeaAngler says the better ledges are a few hundred yards south of the initial access point.",
+        "SeaAngler gives summer and autumn as the season."
+      ],
+      "access": "SeaAngler describes access via a footpath through an old quarry and notes lofty ledges around 40 feet above the sea. A scramble to the water is possible near the old pipe access.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Cheyne Section Sea Fishing Mark, published 16 June 2021",
+        "url": "https://www.seaangler.co.uk/spot/cheyne-section-sea-fishing-mark/",
+        "location_reference": "Cheyne Weares parking/access area; coordinates are for the verified access area, not an exact fishing ledge",
+        "access_reference": "Cheyne Weares car park location independently checked",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "SeaAngler reports some free parking on the left before the yellow lines near Southwell. A separately checked Cheyne Weares car park is also in the access area.",
+      "parking_cost": "free roadside parking reported by SeaAngler; other nearby parking may have separate charges",
+      "access_difficulty": "difficult",
+      "easy_access": false,
+      "accessible_access": false
     }
   ]
 }
