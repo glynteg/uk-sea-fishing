@@ -670,6 +670,131 @@
       "access_difficulty": "moderate",
       "easy_access": false,
       "accessible_access": false
+    },
+    {
+      "id": "scotland-burrow-head",
+      "name": "Burrow Head",
+      "status": "verified",
+      "location": {
+        "latitude": 54.67778,
+        "longitude": -4.39361,
+        "area": "Isle of Whithorn, Dumfries and Galloway",
+        "accuracy": "headland_location"
+      },
+      "description": "SeaAngler published Burrow Head as a group of rock marks near Isle of Whithorn, with deeper water off the front point and easier marks to the left.",
+      "species": [
+        "Dogfish",
+        "Pollack",
+        "Coalfish",
+        "Wrasse",
+        "Conger eel",
+        "Codling",
+        "Gurnard",
+        "Mackerel",
+        "Garfish",
+        "Mullet",
+        "Tope",
+        "Cod",
+        "Whiting",
+        "Dab"
+      ],
+      "tips": [
+        "SeaAngler reports the various rock marks can fish at any state of the tide.",
+        "The tidal pull can be severe off the front point.",
+        "SeaAngler reports summer is the main season for most species and mackerel can be present to October."
+      ],
+      "access": "Access is via the narrow road from Isle of Whithorn to the caravan and camping site at Burrow Head. Some marks are unsuitable for children; SeaAngler notes easier marks to the left.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Burrow Head Sea Fishing Mark, published June 2021",
+        "url": "https://www.seaangler.co.uk/spot/burrow-head-sea-fishing-mark/",
+        "location_reference": "Published venue location independently checked against geographic sources; coordinates are not claimed to be an exact casting position.",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Access is through the caravan and camping site; arrangements for visiting anglers should be checked before travel.",
+      "parking_cost": "check current local arrangements",
+      "access_difficulty": "difficult",
+      "easy_access": false,
+      "accessible_access": false
+    },
+    {
+      "id": "yorkshire-saltwick-bay",
+      "name": "Saltwick Bay",
+      "status": "verified",
+      "location": {
+        "latitude": 54.48536,
+        "longitude": -0.58174,
+        "area": "Whitby, North Yorkshire",
+        "accuracy": "bay_location"
+      },
+      "description": "SeaAngler published Saltwick Bay as a versatile Yorkshire coast mark for cod, flounder and coalfish.",
+      "species": [
+        "Cod",
+        "Flounder",
+        "Coalfish"
+      ],
+      "tips": [
+        "SeaAngler lists September to March as the season.",
+        "Recommended baits include crab, lugworm and mussels."
+      ],
+      "access": "SeaAngler says the mark is accessed by a road leading to a caravan site, with a walk to the mark. North York Moors National Park notes that the beach can be cut off at high tide.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Saltwick Bay Sea Fishing Mark, published June 2021",
+        "url": "https://www.seaangler.co.uk/spot/saltwick-bay-sea-fishing-mark/",
+        "location_reference": "Published venue location independently checked against geographic sources; coordinates are not claimed to be an exact casting position.",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "SeaAngler reports parking on the grass verge outside the caravan site. Current restrictions should be checked before travel.",
+      "parking_cost": "not stated",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false
+    },
+    {
+      "id": "cornwall-carn-du-lamorna",
+      "name": "Carn Du, Lamorna",
+      "status": "verified",
+      "location": {
+        "latitude": 50.0612823,
+        "longitude": -5.551373,
+        "area": "Lamorna, Cornwall",
+        "accuracy": "coastal_outcrop_location"
+      },
+      "description": "SeaAngler published Carn Du as the rocky outcrop on the north-east corner of Lamorna Bay, offering deep water at most states of the tide.",
+      "species": [
+        "Mackerel",
+        "Garfish",
+        "Pollack",
+        "Scad",
+        "Wrasse",
+        "Conger eel",
+        "Bull huss"
+      ],
+      "tips": [
+        "SeaAngler recommends the flood tide, with summer high water around 8pm to 10pm.",
+        "Night is best for conger eels, bull huss and occasional larger pollack.",
+        "The southwest face is unfishable because of The Heaver rock."
+      ],
+      "access": "SeaAngler directs anglers to park in the main car park at Lamorna Cove, cross the footbridge and follow the coastal footpath around the northern side of the bay.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Carn Du, Lamorna Sea Fishing Mark, published June 2021",
+        "url": "https://www.seaangler.co.uk/spot/carn-du-sea-fishing-mark-lamorna/",
+        "location_reference": "Published venue location independently checked against geographic sources; coordinates are not claimed to be an exact casting position.",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Main car park at Lamorna Cove.",
+      "parking_cost": "check current local charges",
+      "access_difficulty": "difficult",
+      "easy_access": false,
+      "accessible_access": false
     }
   ]
 }
