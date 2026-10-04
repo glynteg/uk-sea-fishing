@@ -1,9 +1,82 @@
 {
   "version": 1,
   "rules": {
-    "verified": "Independently checked before being shown as a verified mark.",
+    "verified": "Independently checked before being shown as a verified mark. A recognised fishing publication can be the verification source for a published mark.",
     "community_unverified": "Submitted by an angler but not independently checked.",
     "rejected": "Not suitable for publication."
   },
-  "marks": []
+  "marks": [
+    {
+      "id": "anglesey-benllech-bay",
+      "name": "Benllech Bay",
+      "status": "verified",
+      "location": {
+        "latitude": 53.3180556,
+        "longitude": -4.2147222,
+        "area": "Benllech, Anglesey",
+        "what3words": "///somewhere.musically.hypocrite",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "Published SeaAngler fishing mark at Benllech Bay. The publication describes fishing close in and advises care around the higher ledges.",
+      "species": [
+        "Whiting",
+        "Flounder",
+        "Codling",
+        "Mackerel",
+        "Flatfish",
+        "Dogfish",
+        "Wrasse",
+        "Pollack",
+        "Conger eel"
+      ],
+      "tips": [
+        "SeaAngler reports that many fish can be taken close in.",
+        "SeaAngler advises particular care from the higher ledges."
+      ],
+      "access": "SeaAngler directions approach Benllech from Menai Bridge via the A5025.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Benllech Bay Sea Fishing Mark, published 17 June 2021",
+        "url": "https://www.seaangler.co.uk/spot/benllech-bay-sea-fishing-mark/",
+        "location_reference": "British Beaches, Benllech Beach, approximate beach midpoint",
+        "checked_at": "2026-10-04"
+      }
+    },
+    {
+      "id": "anglesey-cemlyn-beach",
+      "name": "Cemlyn Beach",
+      "status": "verified",
+      "location": {
+        "latitude": 53.4086111,
+        "longitude": -4.5058333,
+        "area": "Cemlyn, Anglesey",
+        "what3words": "///quickly.denote.carefully",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "SeaAngler published Cemlyn Beach as an easily accessible Anglesey mark, reporting codling, whiting and pouting and noting that the rocks at the end of the beach can also be worth trying.",
+      "species": [
+        "Codling",
+        "Whiting",
+        "Pouting"
+      ],
+      "tips": [
+        "SeaAngler reported fish between approximately 30 and 100 yards out.",
+        "SeaAngler reported that evening was the better time in that report.",
+        "The rocks at the end of the beach were reported as worth trying during the day."
+      ],
+      "access": "SeaAngler described Cemlyn Beach as an easily accessible mark. Visit Anglesey identifies two car parks at either end of Cemlyn Bay.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "UK Sea Fishing Catch Reports 5.1.10, Anglesey section",
+        "url": "https://www.seaangler.co.uk/fishing-news/uk-sea-fishing-catch-reports-5-1-10/",
+        "location_reference": "British Beaches, Cemlyn Beach, approximate beach midpoint",
+        "access_reference": "Visit Anglesey, Countryside and coast at Cemlyn",
+        "checked_at": "2026-10-04"
+      }
+    }
+  ]
 }
