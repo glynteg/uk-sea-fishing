@@ -85,6 +85,14 @@ function renderMarks(marks){
 
 function escapeHtml(v){return String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));}
 
+function addDiscoveryControls(){
+ const marks=document.getElementById("marks"); if(!marks||document.getElementById("county-filter"))return;
+ const tools=document.createElement("div"); tools.className="browse-tools";
+ tools.innerHTML='<label>County / area<select id="county-filter"><option value="">All UK marks</option></select></label><label>Find nearby marks<input id="radius-place" placeholder="Town, village or postcode"></label><div class="radius-row"><label>Radius<select id="radius-filter"><option value="5">5 miles</option><option value="10" selected>10 miles</option><option value="25">25 miles</option><option value="50">50 miles</option><option value="100">100 miles</option></select></label><button class="secondary" id="find-radius">Find nearby</button><button class="secondary" id="use-location">Use my location</button><button class="secondary" id="clear-radius">Clear</button></div><p id="radius-status" class="tool-status">Enter a town such as Felinheli, or use your location, to see nearby verified marks.</p>';
+ marks.querySelector(".section-head")?.after(tools);
+}
+addDiscoveryControls();
+
 async function geocode(place){
  const url="https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=gb&q="+encodeURIComponent(place);
  const r=await fetch(url,{headers:{Accept:"application/json"}});if(!r.ok)throw Error("Location search failed");
