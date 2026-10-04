@@ -63,3 +63,13 @@ Parking and access are first-class mark information. Record them separately when
 What3words is an optional precision-location field. It must only be added when the exact location can be reliably established. A What3words address must never be guessed from an approximate mark description.
 
 Coordinates and factual fields must come from a trustworthy source or a documented verification process; placeholder coordinates must never be published as real fishing locations.
+
+
+### Community ratings
+- A mark may have a community rating from 1 to 5 stars.
+- Ratings are separate from verification status; a rating never makes a mark verified.
+- Use `rating.average` and `rating.count` only when real user ratings exist.
+- If there are no ratings, display `Not yet rated`; never invent an initial score.
+- Future voting should use authenticated users and protection against repeated or abusive votes.
+
+Example: `"rating": { "average": 4.5, "count": 12 }`.
