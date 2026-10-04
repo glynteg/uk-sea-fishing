@@ -1,61 +1,36 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b2d3a">
-<title>UK Sea Fishing</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b2d3a"><title>UK Sea Fishing</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="topbar">
-  <div class="brand"><span class="brand-mark">⚓</span><div><strong>UK Sea Fishing</strong><small>Find. Fish. Share.</small></div></div>
-  <button class="premium">Premium</button>
-</header>
+<header class="topbar"><div class="brand"><span class="brand-mark">⚓</span><div><strong>UK Sea Fishing</strong><small>Find. Fish. Share.</small></div></div><button class="premium">Premium</button></header>
 <main>
-<section class="hero">
-  <p class="eyebrow">UK COASTAL FISHING</p>
-  <h1>Find your next fishing mark.</h1>
-  <p>Explore trusted fishing information and local knowledge from anglers across the UK.</p>
-  <div class="search"><span>⌕</span><input id="search" placeholder="Search marks, areas or species"></div>
-</section>
+<section class="hero"><p class="eyebrow">UK COASTAL FISHING</p><h1>Find your next fishing mark.</h1><p>Explore trusted fishing information and local knowledge from anglers across the UK.</p><div class="search"><span>⌕</span><input id="search" placeholder="Search marks, areas or species"></div></section>
 <section class="quick-grid">
-  <button class="quick" data-section="marks"><span>📍</span><b>Fishing Marks</b><small>Browse the map</small></button>
-  <button class="quick" data-section="tides"><span>🌊</span><b>Tides</b><small>Next 36 hours</small></button>
-  <button class="quick" data-section="weather"><span>☁️</span><b>Weather</b><small>Fishing conditions</small></button>
-  <button class="quick" data-section="submit"><span>➕</span><b>Add a Mark</b><small>Share local knowledge</small></button>
+<button class="quick" data-section="marks"><span>📍</span><b>Fishing Marks</b><small>Browse the map</small></button>
+<button class="quick" data-section="tides"><span>🌊</span><b>Tides</b><small>Next 36 hours</small></button>
+<button class="quick" data-section="weather"><span>☁️</span><b>Weather</b><small>Fishing conditions</small></button>
+<button class="quick" data-section="submit"><span>➕</span><b>Add a Mark</b><small>Share local knowledge</small></button>
 </section>
-<section class="section" id="marks">
-  <div class="section-head"><div><p class="eyebrow">FISHING MARKS</p><h2>Explore the coast</h2></div></div>
-  <div class="notice"><span>✓</span><div><b>Trust matters</b><p>Verified marks are checked. Community submissions are clearly labelled until independently verified.</p></div></div>
-  <div class="mark-card">
-    <div id="fishing-map" class="map-container"></div>
-    <div class="mark-body">
-      <span class="badge verified">✓ VERIFIED</span>
-      <div class="marks-list"><div class="empty-state"><strong>Loading fishing marks…</strong></div></div>
-    </div>
-  </div>
-</section>
-<section class="section" id="conditions">
-  <div class="section-head"><div><p class="eyebrow">CONDITIONS</p><h2>Plan your session</h2></div></div>
-  <div class="condition-grid">
-    <div class="condition"><span>🌊</span><b>Tides</b><strong>—</strong><small>Choose a location</small></div>
-    <div class="condition"><span>☁️</span><b>Weather</b><strong>—</strong><small>Choose a location</small></div>
-  </div>
-</section>
-<section class="section" id="submit">
-  <div class="submit-card"><span>🎣</span><div><p class="eyebrow">LOCAL KNOWLEDGE</p><h2>Know a good mark?</h2><p>Suggest a mark, species, tip or photo. Community information stays labelled until it has been checked.</p><button class="primary">Suggest a mark</button></div></div>
-</section>
+<section class="section" id="marks"><div class="section-head"><div><p class="eyebrow">FISHING MARKS</p><h2>Explore the coast</h2></div></div>
+<div class="notice"><span>✓</span><div><b>Trust matters</b><p>Verified marks are checked. Community submissions are clearly labelled until independently verified.</p></div></div>
+<div class="mark-card"><div id="fishing-map" class="map-container"></div><div class="mark-body"><div class="marks-list"><div class="empty-state"><strong>Loading fishing marks…</strong></div></div></div></div></section>
+<section class="section" id="conditions"><div class="section-head"><div><p class="eyebrow">CONDITIONS</p><h2>Plan your session</h2></div></div><div class="condition-grid"><div class="condition"><span>🌊</span><b>Tides</b><strong>—</strong><small>Choose a location</small></div><div class="condition"><span>☁️</span><b>Weather</b><strong>—</strong><small>Choose a location</small></div></div></section>
+<section class="section" id="submit"><div class="submit-card"><span>🎣</span><div><p class="eyebrow">LOCAL KNOWLEDGE</p><h2>Suggest a fishing mark</h2><p>Your submission will remain community-unverified until it has been independently checked.</p>
+<form id="mark-form" class="mark-form">
+<label>Mark name<input name="name" required placeholder="Name of the mark"></label>
+<label>Area / town<input name="area" required placeholder="Nearest town or area"></label>
+<label>Description<textarea name="description" required placeholder="Describe the mark and what makes it useful"></textarea></label>
+<label>Species seen or caught<textarea name="species" placeholder="List species you have personally recorded"></textarea></label>
+<label>Access information<textarea name="access" placeholder="Only include access details you know to be accurate"></textarea></label>
+<label>Coordinates <small>(optional — never guess)</small><input name="coordinates" placeholder="Paste coordinates if you have verified them"></label>
+<button class="primary" type="submit">Submit mark for review</button>
+<p id="submit-message" class="form-message" hidden></p>
+</form></div></div></section>
 </main>
-<nav class="bottom-nav">
-  <button class="active" data-section="home">⌂<small>Home</small></button>
-  <button data-section="marks">📍<small>Marks</small></button>
-  <button data-section="tides">🌊<small>Tides</small></button>
-  <button data-section="weather">☁️<small>Weather</small></button>
-  <button data-section="submit">＋<small>Submit</small></button>
-</nav>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="app.js"></script>
-</body>
-</html>
+<nav class="bottom-nav"><button class="active" data-section="home">⌂<small>Home</small></button><button data-section="marks">📍<small>Marks</small></button><button data-section="tides">🌊<small>Tides</small></button><button data-section="weather">☁️<small>Weather</small></button><button data-section="submit">＋<small>Submit</small></button></nav>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="app.js"></script>
+</body></html>
