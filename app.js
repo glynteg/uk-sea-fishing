@@ -1,117 +1,133 @@
 const buttons=document.querySelectorAll("[data-section]");
-buttons.forEach(button=>button.addEventListener("click",()=>navigate(button.dataset.section)));
+buttons.forEach(b=>b.addEventListener("click",()=>navigate(b.dataset.section)));
 
-let allMarks=[];
-let fishingMap=null;
-let mapMarkers=[];
+let allMarks=[], fishingMap=null, mapMarkers=[], radiusCentre=null;
 
 function navigate(section){
  document.querySelectorAll(".bottom-nav button").forEach(b=>b.classList.toggle("active",b.dataset.section===section));
- const targets={marks:"marks",tides:"conditions",weather:"conditions",submit:"submit",home:null};
- if(targets[section]){
-  document.getElementById(targets[section]).scrollIntoView({behavior:"smooth",block:"start"});
-  if(section==="marks" && fishingMap) setTimeout(()=>fishingMap.invalidateSize(),250);
- }else window.scrollTo({top:0,behavior:"smooth"});
+ const target={marks:"marks",tides:"conditions",weather:"conditions",submit:"submit",home:null}[section];
+ if(target){document.getElementById(target).scrollIntoView({behavior:"smooth"});if(section==="marks"&&fishingMap)setTimeout(()=>fishingMap.invalidateSize(),250)}
+ else window.scrollTo({top:0,behavior:"smooth"});
 }
 
 function initialiseMap(){
- const mapElement=document.getElementById("fishing-map");
- if(!mapElement || typeof L==="undefined") return;
- fishingMap=L.map(mapElement,{scrollWheelZoom:false});
+ const el=document.getElementById("fishing-map"); if(!el||typeof L==="undefined")return;
+ fishingMap=L.map(el,{scrollWheelZoom:false});
  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"&copy; OpenStreetMap contributors",maxZoom:18}).addTo(fishingMap);
- fishingMap.setView([54.5,-3.5],5.5);
- renderMapMarkers(allMarks);
+ fishingMap.setView([54.5,-3.5],5.5); renderMapMarkers(allMarks);
 }
 
 function renderMapMarkers(marks){
- if(!fishingMap) return;
- mapMarkers.forEach(marker=>marker.remove());
- mapMarkers=[];
- marks.filter(mark=>mark.status==="verified" && Number.isFinite(Number(mark.location?.latitude)) && Number.isFinite(Number(mark.location?.longitude))).forEach(mark=>{
-  const accuracy=mark.location?.accuracy==="approximate_venue_midpoint" ? "<br><em>Map position is an approximate venue midpoint.</em>" : "";
-  const source=mark.source?.publication ? "<br><br><strong>Source:</strong> "+escapeHtml(mark.source.publication) : "";
-  const marker=L.marker([Number(mark.location.latitude),Number(mark.location.longitude)]).addTo(fishingMap);
-  marker.bindPopup("<strong>"+escapeHtml(mark.name||"Verified mark")+"</strong><br>"+escapeHtml(mark.location?.area||"")+accuracy+(mark.description?"<br><br>"+escapeHtml(mark.description):"")+source);
+ if(!fishingMap)return;
+ mapMarkers.forEach(m=>m.remove()); mapMarkers=[];
+ marks.filter(m=>m.status==="verified"&&Number.isFinite(Number(m.location?.latitude))&&Number.isFinite(Number(m.location?.longitude))).forEach(mark=>{
+  const marker=L.marker([+mark.location.latitude,+mark.location.longitude]).addTo(fishingMap);
+  const accuracy=mark.location?.accuracy==="approximate_venue_midpoint"?"<br><em>Approximate venue midpoint.</em>":"";
+  marker.bindPopup("<strong>"+escapeHtml(mark.name||"Verified mark")+"</strong><br>"+escapeHtml(mark.location?.area||"")+accuracy);
   mapMarkers.push(marker);
+ });
+ if(radiusCentre&&marks.length&&Number.isFinite(radiusCentre.lat))fishingMap.setView([radiusCentre.lat,radiusCentre.lon],9);
+}
+
+function countyOf(mark){
+ const area=mark.location?.area||"";
+ return area.split(",").pop().trim()||"Unknown";
+}
+
+function milesBetween(a,b,c,d){
+ const R=3958.7613, p=Math.PI/180, x=(c-a)*p, y=(d-b)*p;
+ const q=Math.sin(x/2)**2+Math.cos(a*p)*Math.cos(c*p)*Math.sin(y/2)**2;
+ return R*2*Math.atan2(Math.sqrt(q),Math.sqrt(1-q));
+}
+
+function populateCounties(){
+ const select=document.getElementById("county-filter"); if(!select)return;
+ [...new Set(allMarks.map(countyOf))].sort((a,b)=>a.localeCompare(b)).forEach(c=>{
+  const o=document.createElement("option");o.value=c;o.textContent=c;select.appendChild(o);
  });
 }
 
-async function loadMarks(){
- const container=document.querySelector(".marks-list");
- if(!container) return;
- try{
-  const response=await fetch("data/marks.json");
-  if(!response.ok) throw new Error("Could not load mark data");
-  const data=await response.json();
-  allMarks=Array.isArray(data.marks)?data.marks:[];
-  renderMarks(allMarks);
-  renderMapMarkers(allMarks);
- }catch(error){
-  container.innerHTML='<div class="empty-state"><strong>Fishing marks unavailable</strong><p>Mark data could not be loaded. No unverified information has been added as a fallback.</p></div>';
+function refreshMarkResults(){
+ const q=document.getElementById("search")?.value.trim().toLowerCase()||"";
+ const county=document.getElementById("county-filter")?.value||"";
+ const radius=Number(document.getElementById("radius-filter")?.value||10);
+ let marks=allMarks.filter(m=>{
+  const text=[m.name,m.description,m.location?.area,...(m.species||[])].join(" ").toLowerCase();
+  return (!q||text.includes(q))&&(!county||countyOf(m)===county)&&(!document.getElementById("easy-access-filter")?.checked||m.easy_access===true)&&(!document.getElementById("accessible-filter")?.checked||m.accessible_access===true);
+ });
+ if(radiusCentre){
+  marks=marks.map(m=>{
+   const lat=Number(m.location?.latitude),lon=Number(m.location?.longitude);
+   return {...m,_distance:Number.isFinite(lat)&&Number.isFinite(lon)?milesBetween(radiusCentre.lat,radiusCentre.lon,lat,lon):Infinity};
+  }).filter(m=>m._distance<=radius).sort((a,b)=>a._distance-b._distance);
  }
+ renderMarks(marks);renderMapMarkers(marks);
+ const s=document.getElementById("result-summary");
+ if(s)s.textContent=radiusCentre?marks.length+" verified mark"+(marks.length===1?"":"s")+" within "+radius+" miles":marks.length+" mark"+(marks.length===1?"":"s")+" shown";
 }
 
 function renderMarks(marks){
- const container=document.querySelector(".marks-list");
- if(!container) return;
- if(!marks.length){
-  container.innerHTML='<div class="empty-state"><strong>No fishing marks added yet</strong><p>Verified fishing marks will appear here once they have been independently checked.</p></div>';
-  return;
- }
- container.innerHTML=marks.map(mark=>{
-  const label=mark.status==="verified"?"Verified mark":"Community submission — unverified";
-  const className=mark.status==="verified"?"verified":"unverified";
-  const species=(mark.species||[]).length ? "<p><strong>Species:</strong> "+escapeHtml(mark.species.join(", "))+"</p>" : "";
-  const source=mark.source?.publication ? "<p><strong>Verified source:</strong> "+escapeHtml(mark.source.publication)+"</p>" : "";
-  const w3w=mark.location?.what3words ? "<p><strong>What3words:</strong> "+escapeHtml(mark.location.what3words)+"</p>" : "";
-  const parking=mark.parking ? "<p><strong>Parking:</strong> "+escapeHtml(mark.parking)+"</p>" : "";
-  const access=mark.access ? "<p><strong>Access:</strong> "+escapeHtml(mark.access)+"</p>" : "";
-  const accessW3w=mark.access_what3words ? "<p><strong>Parking / access What3words:</strong> "+escapeHtml(mark.access_what3words)+"</p>" : "";
-  const difficulty=mark.access_difficulty ? "<p><strong>Access difficulty:</strong> "+escapeHtml(mark.access_difficulty)+"</p>" : "";
-  const easier=mark.easy_access===true ? "<p><strong>✓ Easier access</strong></p>" : "";
-  const accessible=mark.accessible_access===true ? "<p><strong>Accessible fishing position</strong></p>" : "";
-  const rating=mark.rating && Number.isFinite(Number(mark.rating.average)) && Number(mark.rating.count)>0 ? "<p><strong>⭐ Community rating:</strong> "+escapeHtml(Number(mark.rating.average).toFixed(1))+" / 5 ("+escapeHtml(mark.rating.count)+" ratings)</p>" : "<p><strong>⭐ Community rating:</strong> Not yet rated</p>";
-  const accuracy=mark.location?.accuracy==="approximate_venue_midpoint" ? "<p><em>Map location is an approximate venue midpoint, not an exact casting position.</em></p>" : "";
-  return '<article class="mark-result"><span class="badge '+className+'">'+label+'</span><h3>'+escapeHtml(mark.name||"Unnamed mark")+'</h3><p>'+escapeHtml(mark.description||"No description provided.")+'</p>'+rating+species+source+w3w+parking+access+accessW3w+difficulty+easier+accessible+accuracy+'</article>';
+ const c=document.querySelector(".marks-list");if(!c)return;
+ if(!marks.length){c.innerHTML='<div class="empty-state"><strong>No matching marks</strong><p>Try a larger radius or another county. No unverified data is promoted as verified.</p></div>';return}
+ c.innerHTML=marks.map(m=>{
+  const label=m.status==="verified"?"Verified mark":"Community submission — unverified";
+  const cls=m.status==="verified"?"verified":"unverified";
+  const dist=Number.isFinite(m._distance)?"<p><strong>Distance:</strong> "+m._distance.toFixed(1)+" miles</p>":"";
+  const rating=m.rating&&Number(m.rating.count)>0?"<p><strong>★★★★★</strong> "+Number(m.rating.average).toFixed(1)+" / 5 ("+m.rating.count+" ratings)</p>":"<p><strong>★★★★★</strong> Not yet rated</p>";
+  const species=(m.species||[]).length?"<p><strong>Species:</strong> "+escapeHtml(m.species.join(", "))+"</p>":"";
+  const source=m.source?.publication?"<p><strong>Verified source:</strong> "+escapeHtml(m.source.publication)+"</p>":"";
+  const access=m.access?"<p><strong>Access:</strong> "+escapeHtml(m.access)+"</p>":"";
+  const parking=m.parking?"<p><strong>Parking:</strong> "+escapeHtml(m.parking)+"</p>":"";
+  const accuracy=m.location?.accuracy==="approximate_venue_midpoint"?"<p><em>Map position is an approximate venue midpoint, not an exact casting position.</em></p>":"";
+  return '<article class="mark-result"><span class="badge '+cls+'">'+label+'</span><h3>'+escapeHtml(m.name||"Unnamed mark")+'</h3><p>'+escapeHtml(m.description||"No description provided.")+'</p>'+dist+rating+species+source+parking+access+accuracy+'</article>';
  }).join("");
 }
 
-function escapeHtml(value){
- return String(value).replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
+function escapeHtml(v){return String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));}
+
+async function geocode(place){
+ const url="https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=gb&q="+encodeURIComponent(place);
+ const r=await fetch(url,{headers:{Accept:"application/json"}});if(!r.ok)throw Error("Location search failed");
+ const data=await r.json();if(!data.length)throw Error("Location not found");
+ return {lat:+data[0].lat,lon:+data[0].lon,label:data[0].display_name};
 }
 
-const easyAccessFilter=document.getElementById("easy-access-filter");
-const accessibleFilter=document.getElementById("accessible-filter");
-const search=document.getElementById("search");
-
-function refreshMarkResults(){
- const query=search?.value.trim().toLowerCase()||"";
- const searched=!query?allMarks:allMarks.filter(mark=>{
-  const text=[mark.name,mark.description,mark.location?.area,...(mark.species||[])].join(" ").toLowerCase();
-  return text.includes(query);
- });
- const filtered=searched.filter(mark=>{
-  const easyOk=!easyAccessFilter?.checked || mark.easy_access===true;
-  const accessibleOk=!accessibleFilter?.checked || mark.accessible_access===true;
-  return easyOk && accessibleOk;
- });
- renderMarks(filtered);
- renderMapMarkers(filtered);
+async function setRadiusFromPlace(place){
+ const status=document.getElementById("radius-status");
+ if(status)status.textContent="Finding "+place+"…";
+ try{radiusCentre=await geocode(place);if(status)status.textContent="Showing verified marks near "+radiusCentre.label;refreshMarkResults()}
+ catch(e){radiusCentre=null;if(status)status.textContent="Location not found. Try a town, village or UK postcode.";refreshMarkResults()}
 }
-if(search) search.addEventListener("input",refreshMarkResults);
-if(easyAccessFilter) easyAccessFilter.addEventListener("change",refreshMarkResults);
-if(accessibleFilter) accessibleFilter.addEventListener("change",refreshMarkResults);
 
-const markForm=document.getElementById("mark-form");
-if(markForm) markForm.addEventListener("submit",e=>{
- e.preventDefault();
- const message=document.getElementById("submit-message");
- if(message){
-  message.hidden=false;
-  message.textContent="Thanks. Your mark has been prepared as a community submission. It will not appear as a verified mark until it has been independently checked.";
- }
- markForm.reset();
+const place=document.getElementById("radius-place");
+document.getElementById("find-radius")?.addEventListener("click",()=>{if(place?.value.trim())setRadiusFromPlace(place.value.trim())});
+place?.addEventListener("keydown",e=>{if(e.key==="Enter"&&place.value.trim())setRadiusFromPlace(place.value.trim())});
+document.getElementById("use-location")?.addEventListener("click",()=>{
+ const status=document.getElementById("radius-status");
+ if(!navigator.geolocation){if(status)status.textContent="Location services are not available in this browser.";return}
+ if(status)status.textContent="Requesting your location…";
+ navigator.geolocation.getCurrentPosition(p=>{radiusCentre={lat:p.coords.latitude,lon:p.coords.longitude,label:"your location"};if(status)status.textContent="Showing verified marks near your location.";refreshMarkResults()},()=>{if(status)status.textContent="Location permission was not available. Enter a town or postcode instead."});
+});
+document.getElementById("clear-radius")?.addEventListener("click",()=>{radiusCentre=null;if(place)place.value="";document.getElementById("radius-status").textContent="Nearby search cleared.";refreshMarkResults()});
+document.getElementById("radius-filter")?.addEventListener("change",refreshMarkResults);
+document.getElementById("county-filter")?.addEventListener("change",refreshMarkResults);
+document.getElementById("search")?.addEventListener("input",refreshMarkResults);
+document.getElementById("easy-access-filter")?.addEventListener("change",refreshMarkResults);
+document.getElementById("accessible-filter")?.addEventListener("change",refreshMarkResults);
+
+async function loadMarks(){
+ const c=document.querySelector(".marks-list");if(!c)return;
+ try{
+  const r=await fetch("data/marks.json");if(!r.ok)throw Error();
+  const d=await r.json();allMarks=Array.isArray(d.marks)?d.marks:[];
+  populateCounties();refreshMarkResults();
+ }catch(e){c.innerHTML='<div class="empty-state"><strong>Fishing marks unavailable</strong><p>Mark data could not be loaded. No unverified information has been added as a fallback.</p></div>'}
+}
+
+document.getElementById("mark-form")?.addEventListener("submit",e=>{
+ e.preventDefault();const m=document.getElementById("submit-message");
+ if(m){m.hidden=false;m.textContent="Thanks. Your mark has been prepared as a community submission. It will not appear as verified until independently checked."}
+ e.target.reset();
 });
 
-initialiseMap();
-loadMarks();
+initialiseMap();loadMarks();
