@@ -70,8 +70,11 @@ function renderMarks(marks){
  const c=document.querySelector(".marks-list");if(!c)return;
  if(!marks.length){c.innerHTML='<div class="empty-state"><strong>No matching marks</strong><p>Try a larger radius or another county. No unverified data is promoted as verified.</p></div>';return}
  c.innerHTML=marks.map(m=>{
-  const label=m.status==="verified"?"Verified mark":"Community submission — unverified";
-  const cls=m.status==="verified"?"verified":"unverified";
+  const historical=m.status==="historical";
+  const label=m.status==="verified"?"Verified mark":historical?"Historical mark":m.status==="community_unverified"?"Community submission — unverified":"Unverified mark";
+  const cls=m.status==="verified"?"verified":historical?"historical":"unverified";
+  const lastChecked=m.source?.checked_at?"<p><strong>Last checked:</strong> "+escapeHtml(m.source.checked_at)+"</p>":"<p><strong>Last checked:</strong> Not recorded</p>";
+  const historicalWarning=historical?"<p class=\"historical-warning\"><strong>Historical information:</strong> this is a genuine recorded mark, but current access, conditions and restrictions have not been confirmed. Check locally before fishing.</p>":"";
   const dist=Number.isFinite(m._distance)?"<p><strong>Distance:</strong> "+m._distance.toFixed(1)+" miles</p>":"";
   const rating=m.rating&&Number(m.rating.count)>0?"<p><strong>★★★★★</strong> "+Number(m.rating.average).toFixed(1)+" / 5 ("+m.rating.count+" ratings)</p>":"<p><strong>★★★★★</strong> Not yet rated</p>";
   const species=(m.species||[]).length?"<p><strong>Species:</strong> "+escapeHtml(m.species.join(", "))+"</p>":"";
@@ -80,7 +83,7 @@ function renderMarks(marks){
   const report='<button class="report-button" type="button" data-report-mark="'+escapeHtml(m.id||"")+'" data-report-name="'+escapeHtml(m.name||"this mark")+'">🚨 Report a problem with this mark</button>';
   const parking=m.parking?"<p><strong>Parking:</strong> "+escapeHtml(m.parking)+"</p>":"";
   const accuracy=m.location?.accuracy==="approximate_venue_midpoint"?"<p><em>Map position is an approximate venue midpoint, not an exact casting position.</em></p>":m.location?.accuracy==="area_only"?"<p><em>Fishing area only — no exact GPS position published. Parking/access may be mapped separately.</em></p>":"";
-  return '<article class="mark-result"><span class="badge '+cls+'">'+label+'</span><h3>'+escapeHtml(m.name||"Unnamed mark")+'</h3><p>'+escapeHtml(m.description||"No description provided.")+'</p>'+dist+rating+species+source+parking+access+accuracy+report+'</article>';
+  return '<article class="mark-result"><span class="badge '+cls+'">'+label+'</span><h3>'+escapeHtml(m.name||"Unnamed mark")+'</h3><p>'+escapeHtml(m.description||"No description provided.")+'</p>'+dist+rating+species+source+lastChecked+historicalWarning+parking+access+accuracy+report+'</article>';
  }).join("");
 }
 
