@@ -1146,6 +1146,48 @@
         "average": 0,
         "count": 0
       }
+    },
+    {
+      "id": "dorset-durdle-door",
+      "name": "Durdle Door",
+      "status": "verified",
+      "location": {
+        "latitude": null,
+        "longitude": null,
+        "area": "Lulworth, Dorset",
+        "accuracy": "area_only"
+      },
+      "description": "Published SeaAngler shore-fishing venue at Durdle Door. The fishing area is recorded as a named coastal area rather than assigning an exact casting coordinate.",
+      "species": [
+        "Conger eel",
+        "Mackerel",
+        "Bream",
+        "Bass",
+        "Wrasse"
+      ],
+      "tips": [
+        "SeaAngler reports a rising tide as productive.",
+        "The venue is a shingle beach and access conditions should be checked before setting out."
+      ],
+      "access": "SeaAngler reports parking close to the Lulworth caravan site. The exact fishing position is not assigned a GPS pin.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "UK sea-fishing catch report covering Durdle Door",
+        "url": "https://www.seaangler.co.uk/fishing-news/uk-sea-fishing-catch-reports-27-10-09/",
+        "location_reference": "Named Durdle Door/Lulworth coastal area; no exact fishing coordinate inferred.",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Parking is reported close to the Lulworth caravan site; current access and charges should be checked before travel.",
+      "parking_cost": "check current local charges",
+      "access_difficulty": "difficult",
+      "easy_access": false,
+      "accessible_access": false,
+      "rating": {
+        "average": 0,
+        "count": 0
+      }
     }
   ]
 }
