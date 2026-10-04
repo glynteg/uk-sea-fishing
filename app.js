@@ -64,8 +64,14 @@ function renderMarks(marks){
   const species=(mark.species||[]).length ? "<p><strong>Species:</strong> "+escapeHtml(mark.species.join(", "))+"</p>" : "";
   const source=mark.source?.publication ? "<p><strong>Verified source:</strong> "+escapeHtml(mark.source.publication)+"</p>" : "";
   const w3w=mark.location?.what3words ? "<p><strong>What3words:</strong> "+escapeHtml(mark.location.what3words)+"</p>" : "";
+  const parking=mark.parking ? "<p><strong>Parking:</strong> "+escapeHtml(mark.parking)+"</p>" : "";
+  const access=mark.access ? "<p><strong>Access:</strong> "+escapeHtml(mark.access)+"</p>" : "";
+  const accessW3w=mark.access_what3words ? "<p><strong>Parking / access What3words:</strong> "+escapeHtml(mark.access_what3words)+"</p>" : "";
+  const difficulty=mark.access_difficulty ? "<p><strong>Access difficulty:</strong> "+escapeHtml(mark.access_difficulty)+"</p>" : "";
+  const easier=mark.easy_access===true ? "<p><strong>✓ Easier access</strong></p>" : "";
+  const accessible=mark.accessible_access===true ? "<p><strong>Accessible fishing position</strong></p>" : "";
   const accuracy=mark.location?.accuracy==="approximate_venue_midpoint" ? "<p><em>Map location is an approximate venue midpoint, not an exact casting position.</em></p>" : "";
-  return '<article class="mark-result"><span class="badge '+className+'">'+label+'</span><h3>'+escapeHtml(mark.name||"Unnamed mark")+'</h3><p>'+escapeHtml(mark.description||"No description provided.")+'</p>'+species+source+w3w+accuracy+'</article>';
+  return '<article class="mark-result"><span class="badge '+className+'">'+label+'</span><h3>'+escapeHtml(mark.name||"Unnamed mark")+'</h3><p>'+escapeHtml(mark.description||"No description provided.")+'</p>'+species+source+w3w+parking+access+accessW3w+difficulty+easier+accessible+accuracy+'</article>';
  }).join("");
 }
 
@@ -73,16 +79,27 @@ function escapeHtml(value){
  return String(value).replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
 }
 
+const easyAccessFilter=document.getElementById("easy-access-filter");
+const accessibleFilter=document.getElementById("accessible-filter");
 const search=document.getElementById("search");
-if(search) search.addEventListener("input",e=>{
- const query=e.target.value.trim().toLowerCase();
- const filtered=!query?allMarks:allMarks.filter(mark=>{
+
+function refreshMarkResults(){
+ const query=search?.value.trim().toLowerCase()||"";
+ const searched=!query?allMarks:allMarks.filter(mark=>{
   const text=[mark.name,mark.description,mark.location?.area,...(mark.species||[])].join(" ").toLowerCase();
   return text.includes(query);
  });
+ const filtered=searched.filter(mark=>{
+  const easyOk=!easyAccessFilter?.checked || mark.easy_access===true;
+  const accessibleOk=!accessibleFilter?.checked || mark.accessible_access===true;
+  return easyOk && accessibleOk;
+ });
  renderMarks(filtered);
  renderMapMarkers(filtered);
-});
+}
+if(search) search.addEventListener("input",refreshMarkResults);
+if(easyAccessFilter) easyAccessFilter.addEventListener("change",refreshMarkResults);
+if(accessibleFilter) accessibleFilter.addEventListener("change",refreshMarkResults);
 
 const markForm=document.getElementById("mark-form");
 if(markForm) markForm.addEventListener("submit",e=>{
