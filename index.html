@@ -12,7 +12,6 @@
   <div class="brand"><span class="brand-mark">⚓</span><div><strong>UK Sea Fishing</strong><small>Find. Fish. Share.</small></div></div>
   <button class="premium">Premium</button>
 </header>
-
 <main>
 <section class="hero">
   <p class="eyebrow">UK COASTAL FISHING</p>
@@ -20,23 +19,23 @@
   <p>Explore trusted fishing information and local knowledge from anglers across the UK.</p>
   <div class="search"><span>⌕</span><input id="search" placeholder="Search marks, areas or species"></div>
 </section>
-
 <section class="quick-grid">
   <button class="quick" data-section="marks"><span>📍</span><b>Fishing Marks</b><small>Browse the map</small></button>
   <button class="quick" data-section="tides"><span>🌊</span><b>Tides</b><small>Next 36 hours</small></button>
   <button class="quick" data-section="weather"><span>☁️</span><b>Weather</b><small>Fishing conditions</small></button>
   <button class="quick" data-section="submit"><span>➕</span><b>Add a Mark</b><small>Share local knowledge</small></button>
 </section>
-
-<section class="section">
-  <div class="section-head"><div><p class="eyebrow">FISHING MARKS</p><h2>Explore the coast</h2></div><button class="text-btn" data-section="marks">View all</button></div>
+<section class="section" id="marks">
+  <div class="section-head"><div><p class="eyebrow">FISHING MARKS</p><h2>Explore the coast</h2></div></div>
   <div class="notice"><span>✓</span><div><b>Trust matters</b><p>Verified marks are checked. Community submissions are clearly labelled until independently verified.</p></div></div>
-  <div id="marks" class="mark-card">
+  <div class="mark-card">
     <div class="map-placeholder"><span>🗺️</span><b>Fishing map</b><small>Verified marks will appear here</small></div>
-    <div class="mark-body"><span class="badge verified">✓ VERIFIED</span><h3>No fishing marks added yet</h3><p>We're building the verified database. Never rely on an unverified location as confirmed fishing information.</p></div>
+    <div class="mark-body">
+      <span class="badge verified">✓ VERIFIED</span>
+      <div class="marks-list"><div class="empty-state"><strong>Loading fishing marks…</strong></div></div>
+    </div>
   </div>
 </section>
-
 <section class="section" id="conditions">
   <div class="section-head"><div><p class="eyebrow">CONDITIONS</p><h2>Plan your session</h2></div></div>
   <div class="condition-grid">
@@ -44,12 +43,10 @@
     <div class="condition"><span>☁️</span><b>Weather</b><strong>—</strong><small>Choose a location</small></div>
   </div>
 </section>
-
 <section class="section" id="submit">
   <div class="submit-card"><span>🎣</span><div><p class="eyebrow">LOCAL KNOWLEDGE</p><h2>Know a good mark?</h2><p>Suggest a mark, species, tip or photo. Community information stays labelled until it has been checked.</p><button class="primary">Suggest a mark</button></div></div>
 </section>
 </main>
-
 <nav class="bottom-nav">
   <button class="active" data-section="home">⌂<small>Home</small></button>
   <button data-section="marks">📍<small>Marks</small></button>
