@@ -15,7 +15,7 @@
 <button class="quick" data-section="weather"><span>☁️</span><b>Weather</b><small>Fishing conditions</small></button>
 <button class="quick" data-section="submit"><span>➕</span><b>Add a Mark</b><small>Share local knowledge</small></button>
 </section>
-<section class="section" id="marks"><div class="section-head"><div><p class="eyebrow">FISHING MARKS</p><h2>Explore the coast</h2></div></div>
+<section class="section" id="marks"><div class="section-head"><div><p class="eyebrow">FISHING MARKS</p><h2>Explore the coast</h2></div></div><div class="mark-filters" aria-label="Fishing mark filters"><label><input type="checkbox" id="easy-access-filter"> Easier access</label><label><input type="checkbox" id="accessible-filter"> Accessible</label></div>
 <div class="notice"><span>✓</span><div><b>Trust matters</b><p>Verified marks are checked. Community submissions are clearly labelled until independently verified.</p></div></div>
 <div class="mark-card"><div id="fishing-map" class="map-container"></div><div class="mark-body"><div class="marks-list"><div class="empty-state"><strong>Loading fishing marks…</strong></div></div></div></div></section>
 <section class="section" id="conditions"><div class="section-head"><div><p class="eyebrow">CONDITIONS</p><h2>Plan your session</h2></div></div><div class="condition-grid"><div class="condition"><span>🌊</span><b>Tides</b><strong>—</strong><small>Choose a location</small></div><div class="condition"><span>☁️</span><b>Weather</b><strong>—</strong><small>Choose a location</small></div></div></section>
@@ -25,7 +25,7 @@
 <label>Area / town<input name="area" required placeholder="Nearest town or area"></label>
 <label>Description<textarea name="description" required placeholder="Describe the mark and what makes it useful"></textarea></label>
 <label>Species seen or caught<textarea name="species" placeholder="List species you have personally recorded"></textarea></label>
-<label>Access information<textarea name="access" placeholder="Only include access details you know to be accurate"></textarea></label>
+<label>Parking information<textarea name="parking" placeholder="Verified car park or parking information"></textarea></label><label>Access information<textarea name="access" placeholder="Verified route and access information"></textarea></label><label>Parking / access What3words <small>(optional — never guess)</small><input name="access_what3words" placeholder="///word.word.word"></label><label>Access difficulty<select name="access_difficulty"><option value="">Not known</option><option value="easy">Easy</option><option value="moderate">Moderate</option><option value="difficult">Difficult</option></select></label>
 <label>Coordinates <small>(optional — never guess)</small><input name="coordinates" placeholder="Paste coordinates if you have verified them"></label>
 <button class="primary" type="submit">Submit mark for review</button>
 <p id="submit-message" class="form-message" hidden></p>
