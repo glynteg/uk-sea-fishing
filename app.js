@@ -22,7 +22,7 @@ function renderMapMarkers(marks){
  mapMarkers.forEach(m=>m.remove()); mapMarkers=[];
  marks.filter(m=>m.status==="verified"&&Number.isFinite(Number(m.location?.latitude))&&Number.isFinite(Number(m.location?.longitude))).forEach(mark=>{
   const marker=L.marker([+mark.location.latitude,+mark.location.longitude]).addTo(fishingMap);
-  const accuracy=mark.location?.accuracy==="approximate_venue_midpoint"?"<br><em>Approximate venue midpoint.</em>":"";
+  const accuracy=mark.location?.accuracy==="approximate_venue_midpoint"?"<br><em>Approximate venue midpoint.</em>":mark.location?.accuracy==="area_only"?"<br><em>Fishing area only — no exact GPS position published.</em>":"";
   marker.bindPopup("<strong>"+escapeHtml(mark.name||"Verified mark")+"</strong><br>"+escapeHtml(mark.location?.area||"")+accuracy);
   mapMarkers.push(marker);
  });
@@ -78,7 +78,7 @@ function renderMarks(marks){
   const source=m.source?.publication?"<p><strong>Verified source:</strong> "+escapeHtml(m.source.publication)+"</p>":"";
   const access=m.access?"<p><strong>Access:</strong> "+escapeHtml(m.access)+"</p>":"";
   const parking=m.parking?"<p><strong>Parking:</strong> "+escapeHtml(m.parking)+"</p>":"";
-  const accuracy=m.location?.accuracy==="approximate_venue_midpoint"?"<p><em>Map position is an approximate venue midpoint, not an exact casting position.</em></p>":"";
+  const accuracy=m.location?.accuracy==="approximate_venue_midpoint"?"<p><em>Map position is an approximate venue midpoint, not an exact casting position.</em></p>":m.location?.accuracy==="area_only"?"<p><em>Fishing area only — no exact GPS position published. Parking/access may be mapped separately.</em></p>":"";
   return '<article class="mark-result"><span class="badge '+cls+'">'+label+'</span><h3>'+escapeHtml(m.name||"Unnamed mark")+'</h3><p>'+escapeHtml(m.description||"No description provided.")+'</p>'+dist+rating+species+source+parking+access+accuracy+'</article>';
  }).join("");
 }
