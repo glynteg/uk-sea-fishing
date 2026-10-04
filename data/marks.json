@@ -795,6 +795,312 @@
       "access_difficulty": "difficult",
       "easy_access": false,
       "accessible_access": false
+    },
+    {
+      "id": "dorset-eype",
+      "name": "Eype",
+      "status": "verified",
+      "location": {
+        "latitude": 50.7145,
+        "longitude": -2.782,
+        "area": "Eype, Dorset",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "SeaAngler published Eype as a Dorset sea-fishing mark offering a wide variety of species from May through the end of the year.",
+      "species": [
+        "Ray",
+        "Bass",
+        "Wrasse",
+        "Mackerel",
+        "Scad",
+        "Silver eel",
+        "Dogfish",
+        "Bull huss",
+        "Pouting",
+        "Conger eel"
+      ],
+      "tips": [
+        "SeaAngler reports the best action is on a night flood tide, especially after a blow.",
+        "The western end is increasingly snaggy and tackle losses are expected."
+      ],
+      "access": "SeaAngler directs anglers to Eype via a minor road and reports a small cliff-top car park.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Eype fishing mark",
+        "url": "https://www.seaangler.co.uk/spot/eype-sea-fishing-mark/",
+        "location_reference": "Venue coordinates independently checked against geographic sources; coordinates are approximate venue locations, not claimed to be exact fishing positions.",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Small cliff-top car park.",
+      "parking_cost": "not stated",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false
+    },
+    {
+      "id": "dorset-seatown",
+      "name": "Seatown",
+      "status": "verified",
+      "location": {
+        "latitude": 50.7212,
+        "longitude": -2.82527,
+        "area": "Seatown, Dorset",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "SeaAngler published Seatown as a Dorset mark between West Bay and Lyme Regis, with a shelving shingle beach and rougher ground farther west.",
+      "species": [
+        "Small-eyed ray",
+        "Bass",
+        "Dogfish",
+        "Pouting",
+        "Rockling",
+        "Wrasse",
+        "Conger eel"
+      ],
+      "tips": [
+        "SeaAngler reports the venue can come alive after a south-westerly blow when the water is coloured.",
+        "SeaAngler warns the beach can be dangerous with a big swell."
+      ],
+      "access": "A small stream runs beside the car park and the favoured fishing area is about 300–400 metres to the left under the cliff.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Seatown fishing mark",
+        "url": "https://www.seaangler.co.uk/spot/seatown/",
+        "location_reference": "Venue coordinates independently checked against geographic sources; coordinates are approximate venue locations, not claimed to be exact fishing positions.",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Car park beside the beach.",
+      "parking_cost": "not stated",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false
+    },
+    {
+      "id": "dorset-monmouth-beach",
+      "name": "Monmouth Beach",
+      "status": "verified",
+      "location": {
+        "latitude": 50.71918,
+        "longitude": -2.94325,
+        "area": "Lyme Regis, Dorset",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "SeaAngler published Monmouth Beach as a rough-ground fishing venue at Lyme Regis, with rocky scars extending into Chippel Bay.",
+      "species": [
+        "Dogfish",
+        "Pouting",
+        "Rockling",
+        "Ballan wrasse",
+        "Bull huss",
+        "Small-eyed ray"
+      ],
+      "tips": [
+        "SeaAngler reports the venue is worth visiting from mid-April onwards.",
+        "As the tide floods, fish move along the edge of rocky shelves and gullies."
+      ],
+      "access": "Monmouth Beach is accessed from Lyme Regis; the fishing ground changes from shingle and sand to rough ground and rocky scars toward low water.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Monmouth Beach fishing mark",
+        "url": "https://www.seaangler.co.uk/spot/a-sea-fishing-guide-to-monmouth-beach/",
+        "location_reference": "Venue coordinates independently checked against geographic sources; coordinates are approximate venue locations, not claimed to be exact fishing positions.",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Local Lyme Regis parking applies; current restrictions and charges should be checked before travel.",
+      "parking_cost": "check current local charges",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false
+    },
+    {
+      "id": "hampshire-weston-shore",
+      "name": "Weston Shore",
+      "status": "verified",
+      "location": {
+        "latitude": 50.89055,
+        "longitude": -1.38259,
+        "area": "Weston, Southampton, Hampshire",
+        "accuracy": "shore_location"
+      },
+      "description": "SeaAngler published Weston Shore as a long shingle beach on Southampton Water giving way to shallow mud and sand.",
+      "species": [
+        "Flounder",
+        "Silver eel",
+        "Small bass",
+        "Mullet"
+      ],
+      "tips": [
+        "SeaAngler reports flounder in April and October to January, with summer producing other species."
+      ],
+      "access": "SeaAngler directs anglers via Weston and the A3025. Weston Shore has shingle beach and intertidal mudflat.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Weston Shore fishing mark",
+        "url": "https://www.seaangler.co.uk/spot/weston-shore-sea-fishing-mark/",
+        "location_reference": "Venue coordinates independently checked against geographic sources; coordinates are approximate venue locations, not claimed to be exact fishing positions.",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Parking is available along the Weston Shore area; current local restrictions should be checked.",
+      "parking_cost": "not stated",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false
+    },
+    {
+      "id": "hampshire-gypsy-lane-lepe",
+      "name": "Gypsy Lane, Lepe",
+      "status": "verified",
+      "location": {
+        "latitude": 50.7768,
+        "longitude": -1.3555,
+        "area": "Lepe, Hampshire",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "SeaAngler published Gypsy Lane at Lepe as a shallow mark with a cast reaching deeper water in the Beaulieu River, fishing from July through February.",
+      "species": [
+        "Bass",
+        "Smoothhound",
+        "Silver eel",
+        "Stingray",
+        "Black bream",
+        "Flounder",
+        "Pout",
+        "Rockling",
+        "Codling"
+      ],
+      "tips": [
+        "SeaAngler recommends evening sessions in summer.",
+        "SeaAngler reports September can produce summer species and black bream, while flounder become a main daytime target later in the year."
+      ],
+      "access": "SeaAngler describes a quiet venue reached via Gypsy Lane at Lepe.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Gypsy Lane, Lepe fishing mark",
+        "url": "https://www.seaangler.co.uk/spot/gypsy-lane-sea-fishing-mark-lepe/",
+        "location_reference": "Venue coordinates independently checked against geographic sources; coordinates are approximate venue locations, not claimed to be exact fishing positions.",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "SeaAngler reports free parking.",
+      "parking_cost": "free",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false
+    },
+    {
+      "id": "west-sussex-shoreham-beach",
+      "name": "Shoreham Beach",
+      "status": "verified",
+      "location": {
+        "latitude": 50.82709,
+        "longitude": -0.26205,
+        "area": "Shoreham-by-Sea, West Sussex",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "SeaAngler published Shoreham Beach as a shallow beach where rock groynes provide hotspots.",
+      "species": [
+        "Thin-lipped mullet",
+        "Bass",
+        "Flounder",
+        "Garfish",
+        "Eels"
+      ],
+      "tips": [
+        "SeaAngler lists harbour rag, peeler crab, lugworm and ragworm as recommended baits."
+      ],
+      "access": "SeaAngler directs anglers to the beach via West Beach Road.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Shoreham Beach fishing mark",
+        "url": "https://www.seaangler.co.uk/spot/shoreham-beach-sea-fishing-mark/",
+        "location_reference": "Venue coordinates independently checked against geographic sources; coordinates are approximate venue locations, not claimed to be exact fishing positions.",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Car parking behind the beach huts, according to SeaAngler.",
+      "parking_cost": "not stated",
+      "access_difficulty": "easy",
+      "easy_access": true,
+      "accessible_access": false
+    },
+    {
+      "id": "west-sussex-rottingdean",
+      "name": "Rottingdean",
+      "status": "verified",
+      "location": {
+        "latitude": 50.8172,
+        "longitude": -0.0597,
+        "area": "Rottingdean, West Sussex",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "SeaAngler published Rottingdean as a popular bass mark with convenient beach access beside a public car park.",
+      "species": [
+        "Bass",
+        "Cod"
+      ],
+      "tips": [
+        "SeaAngler lists summer for bass and winter for cod."
+      ],
+      "access": "SeaAngler says the beach is conveniently accessible next to the public car park.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Rottingdean fishing mark",
+        "url": "https://www.seaangler.co.uk/spot/rottingdean-sea-fishing-mark/",
+        "location_reference": "Venue coordinates independently checked against geographic sources; coordinates are approximate venue locations, not claimed to be exact fishing positions.",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Public car park behind the White Horse pub, according to SeaAngler.",
+      "parking_cost": "not stated",
+      "access_difficulty": "easy",
+      "easy_access": true,
+      "accessible_access": false
+    },
+    {
+      "id": "west-sussex-selsey-west-beach",
+      "name": "Selsey West Beach",
+      "status": "verified",
+      "location": {
+        "latitude": 50.72335,
+        "longitude": -0.7925,
+        "area": "Selsey, West Sussex",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "SeaAngler identified Selsey, with West Beach the popular area, as a standout venue for smoothhound and tope.",
+      "species": [
+        "Smoothhound",
+        "Tope"
+      ],
+      "tips": [
+        "SeaAngler reports evening flood tides in calm weather are considered best.",
+        "SeaAngler identifies peeler crab and squid as favourite baits."
+      ],
+      "access": "SeaAngler directs anglers to Selsey Bill and describes West Beach as a steep shingle beach with deep water close in.",
+      "photos": [],
+      "source": {
+        "type": "fishing_publication",
+        "publication": "SeaAngler",
+        "reference": "Selsey West Beach fishing mark",
+        "url": "https://www.seaangler.co.uk/fishing-news/ten-top-smoothound-venues/",
+        "location_reference": "Venue coordinates independently checked against geographic sources; coordinates are approximate venue locations, not claimed to be exact fishing positions.",
+        "checked_at": "2026-10-04"
+      },
+      "parking": "Parking arrangements vary around Selsey; current local restrictions should be checked.",
+      "parking_cost": "check current local charges",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false
     }
   ]
 }
