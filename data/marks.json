@@ -1511,6 +1511,64 @@
         "average": 0,
         "count": 0
       }
+    },
+    {
+      "id": "anglesey-holyhead-breakwater",
+      "name": "Holyhead Breakwater",
+      "status": "verified",
+      "location": {
+        "latitude": 53.3254,
+        "longitude": -4.6363,
+        "area": "Holyhead, Anglesey",
+        "accuracy": "breakwater_access_location"
+      },
+      "description": "Established Holyhead sea-fishing venue on the long breakwater protecting Holyhead Harbour. The mark is fished along the breakwater, including the harbour side and the seaward/ocean side. The app treats this as a long venue rather than a single casting point.",
+      "species": [
+        "Mackerel",
+        "Pollack",
+        "Coalfish",
+        "Wrasse",
+        "Conger eel",
+        "Dogfish",
+        "Whiting",
+        "Pouting",
+        "Dab",
+        "Poor cod",
+        "Codling",
+        "Smoothhound",
+        "Rays",
+        "Flatfish",
+        "Rockling"
+      ],
+      "tips": [
+        "British Sea Fishing reports fishing around the breakwater and identifies the outer end as a particularly productive area.",
+        "Angling Trust competition records confirm organised sea-angling matches on both the inside and the back/seaward side of the breakwater.",
+        "The exposed outer sections can become unsafe in large waves; conditions must be assessed before fishing."
+      ],
+      "access": "The breakwater is accessed on foot. Local angler information supplied for this app states that anglers can park on the road and walk to the breakwater. Access and fishing can be affected by harbour operations, maintenance or organised competitions; obey current signs and instructions.",
+      "photos": [],
+      "source": {
+        "type": "cross_referenced_fishing_sources",
+        "publication": "British Sea Fishing; Where's The Fish?; Angling Trust; Cadw-listed location",
+        "reference": "Cross-reference confirming Holyhead Breakwater as an established fishing venue and competition venue, with fishing recorded on the inside and back/seaward side.",
+        "url": "https://britishseafishing.co.uk/wales/",
+        "secondary_urls": [
+          "https://wheresthefish.uk/wales/isle-of-anglesey/holyhead-breakwater",
+          "https://anglingtrust.net/our-competitions/sea-competitions/angling-trust-sea-league/match-listings/",
+          "https://anglingtrust.net/our-competitions/sea-competitions/angling-trust-sea-league/results/"
+        ],
+        "location_reference": "Cadw-listed Holyhead Breakwater location at 53.3254, -4.6363; this is the breakwater location, not an invented casting position.",
+        "checked_at": "2026-10-05"
+      },
+      "parking": "Local angler information supplied for this app states that parking is available on the road before walking to the breakwater. Check current road restrictions, signs and harbour requirements on the day.",
+      "parking_cost": "check current local restrictions",
+      "access_difficulty": "difficult",
+      "easy_access": false,
+      "accessible_access": false,
+      "rating": {
+        "average": 0,
+        "count": 0
+      }
     }
   ]
 }
