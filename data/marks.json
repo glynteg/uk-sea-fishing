@@ -1363,6 +1363,154 @@
       "access_difficulty": "moderate",
       "easy_access": false,
       "accessible_access": false
+    },
+    {
+      "id": "anglesey-red-wharf-bay",
+      "name": "Red Wharf Bay",
+      "status": "verified",
+      "location": {
+        "latitude": 53.2965,
+        "longitude": -4.20711,
+        "area": "Red Wharf Bay, Anglesey",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "Established Anglesey beach-fishing venue on the long sandy Red Wharf Bay (Traeth Coch), independently cross-referenced across recognised fishing sources and current local visitor information.",
+      "species": [
+        "Plaice",
+        "Flounder",
+        "Dab",
+        "Thornback ray",
+        "Dogfish",
+        "Whiting",
+        "Bass",
+        "Smoothhound"
+      ],
+      "tips": [
+        "Fishing sources describe the flood and early ebb as productive periods.",
+        "The bay is tide-dependent and includes broad tidal flats and channels; conditions and access should be checked before fishing."
+      ],
+      "access": "Open beach access with parking in the Red Wharf Bay area. Local access, vehicle restrictions and conservation notices should be checked before travel.",
+      "photos": [],
+      "source": {
+        "type": "cross_referenced_fishing_sources",
+        "publication": "British Sea Fishing; Where's The Fish?; Fishing in Wales; Visit Anglesey",
+        "reference": "Cross-reference of established fishing information and current local venue information",
+        "url": "https://britishseafishing.co.uk/wales/",
+        "secondary_urls": [
+          "https://wheresthefish.uk/wales/isle-of-anglesey/red-wharf-bay",
+          "https://fishingwales.net/fishing-locations/red-wharf-bay/",
+          "https://www.visitanglesey.co.uk/en-gb/explore/wildlife/red-wharf-bay-and-pentraeth-forest"
+        ],
+        "location_reference": "Approximate bay centre cross-checked against published geographic coordinates; not an exact casting position.",
+        "checked_at": "2026-10-05"
+      },
+      "parking": "Parking available in the Red Wharf Bay area; current charges and restrictions should be checked.",
+      "parking_cost": "check current local charges",
+      "access_difficulty": "easy",
+      "easy_access": true,
+      "accessible_access": false,
+      "rating": {
+        "average": 0,
+        "count": 0
+      }
+    },
+    {
+      "id": "anglesey-beaumaris-pier",
+      "name": "Beaumaris Pier",
+      "status": "verified",
+      "location": {
+        "latitude": 53.26136,
+        "longitude": -4.09009,
+        "area": "Beaumaris, Anglesey",
+        "accuracy": "pier_location"
+      },
+      "description": "Recognised Menai Strait fishing venue at Beaumaris Pier, with angling facilities and established fishing information for mixed species in strong tidal flow.",
+      "species": [
+        "Mackerel",
+        "Pollack",
+        "Pouting",
+        "Whiting",
+        "Flounder",
+        "Dab",
+        "Plaice",
+        "Dogfish"
+      ],
+      "tips": [
+        "Fishing is tide-dependent because of the strong Menai Strait flow.",
+        "The outer pier provides deeper water, but boat traffic and fast current require care."
+      ],
+      "access": "Public Beaumaris Pier. Published information identifies angling facilities at the seaward end; follow current pier notices and local harbour instructions.",
+      "photos": [],
+      "source": {
+        "type": "cross_referenced_fishing_sources",
+        "publication": "British Sea Fishing; Where's The Fish?; Anglesey County Council / local pier information",
+        "reference": "Cross-reference of established fishing information, pier location and angling facilities",
+        "url": "https://britishseafishing.co.uk/wales/",
+        "secondary_urls": [
+          "https://wheresthefish.uk/wales/isle-of-anglesey/beaumaris-pier",
+          "https://www.anglesey.gov.wales/en/Residents/Maritime/Moorings.aspx"
+        ],
+        "location_reference": "Beaumaris Pier coordinates cross-checked against Wikidata and Geograph.",
+        "checked_at": "2026-10-05"
+      },
+      "parking": "Nearby town parking; current local charges and restrictions should be checked.",
+      "parking_cost": "check current local charges",
+      "access_difficulty": "easy",
+      "easy_access": true,
+      "accessible_access": false,
+      "rating": {
+        "average": 0,
+        "count": 0
+      }
+    },
+    {
+      "id": "anglesey-moelfre",
+      "name": "Moelfre",
+      "status": "verified",
+      "location": {
+        "latitude": 53.35208,
+        "longitude": -4.23523,
+        "area": "Moelfre, Anglesey",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "Established Anglesey mixed-ground fishing venue around Moelfre harbour and nearby rocky shoreline, independently cross-referenced with fishing publications and local Anglesey information.",
+      "species": [
+        "Mackerel",
+        "Wrasse",
+        "Pollack",
+        "Pouting",
+        "Dogfish",
+        "Whiting",
+        "Codling",
+        "Conger eel"
+      ],
+      "tips": [
+        "British Sea Fishing identifies Moelfre Rocks as a summer mackerel, wrasse and pollack venue.",
+        "Local information confirms Moelfre beach/harbour is used for fishing; exposed rocky sections require appropriate sea-state judgement."
+      ],
+      "access": "Moelfre harbour and beach area has public access, parking and coastal paths. Exact access to individual rocky positions varies and should be checked on arrival.",
+      "photos": [],
+      "source": {
+        "type": "cross_referenced_fishing_sources",
+        "publication": "British Sea Fishing; Where's The Fish?; local Anglesey information",
+        "reference": "Cross-reference of established fishing information with local venue/access information",
+        "url": "https://britishseafishing.co.uk/wales/",
+        "secondary_urls": [
+          "https://wheresthefish.uk/wales/isle-of-anglesey/moelfre",
+          "https://www.goanglesey.com/moelfre/"
+        ],
+        "location_reference": "Approximate Moelfre harbour/village position cross-checked against published geographic sources.",
+        "checked_at": "2026-10-05"
+      },
+      "parking": "Parking available in the Moelfre area; current charges and restrictions should be checked.",
+      "parking_cost": "check current local charges",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false,
+      "rating": {
+        "average": 0,
+        "count": 0
+      }
     }
   ]
 }
