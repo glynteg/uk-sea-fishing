@@ -1188,6 +1188,181 @@
         "average": 0,
         "count": 0
       }
+    },
+    {
+      "id": "hampshire-southsea-castle",
+      "name": "Southsea Castle",
+      "status": "verified",
+      "location": {
+        "latitude": 50.7781,
+        "longitude": -1.0888,
+        "area": "Southsea, Portsmouth, Hampshire",
+        "accuracy": "approximate_venue_midpoint"
+      },
+      "description": "Established Southsea seafront shore-fishing mark beside Southsea Castle. Current fishing information identifies the public shingle and sand frontage as a shore mark; established Portsmouth fishing guidance also identifies the area as a recognised mark.",
+      "species": [
+        "Bass",
+        "Pouting",
+        "Plaice",
+        "Dover sole",
+        "Thornback ray",
+        "Mackerel",
+        "Garfish",
+        "Scad"
+      ],
+      "tips": [
+        "Use suitable public beach/seafront frontage rather than castle walls, ramparts or fenced areas.",
+        "The seafront can be very busy; quieter periods are more practical."
+      ],
+      "access": "Public Southsea seafront access. The castle is a managed heritage attraction; obey current signs and event restrictions.",
+      "photos": [],
+      "source": {
+        "type": "cross_referenced_fishing_sources",
+        "publication": "Where's The Fish?; Total Fishing; Southsea Castle official visitor information",
+        "reference": "Independent cross-reference of current fishing information with official/location sources",
+        "url": "https://wheresthefish.uk/south-east/hampshire/southsea-castle",
+        "secondary_urls": [
+          "https://www.total-fishing.com/portsmouth-and-southsea-hampshire/",
+          "https://southseacastle.co.uk/visit/"
+        ],
+        "location_reference": "Southsea Castle location checked against published geographic mapping",
+        "checked_at": "2026-10-05"
+      },
+      "parking": "Wider Southsea seafront parking; check current charges and restrictions",
+      "parking_cost": "check current local charges",
+      "access_difficulty": "easy",
+      "easy_access": true,
+      "accessible_access": false
+    },
+    {
+      "id": "hampshire-portchester-castle",
+      "name": "Portchester Castle",
+      "status": "verified",
+      "location": {
+        "latitude": 50.837415,
+        "longitude": -1.114906,
+        "area": "Portchester, Hampshire",
+        "accuracy": "official_access_location"
+      },
+      "description": "Recognised Portsmouth Harbour shore-fishing mark at Portchester, with fishing from suitable tidal foreshore and public harbour-edge areas rather than from the historic castle structure itself.",
+      "species": [
+        "Flounder",
+        "Bass",
+        "Mullet",
+        "Pouting",
+        "Whiting",
+        "Plaice"
+      ],
+      "tips": [
+        "The flood and high-water period is important at this shallow harbour mark.",
+        "Do not assume castle grounds or walls are fishing access; use lawful public shoreline and follow site notices."
+      ],
+      "access": "Fishing is associated with the tidal waterfront around Portchester rather than the castle itself. English Heritage confirms the castle is a managed historic site; check fishing permission at the exact shoreline position.",
+      "photos": [],
+      "source": {
+        "type": "cross_referenced_fishing_sources",
+        "publication": "Where's The Fish?; Fishmag; English Heritage",
+        "reference": "Independent cross-reference of current fishing information with official/location sources",
+        "url": "https://wheresthefish.uk/south-east/hampshire/portchester-castle",
+        "secondary_urls": [
+          "https://www.fishmag.co.uk/fishing-hampshire/",
+          "https://www.english-heritage.org.uk/visit/places/portchester-castle/plan-your-visit/directions/"
+        ],
+        "location_reference": "English Heritage published latitude/longitude for Portchester Castle access location",
+        "checked_at": "2026-10-05"
+      },
+      "parking": "Charged parking 200m from castle entrance; waterfront arrangements may differ",
+      "parking_cost": "charged parking near castle",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false
+    },
+    {
+      "id": "hampshire-round-tower-portsmouth",
+      "name": "Round Tower",
+      "status": "verified",
+      "location": {
+        "latitude": 50.79052,
+        "longitude": -1.1088424,
+        "area": "Old Portsmouth, Hampshire",
+        "accuracy": "landmark_location"
+      },
+      "description": "Recognised Old Portsmouth harbour-mouth fishing mark from the public waterfront around the Round Tower, with deep tidal water and strong flow close to the wall.",
+      "species": [
+        "Bass",
+        "Pollack",
+        "Pouting",
+        "Whiting",
+        "Flounder",
+        "Mullet"
+      ],
+      "tips": [
+        "Fish the public waterfront around the tower, not the historic structure itself.",
+        "Keep clear of navigation routes, passing vessels and crowded pedestrian areas."
+      ],
+      "access": "Public Old Portsmouth waterfront around the historic Round Tower. Access can change because of events, works, barriers or harbour-security requirements; fish only where current signage permits.",
+      "photos": [],
+      "source": {
+        "type": "cross_referenced_fishing_sources",
+        "publication": "Where's The Fish?; Portsmouth City Council/Visit Portsmouth; Historic England",
+        "reference": "Independent cross-reference of current fishing information with official/location sources",
+        "url": "https://wheresthefish.uk/south-east/hampshire/round-tower",
+        "secondary_urls": [
+          "https://www.visitportsmouth.co.uk/explore/millennium-promenade/hotwalls/",
+          "https://historicengland.org.uk/listing/the-list/list-entry/1386901"
+        ],
+        "location_reference": "Historic England published location for The Round Tower",
+        "checked_at": "2026-10-05"
+      },
+      "parking": "Old Portsmouth controlled parking and nearby public parking",
+      "parking_cost": "check current local charges",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false
+    },
+    {
+      "id": "hampshire-victoria-pier-old-portsmouth",
+      "name": "Victoria Pier",
+      "status": "verified",
+      "location": {
+        "latitude": 50.790021246653,
+        "longitude": -1.1012049595242,
+        "area": "Old Portsmouth, Hampshire",
+        "accuracy": "approximate_beach_pier_location"
+      },
+      "description": "Recognised Old Portsmouth fishing location at Victoria Pier and the adjacent Old Portsmouth Beach. Angling Direct identifies Victoria Pier as a Portsmouth sea-fishing mark, while Portsmouth Museum confirms the present pier remains a popular place for fishing.",
+      "species": [
+        "Mackerel",
+        "Garfish",
+        "Bass",
+        "Pollack",
+        "Wrasse",
+        "Bream",
+        "Sole"
+      ],
+      "tips": [
+        "Angling Direct reports mackerel and garfish around the run-up to high water and sole as a seasonal target.",
+        "Strong harbour currents and passing vessel wash require care."
+      ],
+      "access": "Victoria Pier is a small historic pier at the harbour entrance. Portsmouth Museum confirms fishing remains a popular use of the pier; exact access arrangements should still be checked on arrival.",
+      "photos": [],
+      "source": {
+        "type": "cross_referenced_fishing_sources",
+        "publication": "Angling Direct; Portsmouth Museum and Art Gallery; British Beaches",
+        "reference": "Independent cross-reference of current fishing information with official/location sources",
+        "url": "https://www.anglingdirect.co.uk/community/top-sea-angling-marks-where-can-you-go-sea-fishing-in-the-uk-part-2/",
+        "secondary_urls": [
+          "https://portsmouthmuseum.co.uk/what-to-see-do/special-displays/ocean-at-the-end-of-the-lane/additional-resources/clarence-pier-copy/",
+          "https://www.britishbeaches.uk/portsmouth-victoria-pier-beach-hampshire-england"
+        ],
+        "location_reference": "Published Old Portsmouth Beach/Victoria Pier location used as approximate venue position, not an exact casting point",
+        "checked_at": "2026-10-05"
+      },
+      "parking": "Old Portsmouth parking nearby",
+      "parking_cost": "check current local charges",
+      "access_difficulty": "moderate",
+      "easy_access": false,
+      "accessible_access": false
     }
   ]
 }
