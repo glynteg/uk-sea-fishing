@@ -58,3 +58,11 @@ main{max-width:900px;margin:auto;padding-bottom:80px}.hero{background:linear-gra
 .fish-photo-placeholder{padding:18px;margin:14px 0;background:#f7fafb;border:1px dashed var(--line);border-radius:10px;color:var(--muted);font-size:13px}
 
 .fish-thumb{display:block;width:100%;max-height:190px;object-fit:contain;background:#f7fafb;border-radius:9px;border:1px solid var(--line);margin:10px 0}
+
+
+/* Clear safety notes at the end of each information section */
+.safety-footnote{margin-top:16px;padding:12px 14px;border-left:4px solid #6d8790;background:#f1f6f7;border-radius:7px;color:#344e56;font-size:12px;line-height:1.55}
+.safety-footnote strong{display:block;color:#173d49;font-size:13px;margin-bottom:4px}
+.safety-footnote p{margin:0}
+.safety-footnote-strong{border-left-color:#b87928;background:#fff7e9;color:#65491f}
+.safety-footnote-strong strong{color:#674314}
