@@ -302,6 +302,99 @@ Object.assign(fishProfiles, {
     "conservation": "Confirm the species and check current local rules before retaining fish."
   }
 });
+
+Object.assign(fishProfiles, {
+  "Pollack": {
+    "identification": "Elongated body, dark brown or greenish back, pale underside and a projecting lower jaw. Unlike ling, it has no obvious chin barbel.",
+    "habitat": "Rocky ground, kelp edges, reefs, wrecks and other structure, often where there is depth and current.",
+    "habits": "Ambushes small fish and crustaceans around cover and structure.",
+    "baits": "Sandeel, mackerel strips, squid and other fish baits are used.",
+    "lures": "Soft-plastic shads, jelly lures and metal jigs are common choices around reefs and wrecks.",
+    "tactics": "Work lures around structure while keeping clear of snags and boat hazards. Account for tide and maintain safe distance from rocks and wrecks.",
+    "seasons": "Can be caught through much of the year in suitable areas; local activity varies.",
+    "conservation": "Check current size and local rules. Handle fish carefully and return unwanted fish promptly."
+  },
+  "Whiting": {
+    "identification": "Slim silvery body, three dorsal fins, pale lateral line and a small chin barbel that may be hard to see. Often has a dark mark near the base of the pectoral fin.",
+    "habitat": "Sandy and muddy seabeds, estuaries and offshore ground; young fish often occur inshore.",
+    "habits": "Feeds on small fish, worms and crustaceans, with diet changing as it grows.",
+    "baits": "Lugworm, ragworm, squid, mussel and small fish strips are commonly used.",
+    "lures": "Small lures may take feeding fish, but whiting are often caught on baited bottom rigs.",
+    "tactics": "Use baited rigs close to the bottom and hooks appropriate to expected fish size. Handle small fish carefully when unhooking.",
+    "seasons": "Often encountered more frequently in cooler months in some regions, but catches vary locally.",
+    "conservation": "Check the relevant size rule and local restrictions. Release undersized or unwanted fish carefully."
+  },
+  "Ling": {
+    "identification": "Very elongated body, two dorsal fins, one long anal fin and a single barbel under the chin. Usually mottled brown or grey and more eel-like than cod.",
+    "habitat": "Rocky seabeds, steep underwater features and wrecks, frequently in deeper water.",
+    "habits": "Predatory and often close to the seabed, feeding on fish and crustaceans.",
+    "baits": "Large fish baits, squid and other natural baits are used when targeting ling.",
+    "lures": "Heavy metal jigs and large soft-plastic lures can be used at depth.",
+    "tactics": "Usually boat-targeted over deep rough ground or wrecks. Use tackle matched to depth and current, and take care around snags and boat traffic.",
+    "seasons": "Availability depends on depth, location and seasonal conditions.",
+    "conservation": "Check current minimum size and local restrictions. Handle large fish safely and release unwanted fish with care."
+  },
+  "Brill": {
+    "identification": "A left-eyed flatfish with a relatively smooth body and small bony tubercles. It can be confused with turbot; body shape and skin texture help, but are not infallible.",
+    "habitat": "Sandy and mixed seabeds, often in coastal and offshore water.",
+    "habits": "Feeds on small fish and seabed animals, often lying camouflaged on the bottom.",
+    "baits": "Worms, squid and strips of fish are used by anglers targeting flatfish.",
+    "lures": "Small fish-imitation lures may work, though brill are commonly targeted with bait.",
+    "tactics": "Present bait near the seabed over suitable sand or mixed ground. Do not rely on eye position alone to identify a flatfish.",
+    "seasons": "Catches vary by coast, depth and season.",
+    "conservation": "The listed minimum size applies only to the specified ICES areas shown in the rules entry. Check the exact fishing area and current local rules."
+  },
+  "Mackerel": {
+    "identification": "Streamlined silver body with dark wavy stripes across the blue-green back, two separated dorsal fins and small finlets near the tail.",
+    "habitat": "Open water and coastal areas, often forming shoals that move inshore when feeding.",
+    "habits": "Feeds on small fish and planktonic animals, chasing prey in the water column.",
+    "baits": "Small strips of fish and tiny natural baits can be used.",
+    "lures": "Small feathers, shiny metal lures and sabiki-style rigs are commonly used.",
+    "tactics": "Look for visible shoals or feeding birds and use light tackle where conditions allow. Avoid leaving discarded line or hooks behind.",
+    "seasons": "Often more visible close inshore in warmer months, but timing varies by coast and year.",
+    "conservation": "Check the area-specific minimum size and current local restrictions; retain only what you will use."
+  },
+  "Dab": {
+    "identification": "Usually right-eyed, with relatively rough skin and a small dark mark near the pectoral fin often visible. It generally lacks the bright orange spots of plaice.",
+    "habitat": "Sand and mud from shallow coastal areas to offshore seabeds.",
+    "habits": "Feeds on worms, small crustaceans and other bottom-dwelling animals.",
+    "baits": "Lugworm, ragworm, small strips of squid and fish baits are used.",
+    "lures": "Dab are usually targeted with baited bottom rigs rather than lures.",
+    "tactics": "Keep bait near the seabed on suitable sand or mud. Compare markings with plaice and flounder if uncertain.",
+    "seasons": "Can be caught throughout the year, with local catch rates varying.",
+    "conservation": "No national MCRS is listed in the cited table entry; local rules may still apply. Check current regulations before retaining fish."
+  },
+  "Pouting": {
+    "identification": "Brownish or bronze body, three dorsal fins and a small chin barbel. Often deeper-bodied and browner than whiting.",
+    "habitat": "Rocky and mixed ground, harbour structures and offshore features.",
+    "habits": "Feeds on crustaceans, worms and small fish, often around structure.",
+    "baits": "Worms, squid, mussel and small fish baits are commonly used.",
+    "lures": "Small lures may catch pouting, but baited rigs are more typical.",
+    "tactics": "Use small hooks and bait close to the bottom around suitable structure, while managing snag risk.",
+    "seasons": "Often caught year-round in suitable areas; local abundance varies.",
+    "conservation": "Common names vary regionally. Check identification and current local rules; release unwanted fish carefully."
+  },
+  "Smoothhound": {
+    "identification": "Slender grey shark-like body, pointed snout, two dorsal fins and small blunt crushing teeth. Smoothhound species can be difficult to distinguish, so do not identify solely from colour.",
+    "habitat": "Coastal sand, mud and mixed seabeds, including areas near estuaries and shellfish beds.",
+    "habits": "Feeds heavily on crabs and other hard-shelled invertebrates, with diet varying by species and size.",
+    "baits": "Peeler crab, hardback crab and other suitable crustacean baits are commonly used.",
+    "lures": "Usually targeted with natural bait rather than lures.",
+    "tactics": "Use appropriate tackle and a safe unhooking approach. Support the fish's body and avoid lifting large fish by the tail.",
+    "seasons": "Often targeted during warmer months in some southern areas, but availability varies by coast and year.",
+    "conservation": "Species-level identification matters. Check current local rules and management measures before retaining; release unwanted fish carefully."
+  },
+  "Dogfish": {
+    "identification": "'Dogfish' is a broad common name for several small sharks. Small-spotted catshark, often called lesser-spotted dogfish, is slender, sandy-brown with dark spots, rough skin and two small dorsal fins set well back.",
+    "habitat": "Many UK dogfish occur over seabeds ranging from sand and mud to rough ground; habitat depends on species.",
+    "habits": "Most are bottom-associated predators or scavengers, feeding on small fish and seabed animals.",
+    "baits": "Fish strips, squid and worms are used when dogfish are caught on baited rigs.",
+    "lures": "Generally caught on bait rather than deliberately targeted with lures.",
+    "tactics": "Handle carefully and keep fingers clear of the mouth and rough skin. If unsure which species it is, photograph the whole fish and release it rather than relying on the common name.",
+    "seasons": "Can be encountered year-round, though catches vary with location and conditions.",
+    "conservation": "This entry covers more than one possible species and is not a substitute for species identification. Check current rules for the exact species and area; release unwanted fish carefully."
+  }
+});
 function renderFishId(){
  const c=document.getElementById("fish-results"); if(!c)return;
  const q=document.getElementById("fish-search")?.value.trim().toLowerCase()||"";
