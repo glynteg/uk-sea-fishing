@@ -457,6 +457,21 @@ Object.assign(fishProfiles, {
  }
 });
 
+Object.assign(fishProfiles, {
+ "Herring": {
+  image:"https://commons.wikimedia.org/wiki/Special:FilePath/Atlantic_herring.jpg",
+  imageCredit:"NOAA Fisheries Service / Wikimedia Commons (public domain)",
+  imageCreditUrl:"https://commons.wikimedia.org/wiki/File:Atlantic_herring.jpg"
+ },
+ "Pollack": {
+  image:"https://commons.wikimedia.org/wiki/Special:FilePath/Pollack_%28Pollachius_pollachius%29.jpg",
+  imageCredit:"Wilhelm Thomas Fiege / Wikimedia Commons",
+  imageCreditUrl:"https://commons.wikimedia.org/wiki/File:Pollack_(Pollachius_pollachius).jpg",
+  imageLicense:"CC BY-SA 4.0",
+  imageLicenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/"
+ }
+});
+
 function renderFishId(){
  const c=document.getElementById("fish-results"); if(!c)return;
  const q=document.getElementById("fish-search")?.value.trim().toLowerCase()||"";
