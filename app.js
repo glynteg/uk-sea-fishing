@@ -211,7 +211,10 @@ const fishRules=[
 ];
 const fishProfiles={
  "Bass":{
+  image:"https://www.medianauka.pl/biologia/grafika/ryby/big/labraks.jpg",
+  imageCredit:"Photo reference: Medianauka — European sea bass",
   intro:"A powerful coastal predator prized by shore and boat anglers. Bass behaviour changes with water temperature, light, tide, baitfish and local conditions.",
+  identification:"Long, streamlined silver body, darker grey-blue back, large mouth and two separate dorsal fins. Adults are usually plain silver; young fish may show dark spots.",
   habitat:"Around rocky headlands, reefs, harbour walls, surf beaches, estuaries and tidal channels. Juvenile bass often use shallow sheltered estuaries; larger fish also patrol deeper coastal ground.",
   habits:"Bass are opportunistic hunters. They commonly feed around moving water, ambush points and areas where small fish or crustaceans gather. Low light and a moving tide can be productive, but no tide or time guarantees a catch.",
   baits:"Commonly used natural baits include peeler or soft crab, ragworm, lugworm, sandeel and strips of fish such as mackerel. Availability and local conditions matter; use only bait that is legal to collect or buy.",
@@ -219,6 +222,32 @@ const fishProfiles={
   tactics:"From shore, anglers often work surf edges, gullies, rocky ground and estuary channels, casting with the current or across likely feeding routes. From a boat, fish edges of reefs and tidal features safely, accounting for strong streams and boat traffic. Avoid damaging sensitive habitat.",
   seasons:"Bass can be caught in different parts of the UK across much of the year, but seasonal movements and local restrictions matter. Fishing can be slower in cold periods and varies by region.",
   conservation:"Handle fish with wet hands, minimise time out of water and release unwanted fish promptly. Check current bass rules for the exact area and date before fishing; seasonal catch-and-release rules and local restrictions may apply."
+ },
+ "Plaice":{
+  image:"https://www.hafogvatn.is/static/extras/images/skarkoli_51671206440.jpg",
+  imageCredit:"Photo reference: Marine and Freshwater Research Institute of Iceland",
+  intro:"A common UK flatfish found on sandy and muddy seabeds.",
+  identification:"Usually a right-eyed flatfish: when the fish is held with its head pointing away from you and its eyes uppermost, both eyes are generally on its right side. Look for bright orange or reddish spots and a relatively smooth upper surface. Eye-side alone is not enough to identify it.",
+  habitat:"Sandy and muddy seabeds, including shallow coastal areas and estuaries; larger fish may be found farther offshore.",
+  habits:"Feeds on worms, molluscs and other small seabed animals. It may be less obvious against sand because its colour provides camouflage.",
+  baits:"Worm baits such as lugworm and ragworm are commonly used by sea anglers for plaice. Bait choice and effectiveness vary by location and season.",
+  lures:"Small lures and baited rigs may be used, but plaice are most often targeted with bottom-fished bait rigs.",
+  tactics:"Fish a suitable sandy or muddy bottom and keep bait near the seabed. Use tackle and weights appropriate to tide and conditions; avoid assuming every sandy-looking mark holds plaice.",
+  seasons:"Plaice can be encountered throughout the year, with local movements and seasonal patterns varying by coast.",
+  conservation:"Check current local rules and size limits before retaining any fish. Handle carefully and return unwanted fish promptly."
+ },
+ "Flounder":{
+  image:"https://upload.wikimedia.org/wikipedia/commons/1/13/Platichthys_flesus_V%C3%A4%C3%A4na-J%C3%B5esuu_in_Estonia.jpg",
+  imageCredit:"Photo: Tiit Hunt / Wikimedia Commons",
+  intro:"A hardy flatfish often found around estuaries, harbours and coastal waters, sometimes entering brackish or fresh water.",
+  identification:"Usually right-eyed, but flounder can occasionally be left-eyed, so eye position is not a reliable standalone test. Look for an oval, mottled brown or grey body and rough, prickly patches along parts of the lateral line and fin bases. It can be confused with plaice and dab.",
+  habitat:"Estuaries, harbours, tidal rivers and shallow coastal seabeds; it tolerates lower salinity than many other marine flatfish.",
+  habits:"Feeds on small worms, crustaceans and other bottom-dwelling animals. Often found close to the seabed in estuaries and sheltered tidal areas.",
+  baits:"Ragworm and lugworm are common baits used by anglers. Small pieces of natural bait may also be used; local conditions matter.",
+  lures:"Flounder are commonly targeted with bait rather than lures.",
+  tactics:"Try bottom-fished bait in estuary channels, harbour margins and other suitable sandy or muddy areas. Watch tide flow and local access restrictions.",
+  seasons:"Can be caught through much of the year, but catches vary with location, temperature and tidal conditions.",
+  conservation:"Check current local regulations and handle fish carefully. If identification is uncertain, take a clear photo and release the fish rather than relying on a single feature."
  }
 };
 function renderFishId(){
@@ -232,7 +261,7 @@ function openFishProfile(name){
  const details=fishProfiles[f.name];
  const section=(heading,body)=>'<section class="fish-profile-section"><h4>'+heading+'</h4><p>'+escapeHtml(body)+'</p></section>';
  profile.hidden=false;
- profile.innerHTML='<div class="fish-profile-head"><div><p class="eyebrow">FISH ENCYCLOPAEDIA</p><h3>'+escapeHtml(f.name)+'</h3><em>'+escapeHtml(f.scientific)+'</em></div><button type="button" class="secondary" id="close-fish-profile">Back to fish list</button></div><div class="fish-profile-facts"><div><small>Minimum conservation reference size</small><strong>'+escapeHtml(f.size)+'</strong></div><div><small>Recreational catch rules</small><strong>'+escapeHtml(f.catch)+'</strong></div></div>'+(details?section("Where it lives",details.habitat)+section("Habits and feeding",details.habits)+section("Baits commonly used",details.baits)+section("Lures",details.lures)+section("Fishing tactics",details.tactics)+section("Seasonal notes",details.seasons)+section("Conservation and rules",details.conservation):'<div class="fish-profile-section"><h4>More species information coming</h4><p>We have not yet added a checked species profile for this fish. Its recorded size and rules are shown above; habitat, bait and tactics will be added when we can provide dependable information.</p></div>')+'<p class="fish-profile-warning">Fishing information is general guidance, not a guarantee of catches. Local conditions and rules can differ. Always check current official regulations before retaining a fish.</p>';
+ profile.innerHTML='<div class="fish-profile-head"><div><p class="eyebrow">FISH ENCYCLOPAEDIA</p><h3>'+escapeHtml(f.name)+'</h3><em>'+escapeHtml(f.scientific)+'</em></div><button type="button" class="secondary" id="close-fish-profile">Back to fish list</button></div>'+(details&&details.image?'<figure class="fish-profile-photo"><img src="'+escapeHtml(details.image)+'" alt="'+escapeHtml(f.name)+' for fish identification" loading="lazy"><figcaption>'+escapeHtml(details.imageCredit||"Species reference photograph")+'</figcaption></figure>':'<div class="fish-photo-placeholder">A species photo has not yet been added for this fish.</div>')+(details?section("How to identify it",details.identification):"")+<div class="fish-profile-facts"><div><small>Minimum conservation reference size</small><strong>'+escapeHtml(f.size)+'</strong></div><div><small>Recreational catch rules</small><strong>'+escapeHtml(f.catch)+'</strong></div></div>'+(details?section("Where it lives",details.habitat)+section("Habits and feeding",details.habits)+section("Baits commonly used",details.baits)+section("Lures",details.lures)+section("Fishing tactics",details.tactics)+section("Seasonal notes",details.seasons)+section("Conservation and rules",details.conservation):'<div class="fish-profile-section"><h4>More species information coming</h4><p>We have not yet added a checked species profile for this fish. Its recorded size and rules are shown above; habitat, bait and tactics will be added when we can provide dependable information.</p></div>')+'<p class="fish-profile-warning">Fishing information is general guidance, not a guarantee of catches. Local conditions and rules can differ. Always check current official regulations before retaining a fish.</p>';
  profile.scrollIntoView({behavior:"smooth",block:"start"});
  profile.querySelector("#close-fish-profile")?.addEventListener("click",()=>{profile.hidden=true;document.getElementById("fish-id")?.scrollIntoView({behavior:"smooth",block:"start"})});
 }
