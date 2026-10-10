@@ -66,3 +66,48 @@ Next step: independently verify each candidate's specific fishing position, curr
 - Cymyran Bay: corroborated candidate, not yet live.
 - Moelfre: existing record reviewed; no duplicate.
 - No new marks or coordinates have been written to data/marks.json in this review.
+
+
+## Further North Wales / Anglesey candidates — 11 October 2026
+
+The following are fishing-specific venue entries in Fishing in Wales. They are not in the current 37-mark live database by these exact names. Because several lie close together around Rhosneigr, do not create records until the map positions and boundaries show that each is a distinct, useful fishing mark.
+
+### Llanddwyn Bay / Ynys Llanddwyn
+- Fishing in Wales describes Llanddwyn Bay as sandy beach fishing and the western end at Llanddwyn Island as a mixed sand-and-rock mark. Reported species include bass, dogfish, flatfish, codling, dab, whiting, rays, coalfish and smoothhound.
+- Source: https://fishingwales.net/fishing-locations/llanddwyn-bay/
+- Access note: the area is in a nature reserve and an entry fee may apply; the island is a walk west along the beach. Confirm current Newborough Forest / beach access, seasonal restrictions and the correct boundary before adding.
+- Status: candidate; no coordinates copied or guessed.
+
+### Porth Trecastell / Cable Bay
+- Fishing in Wales identifies a popular rock mark with a small, shallow sandy beach. Reported species include bass, cod, whiting, coalfish, pollack, conger, bullhuss, rays, codling and mackerel.
+- Source: https://fishingwales.net/fishing-locations/rhosneigr-porth-trecastell-cable-bay/
+- Access note: the guide describes a car park above the beach. Verify current access, parking terms, coastal hazards and any archaeological/conservation constraints before publication.
+- Status: candidate.
+
+### Ty Croes
+- Fishing in Wales identifies a rock mark fishing onto sand and describes a signed fisherman’s car park and track to the marks.
+- Source: https://fishingwales.net/fishing-locations/rhosneigr-ty-croes/
+- Access note: access appears to involve a designated parking area and a track; confirm current permission and whether the parking is private/fee-based. Do not imply direct vehicle access to the fishing rocks.
+- Status: candidate.
+
+### Traeth Llydan / Broad Beach
+- Fishing in Wales describes a mixed sand-and-shingle beach with rocks in places and a car park a short walk away. Species reported include bass, cod, whiting, coalfish, pollack, conger, bullhuss, rays, codling and mackerel.
+- Source: https://fishingwales.net/fishing-locations/rhosneigr-traeth-llydan-broad-beach/
+- Status: candidate; compare its boundaries with Cymyran Bay and Porth Trecastell to avoid duplicate or overlapping beach records.
+
+### Traeth Crigyll / Rhosneigr Town Beach
+- Fishing in Wales describes a small mixed sand-and-rock beach in front of Rhosneigr, with access from Beach Road and parking at the top of the beach. Reported species include bass, cod, whiting, coalfish, pollack, conger, bullhuss, rays, codling and mackerel.
+- Source: https://fishingwales.net/fishing-locations/rhosneigr-traeth-crigyll-town-beach/
+- Status: candidate; check current access and whether the venue boundary is distinct from the adjacent Traeth Llydan / Cymyran entries.
+
+### Cymyran Bay — additional fishing-specific corroboration
+- Fishing in Wales confirms the long mixed sand, rock and shingle beach alongside Valley airfield, and warns that the tidal race at the north end can be dangerous: https://fishingwales.net/fishing-locations/rhosneigr-traeth-cymyran-cymyran-beach/
+- This adds a second fishing-specific source alongside the existing Holidays Anglesey and Where's The Fish references. Retain the earlier access and exact-map-point checks.
+
+## North Wales candidate triage
+1. **Higher priority:** Penmon Point and Cymyran Bay, because they have multiple fishing sources and identifiable access leads.
+2. **Next:** Llanddwyn Bay / Island and Porth Trecastell, with nature-reserve/access checks before publication.
+3. **Then:** Ty Croes, Traeth Llydan and Traeth Crigyll, after comparing the clustered Rhosneigr beach boundaries and parking permissions.
+4. **Already live:** Moelfre, Benllech Bay, Cemlyn Beach, Red Wharf Bay, Beaumaris Pier, Holyhead Breakwater and Garth Pier. Review existing records rather than duplicating them.
+
+No candidate in this section has been added to data/marks.json. All species lists remain source-reported venue possibilities, not guarantees of current catches.
