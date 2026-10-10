@@ -11,7 +11,7 @@ function navigate(section){
   b.classList.toggle("active",active);
   if(active)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");
  });
- const target=({marks:"area-encyclopaedia",tides:"conditions",weather:"conditions",submit:"submit","report-problem":"report-problem",gallery:"gallery","fish-id":"fish-id",more:"submit",home:"area-encyclopaedia"})[section];
+ const target=({marks:"area-encyclopaedia",tides:"conditions",weather:"conditions",submit:"submit","report-problem":"report-problem",gallery:"gallery","fish-id":"fish-id",more:"submit"})[section];
  if(target){document.getElementById(target)?.scrollIntoView({behavior:"smooth",block:"start"});}
  else window.scrollTo({top:0,behavior:"smooth"});
  if((panelKey==="marks")&&fishingMap)setTimeout(()=>fishingMap.invalidateSize(),250);
