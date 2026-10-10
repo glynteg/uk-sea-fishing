@@ -419,6 +419,44 @@ Object.assign(fishProfiles, {
     "conservation": "This entry covers more than one possible species and is not a substitute for species identification. Check current rules for the exact species and area; release unwanted fish carefully."
   }
 });
+Object.assign(fishProfiles, {
+ "Cod": {
+  image:"https://commons.wikimedia.org/wiki/Special:FilePath/Atlantic_Cod%2C_Atlantischer_Kabeljau_%28Gadus_morhua%29.jpg",
+  imageCredit:"Wilhelm Thomas Fiege / Wikimedia Commons",
+  imageCreditUrl:"https://commons.wikimedia.org/wiki/File:Atlantic_Cod,_Atlantischer_Kabeljau_(Gadus_morhua).jpg",
+  imageLicense:"CC BY-SA 4.0",
+  imageLicenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/"
+ },
+ "Haddock": {
+  image:"https://commons.wikimedia.org/wiki/Special:FilePath/Melanogrammus_aeglefinus_318932194.jpg",
+  imageCredit:"Vsevolod Rudyi / Wikimedia Commons",
+  imageCreditUrl:"https://commons.wikimedia.org/wiki/File:Melanogrammus_aeglefinus_318932194.jpg",
+  imageLicense:"CC BY 4.0",
+  imageLicenseUrl:"https://creativecommons.org/licenses/by/4.0/"
+ },
+ "Dab": {
+  image:"https://commons.wikimedia.org/wiki/Special:FilePath/Limanda_limanda.jpg",
+  imageCredit:"Hans Hillewaert / Wikimedia Commons",
+  imageCreditUrl:"https://commons.wikimedia.org/wiki/File:Limanda_limanda.jpg",
+  imageLicense:"CC BY-SA 4.0",
+  imageLicenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/"
+ },
+ "Sole": {
+  image:"https://commons.wikimedia.org/wiki/Special:FilePath/Solea_solea.jpg",
+  imageCredit:"Hans Hillewaert / Wikimedia Commons",
+  imageCreditUrl:"https://commons.wikimedia.org/wiki/File:Solea_solea.jpg",
+  imageLicense:"CC BY-SA 4.0",
+  imageLicenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/"
+ },
+ "Mackerel": {
+  image:"https://commons.wikimedia.org/wiki/Special:FilePath/Atlantic_mackerel_%28Scomber_scombrus%29.jpg",
+  imageCredit:"Petar Milošević / Wikimedia Commons",
+  imageCreditUrl:"https://commons.wikimedia.org/wiki/File:Atlantic_mackerel_(Scomber_scombrus).jpg",
+  imageLicense:"CC BY-SA 4.0",
+  imageLicenseUrl:"https://creativecommons.org/licenses/by-sa/4.0/"
+ }
+});
+
 function renderFishId(){
  const c=document.getElementById("fish-results"); if(!c)return;
  const q=document.getElementById("fish-search")?.value.trim().toLowerCase()||"";
@@ -430,7 +468,7 @@ function openFishProfile(name){
  const details=fishProfiles[f.name];
  const section=(heading,body)=>'<section class="fish-profile-section"><h4>'+heading+'</h4><p>'+escapeHtml(body)+'</p></section>';
  profile.hidden=false;
- profile.innerHTML=`<div class="fish-profile-head"><div><p class="eyebrow">FISH ENCYCLOPAEDIA</p><h3>${escapeHtml(f.name)}</h3><em>${escapeHtml(f.scientific)}</em></div><button type="button" class="secondary" id="close-fish-profile">Back to fish list</button></div>${details&&details.image?`<figure class="fish-profile-photo"><img src="${escapeHtml(details.image)}" alt="${escapeHtml(f.name)} for fish identification" loading="lazy"><figcaption>${escapeHtml(details.imageCredit||"Species reference photograph")}</figcaption></figure>`:'<div class="fish-photo-placeholder">A species photo has not yet been added for this fish.</div>'}${details?section("How to identify it",details.identification||"Identification details are being checked."):''}<div class="fish-profile-facts"><div><small>Minimum conservation reference size</small><strong>${escapeHtml(f.size)}</strong></div><div><small>Recreational catch rules</small><strong>${escapeHtml(f.catch)}</strong></div></div>${details?section("Where it lives",details.habitat)+section("Habits and feeding",details.habits)+section("Baits commonly used",details.baits)+section("Lures",details.lures)+section("Fishing tactics",details.tactics)+section("Seasonal notes",details.seasons)+section("Conservation and rules",details.conservation):'<div class="fish-profile-section"><h4>More species information coming</h4><p>We have not yet added a checked species profile for this fish. Its recorded size and rules are shown above; habitat, bait and tactics will be added when we can provide dependable information.</p></div>'}<p class="fish-profile-warning">Fishing information is general guidance, not a guarantee of catches. Local conditions and rules can differ. Always check current official regulations before retaining a fish.</p>`;
+ profile.innerHTML=`<div class="fish-profile-head"><div><p class="eyebrow">FISH ENCYCLOPAEDIA</p><h3>${escapeHtml(f.name)}</h3><em>${escapeHtml(f.scientific)}</em></div><button type="button" class="secondary" id="close-fish-profile">Back to fish list</button></div>${details&&details.image?`<figure class="fish-profile-photo"><img src="${escapeHtml(details.image)}" alt="${escapeHtml(f.name)} for fish identification" loading="lazy"><figcaption>${details.imageCreditUrl?`Photo: <a href="${escapeHtml(details.imageCreditUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(details.imageCredit||"Image source")}</a>${details.imageLicenseUrl?` · <a href="${escapeHtml(details.imageLicenseUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(details.imageLicense||"Image licence")}</a>`:""}`:escapeHtml(details.imageCredit||"Species reference photograph")}</figcaption></figure>`:'<div class="fish-photo-placeholder">A species photo has not yet been added for this fish.</div>'}${details?section("How to identify it",details.identification||"Identification details are being checked."):''}<div class="fish-profile-facts"><div><small>Minimum conservation reference size</small><strong>${escapeHtml(f.size)}</strong></div><div><small>Recreational catch rules</small><strong>${escapeHtml(f.catch)}</strong></div></div>${details?section("Where it lives",details.habitat)+section("Habits and feeding",details.habits)+section("Baits commonly used",details.baits)+section("Lures",details.lures)+section("Fishing tactics",details.tactics)+section("Seasonal notes",details.seasons)+section("Conservation and rules",details.conservation):'<div class="fish-profile-section"><h4>More species information coming</h4><p>We have not yet added a checked species profile for this fish. Its recorded size and rules are shown above; habitat, bait and tactics will be added when we can provide dependable information.</p></div>'}<p class="fish-profile-warning">Fishing information is general guidance, not a guarantee of catches. Local conditions and rules can differ. Always check current official regulations before retaining a fish.</p>`;
  profile.scrollIntoView({behavior:"smooth",block:"start"});
  profile.querySelector("#close-fish-profile")?.addEventListener("click",()=>{profile.hidden=true;document.getElementById("fish-id")?.scrollIntoView({behavior:"smooth",block:"start"})});
 }
