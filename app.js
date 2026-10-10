@@ -4,10 +4,17 @@ buttons.forEach(b=>b.addEventListener("click",()=>navigate(b.dataset.section)));
 let allMarks=[], fishingMap=null, mapMarkers=[], radiusCentre=null, mapVisibleMarks=[];
 
 function navigate(section){
- document.querySelectorAll(".bottom-nav button").forEach(b=>b.classList.toggle("active",b.dataset.section===section));
- const target={marks:"marks",tides:"conditions",weather:"conditions",submit:"submit",gallery:"gallery","fish-id":"fish-id",home:null}[section];
- if(target){document.getElementById(target).scrollIntoView({behavior:"smooth"});if(section==="marks"&&fishingMap)setTimeout(()=>fishingMap.invalidateSize(),250)}
+ const panelKey=({weather:"tides",submit:"more","report-problem":"more",home:"marks"})[section]||section;
+ document.querySelectorAll("[data-tab-panel]").forEach(panel=>panel.classList.toggle("active",panel.dataset.tabPanel===panelKey));
+ document.querySelectorAll(".bottom-nav button").forEach(b=>{
+  const active=b.dataset.section===panelKey;
+  b.classList.toggle("active",active);
+  if(active)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");
+ });
+ const target=({marks:"area-encyclopaedia",tides:"conditions",weather:"conditions",submit:"submit","report-problem":"report-problem",gallery:"gallery","fish-id":"fish-id",more:"submit",home:"area-encyclopaedia"})[section];
+ if(target){document.getElementById(target)?.scrollIntoView({behavior:"smooth",block:"start"});}
  else window.scrollTo({top:0,behavior:"smooth"});
+ if((panelKey==="marks")&&fishingMap)setTimeout(()=>fishingMap.invalidateSize(),250);
 }
 
 function initialiseMap(){
