@@ -13,7 +13,10 @@ function navigate(section){
 function initialiseMap(){
  const el=document.getElementById("fishing-map"); if(!el||typeof L==="undefined")return;
  fishingMap=L.map(el,{scrollWheelZoom:false});
- L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"&copy; OpenStreetMap contributors",maxZoom:18}).addTo(fishingMap);
+ const streetLayer=L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"&copy; OpenStreetMap contributors",maxZoom:19});
+ const satelliteLayer=L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",{attribution:"Tiles &copy; Esri and its imagery providers",maxZoom:19});
+ streetLayer.addTo(fishingMap);
+ L.control.layers({"Street map":streetLayer,"Satellite":satelliteLayer},null,{collapsed:false}).addTo(fishingMap);
  fishingMap.setView([54.5,-3.5],5.5); fishingMap.on("zoomend",()=>renderMapMarkers(mapVisibleMarks)); renderMapMarkers(allMarks);
 }
 
