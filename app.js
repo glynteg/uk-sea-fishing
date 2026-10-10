@@ -199,3 +199,32 @@ document.getElementById("gallery-upload")?.addEventListener("click",async()=>{
  input.value="";if(caption)caption.value="";renderGallery();
 });
 renderGallery();
+
+
+async function loadConditions(){
+ const place=document.getElementById("conditions-place")?.value.trim();
+ const status=document.getElementById("conditions-status");
+ const results=document.getElementById("weather-results");
+ if(!place){if(status)status.textContent="Enter a coastal town or harbour first.";return}
+ if(status)status.textContent="Finding "+place+" and loading the forecast…";
+ if(results)results.innerHTML='<p class="condition-placeholder">Loading local weather…</p>';
+ try{
+  const location=await geocode(place);
+  const url="https://api.open-meteo.com/v1/forecast?latitude="+location.lat+"&longitude="+location.lon+"&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m,wind_direction_10m,wind_gusts_10m&hourly=temperature_2m,precipitation_probability,weather_code,wind_speed_10m,wind_direction_10m,wind_gusts_10m&forecast_days=2&timezone=auto";
+  const response=await fetch(url);if(!response.ok)throw Error("Weather service unavailable");
+  const data=await response.json();
+  const codeLabel=code=>({0:"Clear",1:"Mostly clear",2:"Partly cloudy",3:"Overcast",45:"Fog",48:"Freezing fog",51:"Light drizzle",53:"Drizzle",55:"Heavy drizzle",61:"Light rain",63:"Rain",65:"Heavy rain",71:"Light snow",73:"Snow",75:"Heavy snow",80:"Rain showers",81:"Showers",82:"Heavy showers",95:"Thunderstorms",96:"Thunderstorms with hail",99:"Severe thunderstorms"}[code]||"Changeable");
+  const direction=deg=>{const dirs=["N","NE","E","SE","S","SW","W","NW"];return dirs[Math.round((Number(deg)||0)/45)%8]};
+  const now=new Date();
+  const times=data.hourly.time.map((t,i)=>({t:new Date(t),i})).filter(x=>x.t>=now&&x.t<=new Date(now.getTime()+36*60*60*1000)).filter((x)=>x.t.getHours()%3===0).slice(0,12);
+  const current=data.current;
+  const rows=times.map(x=>'<div class="weather-hour"><span>'+x.t.toLocaleString("en-GB",{weekday:"short",hour:"2-digit",minute:"2-digit"})+'</span><span>'+Math.round(data.hourly.temperature_2m[x.i])+'°C · '+escapeHtml(codeLabel(data.hourly.weather_code[x.i]))+'</span><span>Wind '+Math.round(data.hourly.wind_speed_10m[x.i])+' km/h '+direction(data.hourly.wind_direction_10m[x.i])+'</span><span>Rain '+(data.hourly.precipitation_probability[x.i]??0)+'%</span></div>').join("");
+  if(results)results.innerHTML='<div class="weather-current"><strong>'+Math.round(current.temperature_2m)+'°C</strong><span>'+escapeHtml(codeLabel(current.weather_code))+' · feels like '+Math.round(current.apparent_temperature)+'°C</span><span>Wind '+Math.round(current.wind_speed_10m)+' km/h '+direction(current.wind_direction_10m)+' · gusts '+Math.round(current.wind_gusts_10m)+' km/h</span><span>Humidity '+Math.round(current.relative_humidity_2m)+'%</span></div><div class="weather-hour-list">'+rows+'</div><small>Forecast for '+escapeHtml(location.label)+'. Weather from Open-Meteo; forecast values can change.</small>';
+  if(status)status.textContent="Weather loaded for "+location.label+". Forecast shown for the next 36 hours.";
+ }catch(error){
+  if(status)status.textContent="Could not load conditions for that place. Try a nearby town or harbour.";
+  if(results)results.innerHTML='<p class="condition-placeholder">Weather could not be loaded just now. Please try again.</p>';
+ }
+}
+document.getElementById("load-conditions")?.addEventListener("click",loadConditions);
+document.getElementById("conditions-place")?.addEventListener("keydown",e=>{if(e.key==="Enter")loadConditions()});
