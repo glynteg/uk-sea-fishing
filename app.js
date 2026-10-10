@@ -67,6 +67,47 @@ function refreshMarkResults(){
  if(s)s.textContent=radiusCentre?marks.length+" verified mark"+(marks.length===1?"":"s")+" within "+radius+" miles":marks.length+" mark"+(marks.length===1?"":"s")+" shown";
 }
 
+
+function markAreaName(mark){
+ const parts=String(mark.location?.area||"").split(",").map(x=>x.trim()).filter(Boolean);
+ return parts.length?parts[parts.length-1]:"Other areas";
+}
+function renderAreaDirectory(){
+ const directory=document.getElementById("area-directory");if(!directory)return;
+ const verified=allMarks.filter(m=>m.status==="verified");
+ const areas=[...new Set(verified.map(markAreaName))].sort((a,b)=>a.localeCompare(b));
+ if(!areas.length){directory.innerHTML='<div class="empty-state"><strong>No verified areas available yet</strong><p>New areas will appear when genuine fishing marks have been checked.</p></div>';return}
+ directory.innerHTML=areas.map(area=>{
+  const marks=verified.filter(m=>markAreaName(m)===area);
+  const species=[...new Set(marks.flatMap(m=>m.species||[]))];
+  return '<button type="button" class="area-card" data-open-area="'+escapeHtml(area)+'"><span class="area-card-icon">🧭</span><strong>'+escapeHtml(area)+'</strong><span>'+marks.length+' verified mark'+(marks.length===1?'':'s')+'</span><small>'+(species.length?escapeHtml(species.slice(0,4).join(' · ')):'Species information being checked')+'</small><b>Open area guide →</b></button>';
+ }).join("");
+}
+function openAreaGuide(area){
+ const detail=document.getElementById("area-detail");if(!detail)return;
+ const marks=allMarks.filter(m=>m.status==="verified"&&markAreaName(m)===area);
+ const species=[...new Set(marks.flatMap(m=>m.species||[]))].sort((a,b)=>a.localeCompare(b));
+ const markRows=marks.map(m=>'<article class="area-mark"><div><strong>'+escapeHtml(m.name)+'</strong><span class="badge verified">Verified mark</span></div><p>'+escapeHtml(m.description||"No description recorded.")+'</p>'+(m.parking?'<p><strong>Parking:</strong> '+escapeHtml(m.parking)+'</p>':'')+(m.access?'<p><strong>Access:</strong> '+escapeHtml(m.access)+'</p>':'')+(m.source?.url?'<p><a href="'+escapeHtml(m.source.url)+'" target="_blank" rel="noopener noreferrer">View source / verification ↗</a></p>':'')+'</article>').join("");
+ detail.hidden=false;
+ detail.innerHTML='<div class="area-detail-head"><div><p class="eyebrow">AREA ENCYCLOPAEDIA</p><h3>'+escapeHtml(area)+'</h3><p>One place for the fishing information currently recorded for this area.</p></div><button type="button" class="secondary" id="close-area-guide">Close</button></div><div class="area-action-grid"><button type="button" class="area-action" data-area-action="weather"><span>☁️</span><strong>Weather</strong><small>Local 36-hour forecast</small></button><button type="button" class="area-action" data-area-action="tides"><span>🌊</span><strong>Tides</strong><small>Official tide predictions</small></button><button type="button" class="area-action" data-area-action="fish"><span>🐟</span><strong>Fish ID</strong><small>Species and restrictions</small></button></div><div class="area-info-grid"><section class="area-info"><h4>Fishing marks</h4><p>'+marks.length+' verified mark'+(marks.length===1?'':'s')+' currently recorded for '+escapeHtml(area)+'.</p>'+markRows+'</section><section class="area-info"><h4>Species recorded</h4>'+(species.length?'<div class="species-chips">'+species.map(s=>'<span>'+escapeHtml(s)+'</span>').join('')+'</div>':'<p>No species information has been verified for this area yet.</p>')+'<h4>Bait & tactics</h4><p>Area-specific bait and tactics will only be published when supported by a reliable source or clearly labelled angler contribution. No local advice has been independently verified for this area yet.</p><h4>Local knowledge & gallery</h4><p>Photos and angler tips can be collected here. Community contributions will be labelled unverified until checked.</p><button type="button" class="secondary" data-area-action="gallery">Open angler gallery</button><button type="button" class="secondary" data-area-action="submit">Suggest local information</button></section></div>';
+ detail.scrollIntoView({behavior:"smooth",block:"start"});
+ detail.querySelector("#close-area-guide")?.addEventListener("click",()=>{detail.hidden=true;document.getElementById("area-directory")?.scrollIntoView({behavior:"smooth",block:"center"})});
+ detail.querySelectorAll("[data-area-action]").forEach(button=>button.addEventListener("click",()=>{
+  const action=button.dataset.areaAction;
+  if(action==="weather"||action==="tides"){
+   const input=document.getElementById("conditions-place");if(input)input.value=area;
+   document.getElementById("conditions")?.scrollIntoView({behavior:"smooth",block:"start"});
+   if(action==="weather")loadConditions();
+   else document.querySelector(".tide-link")?.focus();
+  }else if(action==="fish-id")navigate("fish-id");
+  else if(action==="gallery")navigate("gallery");
+  else if(action==="submit")navigate("submit");
+ }));
+}
+document.getElementById("area-directory")?.addEventListener("click",e=>{
+ const card=e.target.closest("[data-open-area]");if(card)openAreaGuide(card.dataset.openArea);
+});
+
 function renderMarks(marks){
  const c=document.querySelector(".marks-list");if(!c)return;
  if(!marks.length){c.innerHTML='<div class="empty-state"><strong>No matching marks</strong><p>Try a larger radius or another county. No unverified data is promoted as verified.</p></div>';return}
@@ -133,7 +174,7 @@ async function loadMarks(){
  try{
   const r=await fetch("data/marks.json");if(!r.ok)throw Error();
   const d=await r.json();allMarks=Array.isArray(d.marks)?d.marks:[];
-  populateCounties();refreshMarkResults();
+  populateCounties();refreshMarkResults();renderAreaDirectory();
  }catch(e){c.innerHTML='<div class="empty-state"><strong>Fishing marks unavailable</strong><p>Mark data could not be loaded. No unverified information has been added as a fallback.</p></div>'}
 }
 
