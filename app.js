@@ -527,20 +527,45 @@ async function loadConditions(){
  const status=document.getElementById("conditions-status");
  const results=document.getElementById("weather-results");
  if(!place){if(status)status.textContent="Enter a coastal town or harbour first.";return}
- if(status)status.textContent="Finding "+place+" and loading the forecast…";
- if(results)results.innerHTML='<p class="condition-placeholder">Loading local weather…</p>';
+ if(status)status.textContent="Finding "+place+" and loading weather and sea conditions…";
+ if(results)results.innerHTML='<p class="condition-placeholder">Loading local weather and marine forecast…</p>';
  try{
   const location=await geocode(place);
-  const url="https://api.open-meteo.com/v1/forecast?latitude="+location.lat+"&longitude="+location.lon+"&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m,wind_direction_10m,wind_gusts_10m&hourly=temperature_2m,precipitation_probability,weather_code,wind_speed_10m,wind_direction_10m,wind_gusts_10m&forecast_days=3&timezone=auto";
-  const response=await fetch(url);if(!response.ok)throw Error("Weather service unavailable");
+  const base="latitude="+encodeURIComponent(location.lat)+"&longitude="+encodeURIComponent(location.lon)+"&timezone=auto&forecast_days=3";
+  const weatherUrl="https://api.open-meteo.com/v1/forecast?"+base+"&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m,wind_direction_10m,wind_gusts_10m&hourly=temperature_2m,precipitation_probability,weather_code,wind_speed_10m,wind_direction_10m,wind_gusts_10m";
+  const marineUrl="https://marine-api.open-meteo.com/v1/marine?"+base+"&hourly=wave_height,wave_period,wave_direction,swell_wave_height,swell_wave_period";
+  const response=await fetch(weatherUrl);if(!response.ok)throw Error("Weather service unavailable");
   const data=await response.json();
+  let marine=null;
+  try{const mr=await fetch(marineUrl);if(mr.ok){const md=await mr.json();if(md.hourly&&md.hourly.time)marine=md}}catch(_e){marine=null}
   const codeLabel=code=>({0:"Clear",1:"Mostly clear",2:"Partly cloudy",3:"Overcast",45:"Fog",48:"Freezing fog",51:"Light drizzle",53:"Drizzle",55:"Heavy drizzle",61:"Light rain",63:"Rain",65:"Heavy rain",71:"Light snow",73:"Snow",75:"Heavy snow",80:"Rain showers",81:"Showers",82:"Heavy showers",95:"Thunderstorms",96:"Thunderstorms with hail",99:"Severe thunderstorms"}[code]||"Changeable");
   const direction=deg=>{const dirs=["N","NE","E","SE","S","SW","W","NW"];return dirs[Math.round((Number(deg)||0)/45)%8]};
+  const marineByTime={};
+  if(marine)marine.hourly.time.forEach((t,i)=>{marineByTime[t]=i});
   const now=new Date();
-  const times=data.hourly.time.map((t,i)=>({t:new Date(t),i})).filter(x=>x.t>=now&&x.t<=new Date(now.getTime()+36*60*60*1000)).filter((x)=>x.t.getHours()%3===0).slice(0,12);
+  const times=data.hourly.time.map((t,i)=>({t:new Date(t),key:t,i})).filter(x=>x.t>=now&&x.t<=new Date(now.getTime()+36*60*60*1000)).filter(x=>x.t.getHours()%3===0).slice(0,12);
   const current=data.current;
-  const rows=times.map(x=>'<div class="weather-hour"><span>'+x.t.toLocaleString("en-GB",{weekday:"short",hour:"2-digit",minute:"2-digit"})+'</span><span>'+Math.round(data.hourly.temperature_2m[x.i])+'°C · '+escapeHtml(codeLabel(data.hourly.weather_code[x.i]))+'</span><span>Wind '+Math.round(data.hourly.wind_speed_10m[x.i])+' km/h '+direction(data.hourly.wind_direction_10m[x.i])+'</span><span>Rain '+(data.hourly.precipitation_probability[x.i]??0)+'%</span></div>').join("");
-  if(results)results.innerHTML='<div class="weather-current"><strong>'+Math.round(current.temperature_2m)+'°C</strong><span>'+escapeHtml(codeLabel(current.weather_code))+' · feels like '+Math.round(current.apparent_temperature)+'°C</span><span>Wind '+Math.round(current.wind_speed_10m)+' km/h '+direction(current.wind_direction_10m)+' · gusts '+Math.round(current.wind_gusts_10m)+' km/h</span><span>Humidity '+Math.round(current.relative_humidity_2m)+'%</span></div><div class="weather-hour-list">'+rows+'</div><small>Forecast for '+escapeHtml(location.label)+'. Weather from Open-Meteo; forecast values can change.</small>';
+  const scoreAt=(i,mi)=>{
+   const wind=Number(data.hourly.wind_speed_10m[i])||0,gust=Number(data.hourly.wind_gusts_10m[i])||0,rain=Number(data.hourly.precipitation_probability[i])||0;
+   let score=5;
+   if(wind>35)score-=2;else if(wind>25)score-=1;
+   if(gust>45)score-=2;else if(gust>35)score-=1;
+   if(rain>80)score-=1;
+   if(mi!==undefined&&marine){const wave=marine.hourly.wave_height[mi];if(Number.isFinite(wave)){if(wave>1.8)score-=2;else if(wave>1.2)score-=1}}
+   return Math.max(1,Math.min(5,score));
+  };
+  const rows=times.map(x=>{
+   const mi=marineByTime[x.key];
+   const wave=mi!==undefined&&marine?marine.hourly.wave_height[mi]:null;
+   const period=mi!==undefined&&marine?marine.hourly.wave_period[mi]:null;
+   const score=scoreAt(x.i,mi);
+   return '<div class="weather-hour"><span>'+x.t.toLocaleString("en-GB",{weekday:"short",hour:"2-digit",minute:"2-digit"})+'</span><span>'+Math.round(data.hourly.temperature_2m[x.i])+'°C · '+escapeHtml(codeLabel(data.hourly.weather_code[x.i]))+'</span><span>Wind '+Math.round(data.hourly.wind_speed_10m[x.i])+' km/h '+direction(data.hourly.wind_direction_10m[x.i])+' · gusts '+Math.round(data.hourly.wind_gusts_10m[x.i])+'</span><span>Rain '+(data.hourly.precipitation_probability[x.i]??0)+'%</span><span>'+ (Number.isFinite(wave)?'Waves '+wave.toFixed(1)+' m'+(Number.isFinite(period)?' · '+period.toFixed(0)+' s period':''):'Sea forecast unavailable')+'</span><span class="conditions-score">Conditions indicator: '+score+'/5</span></div>';
+  }).join("");
+  const scored=times.map(x=>({x,mi:marineByTime[x.key],score:scoreAt(x.i,marineByTime[x.key])})).sort((a,b)=>b.score-a.score);
+  const best=scored[0];
+  const bestHtml=best?'<div class="best-fishing-window"><strong>Most favourable forecast window</strong><span>'+best.x.t.toLocaleString("en-GB",{weekday:"long",hour:"2-digit",minute:"2-digit"})+' · '+best.score+'/5 conditions indicator</span><small>This simple guide compares forecast wind, gusts, rain and available wave height. It does not predict fish activity or guarantee a catch.</small></div>':'';
+  const marineNote=marine?'<p class="marine-source-note">Sea-state estimates from Open-Meteo Marine API. Nearshore wave data can be incomplete or differ from local conditions; it is not for navigation.</p>':'<p class="marine-source-note">A marine forecast was not available for this location. Weather is shown without wave estimates.</p>';
+  if(results)results.innerHTML='<div class="weather-current"><strong>'+Math.round(current.temperature_2m)+'°C</strong><span>'+escapeHtml(codeLabel(current.weather_code))+' · feels like '+Math.round(current.apparent_temperature)+'°C</span><span>Wind '+Math.round(current.wind_speed_10m)+' km/h '+direction(current.wind_direction_10m)+' · gusts '+Math.round(current.wind_gusts_10m)+' km/h</span><span>Humidity '+Math.round(current.relative_humidity_2m)+'%</span></div>'+bestHtml+'<div class="weather-hour-list">'+rows+'</div><small>Forecast for '+escapeHtml(location.label)+'. Weather from Open-Meteo; values can change.</small>'+marineNote;
   if(status)status.textContent="Weather loaded for "+location.label+". Forecast shown for the next 36 hours.";
  }catch(error){
   if(status)status.textContent="Could not load conditions for that place. Try a nearby town or harbour.";
