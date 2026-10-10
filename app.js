@@ -148,9 +148,33 @@ async function geocode(place){
 
 async function setRadiusFromPlace(place){
  const status=document.getElementById("radius-status");
+ const countySelect=document.getElementById("county-filter");
+ const query=place.trim().toLowerCase();
  if(status)status.textContent="Finding "+place+"…";
- try{radiusCentre=await geocode(place);if(status)status.textContent="Showing verified marks near "+radiusCentre.label;refreshMarkResults()}
- catch(e){radiusCentre=null;if(status)status.textContent="Location not found. Try a town, village or UK postcode.";refreshMarkResults()}
+
+ // A county such as Hampshire is an area, not a single point. Show all marks
+ // recorded in that county instead of searching a small radius around its centroid.
+ const matchingCounty=[...new Set(allMarks.map(countyOf))].find(county=>county.toLowerCase()===query);
+ if(matchingCounty){
+  radiusCentre=null;
+  if(countySelect)countySelect.value=matchingCounty;
+  const search=document.getElementById("search");if(search)search.value="";
+  refreshMarkResults();
+  if(status)status.textContent="Showing marks recorded in "+matchingCounty+". For a smaller nearby search, enter a town or postcode.";
+  return;
+ }
+ if(countySelect)countySelect.value="";
+ try{
+  radiusCentre=await geocode(place);
+  if(status)status.textContent="Showing verified marks within the selected radius of "+place+".";
+  refreshMarkResults();
+  const summary=document.getElementById("result-summary");
+  if(summary&&radiusCentre)summary.textContent=summary.textContent.replace(" mark"," verified mark");
+ }catch(e){
+  radiusCentre=null;
+  if(status)status.textContent="Location not found. Try a coastal town, village or UK postcode.";
+  refreshMarkResults();
+ }
 }
 
 const place=document.getElementById("radius-place");
