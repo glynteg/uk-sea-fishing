@@ -24,6 +24,7 @@ function renderMapMarkers(marks){
   const marker=L.marker([+mark.location.latitude,+mark.location.longitude]).addTo(fishingMap);
   const accuracy=mark.location?.accuracy==="approximate_venue_midpoint"?"<br><em>Approximate venue midpoint.</em>":mark.location?.accuracy==="area_only"?"<br><em>Fishing area only — no exact GPS position published.</em>":"";
   marker.bindPopup("<strong>"+escapeHtml(mark.name||"Verified mark")+"</strong><br>"+escapeHtml(mark.location?.area||"")+accuracy+'<br><button type="button" class="map-view-mark" data-open-mark="'+escapeHtml(mark.id||"")+'">View fishing mark details</button>');
+  marker.on("click",()=>{const card=document.getElementById("mark-"+mark.id);if(card){document.querySelectorAll(".mark-result.map-selected").forEach(x=>x.classList.remove("map-selected"));card.classList.add("map-selected");setTimeout(()=>card.scrollIntoView({behavior:"smooth",block:"center"}),150);}});
   mapMarkers.push(marker);
  });
  if(radiusCentre&&marks.length&&Number.isFinite(radiusCentre.lat))fishingMap.setView([radiusCentre.lat,radiusCentre.lon],9);
