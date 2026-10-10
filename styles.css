@@ -49,3 +49,10 @@ main{max-width:900px;margin:auto;padding-bottom:80px}.hero{background:linear-gra
 .fish-profile-warning{margin:14px 0 0;padding:10px;border-left:4px solid #b58a3b;background:#fff8e8;border-radius:5px;color:#6f4e16;font-size:12px;line-height:1.5}
 .fish-profile-button{margin-top:10px}
 @media(max-width:480px){.fish-profile-head{flex-direction:column}.fish-profile-facts{grid-template-columns:1fr}}
+
+
+/* Fish identification photographs */
+.fish-profile-photo{margin:14px 0 8px;background:#f5f8f9;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.fish-profile-photo img{display:block;width:100%;max-height:320px;object-fit:contain;background:#fff}
+.fish-profile-photo figcaption{padding:8px 10px;font-size:11px;color:var(--muted)}
+.fish-photo-placeholder{padding:18px;margin:14px 0;background:#f7fafb;border:1px dashed var(--line);border-radius:10px;color:var(--muted);font-size:13px}
