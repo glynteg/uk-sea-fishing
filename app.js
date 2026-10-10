@@ -472,6 +472,14 @@ Object.assign(fishProfiles, {
  }
 });
 
+Object.assign(fishProfiles, {
+ "Whiting": {
+  image:"https://commons.wikimedia.org/wiki/Special:FilePath/Whiting_%28PSF%29.png",
+  imageCredit:"Pearson Scott Foresman / Wikimedia Commons (public domain)",
+  imageCreditUrl:"https://commons.wikimedia.org/wiki/File:Whiting_(PSF).png"
+ }
+});
+
 function renderFishId(){
  const c=document.getElementById("fish-results"); if(!c)return;
  const q=document.getElementById("fish-search")?.value.trim().toLowerCase()||"";
