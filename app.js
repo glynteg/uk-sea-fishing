@@ -250,6 +250,58 @@ const fishProfiles={
   conservation:"Check current local regulations and handle fish carefully. If identification is uncertain, take a clear photo and release the fish rather than relying on a single feature."
  }
 };
+Object.assign(fishProfiles, {
+  "Cod": {
+    "identification": "Stout body, pale lateral line, three dorsal fins, two anal fins and a single barbel beneath the chin. Colour is often mottled brown, olive or grey.",
+    "habitat": "Rocky and mixed seabeds, offshore banks, wrecks and deeper coastal water.",
+    "habits": "Feeds on crustaceans, worms and fish; diet and depth change with size and season.",
+    "baits": "Lugworm, ragworm, crab, squid, mussel and fish baits are used by sea anglers.",
+    "lures": "Metal jigs and fish-imitation lures can work where cod are feeding on prey fish.",
+    "tactics": "Fish bait close to the seabed over suitable rough or mixed ground. Match tackle to tide and snag risk.",
+    "seasons": "Availability varies by region and year; colder months bring cod closer inshore in some areas, but not reliably.",
+    "conservation": "Check current local rules before retaining fish. Release unwanted fish promptly and carefully."
+  },
+  "Haddock": {
+    "identification": "Three dorsal fins, a dark lateral line and a distinctive dark shoulder blotch often called the Devil's thumbprint. Usually slimmer than cod and lacks a prominent chin barbel.",
+    "habitat": "Sandy, gravelly and mixed seabeds, often offshore and in cooler water.",
+    "habits": "Feeds mainly on seabed invertebrates, including worms, crustaceans and molluscs.",
+    "baits": "Worms, shellfish, squid and fish strips are commonly used on bottom-fished rigs.",
+    "lures": "Small metal jigs may work when fish are feeding on small prey.",
+    "tactics": "Present bait close to the seabed using a rig suited to the current and ground. Identify carefully as small cod-family fish can be confused.",
+    "seasons": "Catch rates depend on area, depth, temperature and stock distribution.",
+    "conservation": "Check the applicable size rule and local restrictions before keeping a fish; return unwanted fish quickly."
+  },
+  "Hake": {
+    "identification": "Long, slender body, large mouth with sharp teeth, two dorsal fins and a silvery-grey appearance. More elongated than cod or haddock.",
+    "habitat": "Usually associated with deeper offshore water and the continental shelf.",
+    "habits": "Predator that feeds on fish and squid; behaviour can change with depth and time.",
+    "baits": "Fish strips, squid and other natural fish baits are used where hake are targeted.",
+    "lures": "Metal jigs and fish-shaped lures can be used at suitable depths.",
+    "tactics": "Usually targeted from boats over deeper ground with tackle matched to depth and current. Use reliable depth information and safe boating practice.",
+    "seasons": "Availability varies with region, depth and seasonal movement.",
+    "conservation": "Check current size and local rules before retaining. Handle the teeth carefully and release unwanted fish with care."
+  },
+  "Herring": {
+    "identification": "Slim, bright silver body, deeply forked tail and a single dorsal fin. Unlike mackerel, it has no wavy dark stripes on the back.",
+    "habitat": "Coastal and offshore waters, often travelling in shoals that may move close to shore seasonally.",
+    "habits": "Feeds mainly on plankton and small organisms in the water column.",
+    "baits": "Small baited hooks and tiny natural baits are sometimes used, though herring are commonly caught on small artificial rigs.",
+    "lures": "Small shiny feather, sabiki-style or reflective hooks are used for shoaling herring where permitted.",
+    "tactics": "Use light tackle and small hooks, and avoid taking more fish than can be used. Shoals are not guaranteed to be present.",
+    "seasons": "Runs and shore catches vary greatly by coast and year.",
+    "conservation": "Check current local rules and area-specific restrictions. Keep only what you need and handle fish humanely."
+  },
+  "Horse mackerel / Scad": {
+    "identification": "Silvery body, large eyes and forked tail, with a row of hard raised scutes along the lateral line near the tail. It lacks the tiger-like stripes of common mackerel.",
+    "habitat": "Open coastal water, harbours and offshore areas, often in shoals.",
+    "habits": "Feeds on small fish and planktonic animals, depending on size and availability.",
+    "baits": "Small strips of fish and tiny natural baits may be used.",
+    "lures": "Small feathers, sabiki-style rigs and shiny lures are used when shoals are feeding.",
+    "tactics": "Use light tackle and small hooks around observed shoals; avoid unnecessary catches.",
+    "seasons": "Presence can be seasonal and differs between coasts.",
+    "conservation": "Confirm the species and check current local rules before retaining fish."
+  }
+});
 function renderFishId(){
  const c=document.getElementById("fish-results"); if(!c)return;
  const q=document.getElementById("fish-search")?.value.trim().toLowerCase()||"";
