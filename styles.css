@@ -66,3 +66,14 @@ main{max-width:900px;margin:auto;padding-bottom:80px}.hero{background:linear-gra
 .safety-footnote p{margin:0}
 .safety-footnote-strong{border-left-color:#b87928;background:#fff7e9;color:#65491f}
 .safety-footnote-strong strong{color:#674314}
+
+
+/* Marine forecast and indicative fishing-condition guidance */
+.best-fishing-window{display:grid;gap:5px;margin:12px 0;padding:12px;border:1px solid #c6dfe4;border-left:4px solid #117a9a;border-radius:9px;background:#eef7f8}
+.best-fishing-window strong{font-size:13px;color:#0b2d3a}
+.best-fishing-window span{font-weight:800;color:#117a9a;font-size:14px}
+.best-fishing-window small,.marine-source-note{font-size:11px;line-height:1.5;color:#6b7d84}
+.conditions-score{font-weight:800;color:#117a9a!important}
+.marine-source-note{margin:8px 0 0}
+.weather-hour{grid-template-columns:1fr 1.3fr;gap:6px}
+@media(max-width:650px){.weather-hour{grid-template-columns:1fr}}
