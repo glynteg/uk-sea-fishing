@@ -98,8 +98,8 @@ function openAreaGuide(area){
    const input=document.getElementById("conditions-place");if(input)input.value=area;
    document.getElementById("conditions")?.scrollIntoView({behavior:"smooth",block:"start"});
    if(action==="weather")loadConditions();
-   else document.querySelector(".tide-link")?.focus();
-  }else if(action==="fish-id")navigate("fish-id");
+   else document.querySelector(".tide-link")?.click();
+  }else if(action==="fish")navigate("fish-id");
   else if(action==="gallery")navigate("gallery");
   else if(action==="submit")navigate("submit");
  }));
