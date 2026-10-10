@@ -23,7 +23,7 @@ function renderMapMarkers(marks){
  marks.filter(m=>m.status==="verified"&&Number.isFinite(Number(m.location?.latitude))&&Number.isFinite(Number(m.location?.longitude))).forEach(mark=>{
   const marker=L.marker([+mark.location.latitude,+mark.location.longitude]).addTo(fishingMap);
   const accuracy=mark.location?.accuracy==="approximate_venue_midpoint"?"<br><em>Approximate venue midpoint.</em>":mark.location?.accuracy==="area_only"?"<br><em>Fishing area only — no exact GPS position published.</em>":"";
-  marker.bindPopup("<strong>"+escapeHtml(mark.name||"Verified mark")+"</strong><br>"+escapeHtml(mark.location?.area||"")+accuracy);
+  marker.bindPopup("<strong>"+escapeHtml(mark.name||"Verified mark")+"</strong><br>"+escapeHtml(mark.location?.area||"")+accuracy+'<br><button type="button" class="map-view-mark" data-open-mark="'+escapeHtml(mark.id||"")+'">View fishing mark details</button>');
   mapMarkers.push(marker);
  });
  if(radiusCentre&&marks.length&&Number.isFinite(radiusCentre.lat))fishingMap.setView([radiusCentre.lat,radiusCentre.lon],9);
@@ -83,7 +83,7 @@ function renderMarks(marks){
   const report='<button class="report-button" type="button" data-report-mark="'+escapeHtml(m.id||"")+'" data-report-name="'+escapeHtml(m.name||"this mark")+'">🚨 Report a problem with this mark</button>';
   const parking=m.parking?"<p><strong>Parking:</strong> "+escapeHtml(m.parking)+"</p>":"";
   const accuracy=m.location?.accuracy==="approximate_venue_midpoint"?"<p><em>Map position is an approximate venue midpoint, not an exact casting position.</em></p>":m.location?.accuracy==="area_only"?"<p><em>Fishing area only — no exact GPS position published. Parking/access may be mapped separately.</em></p>":"";
-  return '<article class="mark-result"><span class="badge '+cls+'">'+label+'</span><h3>'+escapeHtml(m.name||"Unnamed mark")+'</h3><p>'+escapeHtml(m.description||"No description provided.")+'</p>'+dist+rating+species+source+lastChecked+historicalWarning+parking+access+accuracy+report+'</article>';
+  return '<article class="mark-result" id="mark-'+escapeHtml(m.id||"")+'"><span class="badge '+cls+'">'+label+'</span><h3>'+escapeHtml(m.name||"Unnamed mark")+'</h3><p>'+escapeHtml(m.description||"No description provided.")+'</p>'+dist+rating+species+source+lastChecked+historicalWarning+parking+access+accuracy+report+'</article>';
  }).join("");
 }
 
@@ -136,7 +136,7 @@ async function loadMarks(){
  }catch(e){c.innerHTML='<div class="empty-state"><strong>Fishing marks unavailable</strong><p>Mark data could not be loaded. No unverified information has been added as a fallback.</p></div>'}
 }
 
-document.addEventListener("click",e=>{const b=e.target.closest("[data-report-mark]");if(!b)return;const form=document.getElementById("problem-form");if(form){form.dataset.markId=b.dataset.reportMark;form.dataset.markName=b.dataset.reportName;form.scrollIntoView({behavior:"smooth",block:"center"});const details=form.querySelector('[name="details"]');if(details)details.value="Problem with "+b.dataset.reportName+": ";}});
+document.addEventListener("click",e=>{const open=e.target.closest("[data-open-mark]");if(open){const card=document.getElementById("mark-"+open.dataset.openMark);if(card){document.querySelectorAll(".mark-result.map-selected").forEach(x=>x.classList.remove("map-selected"));card.classList.add("map-selected");card.scrollIntoView({behavior:"smooth",block:"center"});}return;}const b=e.target.closest("[data-report-mark]");if(!b)return;const form=document.getElementById("problem-form");if(form){form.dataset.markId=b.dataset.reportMark;form.dataset.markName=b.dataset.reportName;form.scrollIntoView({behavior:"smooth",block:"center"});const details=form.querySelector('[name="details"]');if(details)details.value="Problem with "+b.dataset.reportName+": ";}});
 
 document.getElementById("problem-form")?.addEventListener("submit",e=>{e.preventDefault();const form=e.currentTarget;const data=Object.fromEntries(new FormData(form).entries());data.mark_id=form.dataset.markId||"";data.mark_name=form.dataset.markName||"General report";data.reported_at=new Date().toISOString();const reports=JSON.parse(localStorage.getItem("ukSeaFishingProblemReports")||"[]");reports.push(data);localStorage.setItem("ukSeaFishingProblemReports",JSON.stringify(reports));const msg=document.getElementById("problem-message");if(msg){msg.hidden=false;msg.textContent="Thank you. Your report has been saved for review. It will not automatically change verified information."; }form.reset();});
 
