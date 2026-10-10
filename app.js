@@ -12,6 +12,19 @@ function navigate(section){
 
 function initialiseMap(){
  const el=document.getElementById("fishing-map"); if(!el||typeof L==="undefined")return;
+ const mapShell=el.closest(".map-shell"), fullButton=document.getElementById("map-fullscreen");
+ if(mapShell&&fullButton){
+  const toggleFullscreen=()=>{
+   const expanded=mapShell.classList.toggle("map-is-fullscreen");
+   document.body.classList.toggle("map-fullscreen-open",expanded);
+   fullButton.setAttribute("aria-pressed",String(expanded));
+   fullButton.setAttribute("aria-label",expanded?"Exit full-screen map":"Expand map to full screen");
+   fullButton.textContent=expanded?"✕ Exit full screen":"⛶ Full screen map";
+   if(fishingMap)setTimeout(()=>fishingMap.invalidateSize(),100);
+  };
+  fullButton.addEventListener("click",toggleFullscreen);
+  document.addEventListener("keydown",event=>{if(event.key==="Escape"&&mapShell.classList.contains("map-is-fullscreen"))toggleFullscreen()});
+ }
  fishingMap=L.map(el,{scrollWheelZoom:false});
  const streetLayer=L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"&copy; OpenStreetMap contributors",maxZoom:19});
  const satelliteLayer=L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",{attribution:"Tiles &copy; Esri and its imagery providers",maxZoom:19});
