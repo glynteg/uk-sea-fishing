@@ -122,3 +122,38 @@ No candidate in this backlog should appear as a verified mark solely because it 
 1. Inspect live mark coordinates and schema for nearby overlap before deciding on Bracklesham / Wittering boundaries.
 2. Check exact access and species evidence for Penmon Point and Cymyran Bay, then review Moelfre's existing record rather than duplicating it.
 3. Continue finding individual Sea Angler venue pages and dated reports where they provide location-specific seasonal evidence.
+
+
+## Second research batch — additional named marks (11 October 2026)
+
+### Brighton Marina — East Sussex
+- Sea Angler names Brighton Marina as a sea-fishing venue and lists garfish, mackerel, pollack, mullet, bass, dogfish, gurnard, pouting, sole, whiting and cod. Its guide says summer is associated with garfish, mackerel and pollack, and autumn with whiting and cod: https://www.seaangler.co.uk/spot/brighton-marina-sea-fishing-mark/
+- The guide's directions point to the A259 slip road east of Brighton.
+- Status: candidate; check current marina fishing rules, which structures are open to anglers, parking arrangements, and exact venue location before adding. A marina name alone must not imply all pontoons or harbour infrastructure are fishable.
+
+### Eastney Beach and the Portsmouth Pyramid Centre beach — Hampshire
+- Sea Angler's historical catch reports document Eastney Beach and the beach by the Pyramid Centre as fishing venues, with reports including dabs, flounder, whiting, bass, rockling, codling and plaice: https://www.seaangler.co.uk/fishing-news/uk-sea-fishing-catch-reports-5-1-10/ and https://www.seaangler.co.uk/fishing-news/uk-sea-fishing-catch-reports-for-week-ending-28-2-10/
+- These are dated catch reports, not current catch guarantees. Eastney is not currently in the app's 37-mark list.
+- Status: Eastney remains a candidate pending current access and boundaries check. Check whether the Pyramid Centre beach is a genuinely distinct mark or just part of an existing Southsea beach entry before adding.
+
+### Hayling Island — East Stoke Corner / Sandy Point
+- Sea Angler's historic catch reports identify East Stoke Corner as a local Hayling Island hotspot: https://www.seaangler.co.uk/fishing-news/uk-sea-fishing-catch-reports-5-1-10/
+- Sea Angler also documents Sandy Point as a notable smoothhound venue: https://www.seaangler.co.uk/fishing-news/its-a-new-record-smoothhound/
+- These are distinct candidate names, but exact positions, present-day public access, parking, nature-conservation restrictions and any seasonal closures need checking before either can be added. Do not substitute a general Hayling Island midpoint for a specific mark.
+- Status: candidates; keep separate from the broad Langstone Harbour candidate until exact locations and boundaries are clear.
+
+### Hill Head — additional species-season lead
+- Sea Angler lists Hill Head among established Sussex/Hampshire smoothhound venues: https://www.seaangler.co.uk/fishing-tips/advanced/when-and-how-to-catch-big-smoothhounds-from-the-beach/
+- This corroborates the venue as a fishing lead and suggests a seasonal smoothhound association, but it does not resolve the boundary between Hill Head Sea Wall and Hill Head Harbour Wall.
+- Status: retain the previous access/boundary check; don't create duplicate entries for neighbouring structures without precise evidence.
+
+### Seasonal record quality note
+- Sea Angler's dated catch reports from 2009–2010 describe what anglers reported during those periods at Eastney, Portsmouth, Hayling Island and Shoreham. They can help establish historic seasonal patterns when multiple reports agree, but should be stored as historical supporting evidence, not shown as current catch reports.
+- The live app should display a seasonal tendency only when supported by suitable sources, and should avoid phrases such as “fish are being caught now” unless a genuinely recent report confirms that.
+
+## Second-batch decisions
+- Brighton Marina: credible named candidate; check current fishing permissions and access.
+- Eastney Beach: credible candidate; check access and whether any narrower Southsea venue is separate.
+- East Stoke Corner and Sandy Point: credible historic venue leads; exact position and current access remain unverified.
+- Hill Head: another fishing source supports the smoothhound association, but boundary/access checks remain open.
+- No candidate in this batch has been added to data/marks.json.
