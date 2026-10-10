@@ -105,3 +105,9 @@ body{padding-bottom:70px}
  .bottom-nav button small{font-size:10px}
  .tab-panel{min-height:calc(100vh - 136px)}
 }
+
+/* Persistent return-home control in the header */
+.topbar-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.home-button{border:1px solid #8bc5d5;background:rgba(255,255,255,.08);color:#fff;border-radius:18px;padding:7px 12px;font-weight:700;cursor:pointer;white-space:nowrap}
+.home-button:hover{background:rgba(255,255,255,.16)}
+@media(max-width:420px){.topbar{padding:0 10px}.brand{gap:6px}.brand strong{font-size:12px}.brand small{font-size:10px}.brand-mark{font-size:21px}.topbar-actions{gap:5px}.home-button,.premium{padding:6px 8px;font-size:11px}}
