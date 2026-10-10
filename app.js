@@ -269,7 +269,9 @@ const fishRules=[
   {"name":"Anglerfish / monkfish","scientific":"Lophius piscatorius","size":"Check current local rules.","catch":"Check current local rules before retaining.","season":"Generally associated with deeper water and seabeds.","notes":"Very broad head and large mouth; has a modified first dorsal spine used as a lure.","source":"Species identification guidance"},
   {"name":"Ocean sunfish","scientific":"Mola mola","size":"Do not target or retain without checking current official rules.","catch":"Check current conservation and legal guidance.","season":"Occasionally seen near the surface in warmer months.","notes":"Very deep, flattened body and truncated tail; observe from a distance and do not attempt to handle.","protection":"Handle with care; check current legal and conservation guidance","source":"Species identification guidance"},
   {"name":"Grey triggerfish","scientific":"Balistes capriscus","size":"Check current local rules.","catch":"Check current local rules before retaining.","season":"Often encountered in warmer months in some UK waters.","notes":"Deep-bodied fish with a prominent first dorsal spine that can lock upright.","source":"Species identification guidance"},
-  {"name":"Ocean pout / eelpout","scientific":"Zoarces viviparus","size":"Check current local rules.","catch":"Check current local rules before retaining.","season":"Local occurrence varies.","notes":"Elongated body with a long continuous dorsal fin; confirm the exact species before recording.","source":"Species identification guidance"}
+  {"name":"Ocean pout / eelpout","scientific":"Zoarces viviparus","size":"Check current local rules.","catch":"Check current local rules before retaining.","season":"Local occurrence varies.","notes":"Elongated body with a long continuous dorsal fin; confirm the exact species before recording.","source":"Species identification guidance"},
+  {"name":"European lobster","scientific":"Homarus gammarus","size":"Often 87 mm carapace length in UK guidance, but local rules can differ — check the rules for the exact area.","catch":"Do not retain berried (egg-bearing) or legally V-notched lobsters; additional local restrictions may apply.","season":"Can be caught year-round where present; local availability varies.","notes":"Blue-black to dark green shell, large unequal claws and a muscular tail. Measure the carapace using the official method and check local rules before retaining.","protection":"Check minimum size, berried-lobster rules and V-notch restrictions before retaining","source":"MMO minimum conservation reference sizes and local IFCA guidance"},
+  {"name":"Edible crab / brown crab","scientific":"Cancer pagurus","size":"Minimum size varies substantially by area; check the local IFCA or fisheries authority guidance before retaining.","catch":"Berried (egg-bearing) or soft-shelled crab may be protected by local rules; check before retaining.","season":"Can be caught year-round where present; local availability varies.","notes":"Broad oval shell, reddish-brown upper surface and black-tipped claws. Measure the shell width across the widest part using the official method.","protection":"Check local minimum size and restrictions on berried or soft-shelled crabs","source":"MMO minimum conservation reference sizes and local IFCA guidance"}
  ];
 const fishProfiles={
  "Bass":{
@@ -455,6 +457,26 @@ Object.assign(fishProfiles, {
     "tactics": "Handle carefully and keep fingers clear of the mouth and rough skin. If unsure which species it is, photograph the whole fish and release it rather than relying on the common name.",
     "seasons": "Can be encountered year-round, though catches vary with location and conditions.",
     "conservation": "This entry covers more than one possible species and is not a substitute for species identification. Check current rules for the exact species and area; release unwanted fish carefully."
+  },
+  "European lobster": {
+    "identification": "A robust crustacean with a hard blue-black to dark green shell, two large unequal claws and a muscular tail. Colour can change after cooking, so use shape and claws as well as colour.",
+    "habitat": "Rocky ground, crevices and mixed seabeds, often in areas where it can shelter.",
+    "habits": "Usually shelters in holes or crevices and is more active when feeding, often at lower light levels.",
+    "baits": "Not applicable as a fish bait recommendation; follow local rules on shellfish capture and handling.",
+    "lures": "Not applicable.",
+    "tactics": "Use a suitable shellfish gauge and follow local rules. Keep fingers clear of the claws and do not retain undersized, berried or V-notched lobsters where prohibited.",
+    "seasons": "Availability depends on local habitat, weather and fishing method.",
+    "conservation": "Minimum size and restrictions can vary by area. Check the current local IFCA or fisheries authority rules before retaining; do not assume one UK-wide size covers every situation."
+  },
+  "Edible crab / brown crab": {
+    "identification": "A broad oval shell, usually reddish-brown above with a pale underside and black tips to the claws. Also commonly called brown crab.",
+    "habitat": "Rocky and mixed seabeds, reefs and areas with crevices; habitat varies with size and local conditions.",
+    "habits": "Feeds on shellfish and other seabed animals, using its strong claws to break shells.",
+    "baits": "Not applicable as a fish bait recommendation; check local rules before using any crab as bait.",
+    "lures": "Not applicable.",
+    "tactics": "Measure shell width across the widest part using the correct gauge and official method. Handle claws carefully and check local restrictions before retaining.",
+    "seasons": "Can be encountered year-round where present; catches vary by area and conditions.",
+    "conservation": "Minimum sizes vary by area, and additional rules may protect berried or soft-shelled crabs. Check current local regulations before retaining."
   }
 });
 Object.assign(fishProfiles, {
