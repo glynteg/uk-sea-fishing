@@ -250,7 +250,43 @@ async function loadMarks(){
 
 document.addEventListener("click",e=>{const open=e.target.closest("[data-open-mark]");if(open){const card=document.getElementById("mark-"+open.dataset.openMark);if(card){document.querySelectorAll(".mark-result.map-selected").forEach(x=>x.classList.remove("map-selected"));card.classList.add("map-selected");card.scrollIntoView({behavior:"smooth",block:"center"});}return;}const b=e.target.closest("[data-report-mark]");if(!b)return;const form=document.getElementById("problem-form");if(form){form.dataset.markId=b.dataset.reportMark;form.dataset.markName=b.dataset.reportName;form.scrollIntoView({behavior:"smooth",block:"center"});const details=form.querySelector('[name="details"]');if(details)details.value="Problem with "+b.dataset.reportName+": ";}});
 
-document.getElementById("problem-form")?.addEventListener("submit",e=>{e.preventDefault();const form=e.currentTarget;const data=Object.fromEntries(new FormData(form).entries());data.mark_id=form.dataset.markId||"";data.mark_name=form.dataset.markName||"General report";data.reported_at=new Date().toISOString();const reports=JSON.parse(localStorage.getItem("ukSeaFishingProblemReports")||"[]");reports.push(data);localStorage.setItem("ukSeaFishingProblemReports",JSON.stringify(reports));const msg=document.getElementById("problem-message");if(msg){msg.hidden=false;msg.textContent="Thank you. Your report has been saved for review. It will not automatically change verified information."; }form.reset();});
+const SUPABASE_URL="https://movunapqaufbnrapimmo.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY="sb_publishable_d7hVz9GxmJW7Ny2HSocBiA_9DJF80Ba";
+
+document.getElementById("problem-form")?.addEventListener("submit",async e=>{
+ e.preventDefault();
+ const form=e.currentTarget;
+ const submitButton=form.querySelector('button[type="submit"]');
+ const msg=document.getElementById("problem-message");
+ const data=Object.fromEntries(new FormData(form).entries());
+ data.mark_id=form.dataset.markId||"";
+ data.mark_name=form.dataset.markName||"General report";
+ if(msg){msg.hidden=true;msg.textContent="";}
+ if(submitButton){submitButton.disabled=true;submitButton.textContent="Sending report…";}
+ try{
+  const response=await fetch(SUPABASE_URL+"/rest/v1/problem_reports",{
+   method:"POST",
+   headers:{
+    "apikey":SUPABASE_PUBLISHABLE_KEY,
+    "Authorization":"Bearer "+SUPABASE_PUBLISHABLE_KEY,
+    "Content-Type":"application/json",
+    "Prefer":"return=minimal"
+   },
+   body:JSON.stringify(data)
+  });
+  if(!response.ok){
+   const detail=await response.text();
+   throw new Error("Report submission failed ("+response.status+"): "+detail);
+  }
+  if(msg){msg.hidden=false;msg.textContent="Thank you. Your report has been sent for review. It will not automatically change verified information.";}
+  form.reset();
+ }catch(error){
+  console.error("Problem report submission failed:",error);
+  if(msg){msg.hidden=false;msg.textContent="Sorry, your report could not be sent. Please check your internet connection and try again. Your report has not been confirmed as received.";}
+ }finally{
+  if(submitButton){submitButton.disabled=false;submitButton.textContent="Send report for review";}
+ }
+});
 
 document.getElementById("mark-form")?.addEventListener("submit",e=>{
  e.preventDefault();const m=document.getElementById("submit-message");
