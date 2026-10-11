@@ -1,7 +1,7 @@
 {
   "version": 1,
   "rules": {
-    "verified": "A fishing mark explicitly named in a Sea Angler fishing-mark article, venue guide, or catch report qualifies as verified. Other marks require at least two matching listings across the approved references.",
+    "verified": "A fishing mark explicitly named in a Sea Angler fishing-mark article, venue guide, or catch report qualifies as verified. Other marks require at least two matching explicit fishing-venue listings across British Sea Fishing, The Beach Guide, and TripAdvisor. A general TripAdvisor attraction page alone does not verify fishing use.",
     "community_unverified": "Submitted by an angler but not independently checked.",
     "rejected": "Not suitable for publication."
   },
@@ -49,7 +49,7 @@
       "accessible_access": false,
       "access_what3words": "fewest.campfires.product",
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -63,6 +63,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/benllech-bay-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -109,7 +113,7 @@
       "accessible_access": false,
       "access_what3words": "shaky.clubbing.absorb",
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -123,6 +127,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/fishing-news/uk-sea-fishing-catch-reports-5-1-10/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -168,7 +176,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -182,6 +190,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/fishing-news/book-this-pier-for-just-a-quid/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -232,7 +244,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -246,6 +258,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/calshot-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -295,7 +311,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -309,6 +325,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/sandwich-bay-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 2,
@@ -360,7 +380,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -374,6 +394,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/blue-anchor-sea-fishing-marks/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -425,7 +449,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -439,6 +463,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/white-mark-gasworks-sea-fishing-marks/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -490,7 +518,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -504,6 +532,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/bossington-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -553,7 +585,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -567,6 +599,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/cheyne-section-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -613,7 +649,7 @@
       "easy_access": true,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -627,6 +663,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/rhos-on-sea-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -679,7 +719,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -693,6 +733,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/llandudno-pier-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 2,
@@ -744,7 +788,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -758,6 +802,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/llanddulas-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -803,7 +851,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -817,6 +865,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/pendine-beach-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 2,
@@ -865,7 +917,7 @@
       "easy_access": true,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -879,6 +931,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/the-knap-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -925,7 +981,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -939,6 +995,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/goldcliff-beach-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 2,
@@ -986,7 +1046,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1000,6 +1060,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/talacre-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -1055,7 +1119,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1069,6 +1133,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/burrow-head-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -1112,7 +1180,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1126,6 +1194,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/saltwick-bay-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -1174,7 +1246,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1188,6 +1260,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/carn-du-sea-fishing-mark-lamorna/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -1238,7 +1314,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1252,6 +1328,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/eype-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -1299,7 +1379,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1313,6 +1393,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/seatown/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -1359,7 +1443,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1373,6 +1457,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/a-sea-fishing-guide-to-monmouth-beach/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -1416,7 +1504,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1430,6 +1518,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/weston-shore-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -1479,7 +1571,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1493,6 +1585,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/gypsy-lane-sea-fishing-mark-lepe/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -1537,7 +1633,7 @@
       "easy_access": true,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1551,6 +1647,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/shoreham-beach-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -1592,7 +1692,7 @@
       "easy_access": true,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1606,6 +1706,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/rottingdean-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 2,
@@ -1648,7 +1752,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1662,6 +1766,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/fishing-news/ten-top-smoothound-venues/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 2,
@@ -1714,7 +1822,7 @@
         "count": 0
       },
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1728,6 +1836,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/bridging-camp-section-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -1777,7 +1889,7 @@
         "count": 0
       },
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1791,6 +1903,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/fishing-news/uk-sea-fishing-catch-reports-27-10-09/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -1843,7 +1959,7 @@
       "easy_access": true,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1857,6 +1973,10 @@
           "sea_angler": {
             "listed": false,
             "url": null
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 0,
@@ -1907,7 +2027,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1921,6 +2041,10 @@
           "sea_angler": {
             "listed": false,
             "url": null
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 0,
@@ -1971,7 +2095,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1985,6 +2109,10 @@
           "sea_angler": {
             "listed": false,
             "url": null
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 0,
@@ -2036,7 +2164,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -2050,6 +2178,10 @@
           "sea_angler": {
             "listed": false,
             "url": null
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -2107,7 +2239,7 @@
         "count": 0
       },
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -2121,6 +2253,10 @@
           "sea_angler": {
             "listed": false,
             "url": null
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -2177,7 +2313,7 @@
         "count": 0
       },
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -2191,6 +2327,10 @@
           "sea_angler": {
             "listed": false,
             "url": null
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -2247,7 +2387,7 @@
         "count": 0
       },
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -2261,6 +2401,10 @@
           "sea_angler": {
             "listed": false,
             "url": null
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 1,
@@ -2326,7 +2470,7 @@
         "count": 0
       },
       "verification": {
-        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 matching listings across British Sea Fishing, The Beach Guide, and TripAdvisor are required. TripAdvisor must explicitly identify the venue as a fishing mark.",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -2340,6 +2484,10 @@
           "sea_angler": {
             "listed": true,
             "url": "https://www.seaangler.co.uk/spot/holyhead-breakwater-sea-fishing-mark/"
+          },
+          "tripadvisor": {
+            "listed": null,
+            "note": "Not yet conclusively checked for an explicit fishing-venue listing"
           }
         },
         "confirmed_source_count": 2,
