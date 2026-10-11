@@ -1,7 +1,7 @@
 {
   "version": 1,
   "rules": {
-    "verified": "Independently checked before being shown as a verified mark. A recognised fishing publication can be the verification source for a published mark.",
+    "verified": "A fishing mark explicitly named in a Sea Angler fishing-mark article, venue guide, or catch report qualifies as verified. Other marks require at least two matching listings across the approved references.",
     "community_unverified": "Submitted by an angler but not independently checked.",
     "rejected": "Not suitable for publication."
   },
@@ -9,7 +9,7 @@
     {
       "id": "anglesey-benllech-bay",
       "name": "Benllech Bay",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 53.3180556,
         "longitude": -4.2147222,
@@ -49,7 +49,7 @@
       "accessible_access": false,
       "access_what3words": "fewest.campfires.product",
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -66,14 +66,14 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
       "id": "anglesey-cemlyn-beach",
       "name": "Cemlyn Beach",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 53.4086111,
         "longitude": -4.5058333,
@@ -109,7 +109,7 @@
       "accessible_access": false,
       "access_what3words": "shaky.clubbing.absorb",
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -126,14 +126,14 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
       "id": "bangor-garth-pier",
       "name": "Garth Pier",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 53.2384944,
         "longitude": -4.1241,
@@ -168,7 +168,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -185,14 +185,14 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
       "id": "hampshire-calshot-beach",
       "name": "Calshot",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 50.8080556,
         "longitude": -1.3166667,
@@ -232,7 +232,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -249,8 +249,8 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
@@ -295,7 +295,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -312,14 +312,14 @@
           }
         },
         "confirmed_source_count": 2,
-        "required_source_count": 2,
+        "required_source_count": 1,
         "threshold_met": true
       }
     },
     {
       "id": "somerset-blue-anchor",
       "name": "Blue Anchor",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 51.1827,
         "longitude": -3.398,
@@ -360,7 +360,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -377,14 +377,14 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
       "id": "somerset-white-mark-gasworks",
       "name": "White Mark & Gasworks",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 51.21456,
         "longitude": -3.47655,
@@ -425,7 +425,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -442,14 +442,14 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
       "id": "somerset-bossington",
       "name": "Bossington",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 51.21987,
         "longitude": -3.57995,
@@ -490,7 +490,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -507,14 +507,14 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
       "id": "dorset-cheyne-section",
       "name": "Cheyne Section",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 50.531615,
         "longitude": -2.437923,
@@ -553,7 +553,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -570,14 +570,14 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
       "id": "wales-rhos-on-sea",
       "name": "Rhos-on-Sea",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 53.30959,
         "longitude": -3.73631,
@@ -613,7 +613,7 @@
       "easy_access": true,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -630,8 +630,8 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
@@ -679,7 +679,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -696,14 +696,14 @@
           }
         },
         "confirmed_source_count": 2,
-        "required_source_count": 2,
+        "required_source_count": 1,
         "threshold_met": true
       }
     },
     {
       "id": "wales-llanddulas",
       "name": "Llanddulas",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 53.28966,
         "longitude": -3.64146,
@@ -744,7 +744,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -761,8 +761,8 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
@@ -803,7 +803,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -820,14 +820,14 @@
           }
         },
         "confirmed_source_count": 2,
-        "required_source_count": 2,
+        "required_source_count": 1,
         "threshold_met": true
       }
     },
     {
       "id": "wales-the-knap",
       "name": "The Knap",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 51.39083,
         "longitude": -3.29222,
@@ -865,7 +865,7 @@
       "easy_access": true,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -882,8 +882,8 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
@@ -925,7 +925,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -942,14 +942,14 @@
           }
         },
         "confirmed_source_count": 2,
-        "required_source_count": 2,
+        "required_source_count": 1,
         "threshold_met": true
       }
     },
     {
       "id": "wales-talacre",
       "name": "Talacre",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 53.34784,
         "longitude": -3.32663,
@@ -986,7 +986,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1003,14 +1003,14 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
       "id": "scotland-burrow-head",
       "name": "Burrow Head",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 54.67778,
         "longitude": -4.39361,
@@ -1055,7 +1055,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1072,14 +1072,14 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
       "id": "yorkshire-saltwick-bay",
       "name": "Saltwick Bay",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 54.48536,
         "longitude": -0.58174,
@@ -1112,7 +1112,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1129,14 +1129,14 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
       "id": "cornwall-carn-du-lamorna",
       "name": "Carn Du, Lamorna",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 50.0612823,
         "longitude": -5.551373,
@@ -1174,7 +1174,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1191,14 +1191,14 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
       "id": "dorset-eype",
       "name": "Eype",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 50.7145,
         "longitude": -2.782,
@@ -1238,7 +1238,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1255,14 +1255,14 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
       "id": "dorset-seatown",
       "name": "Seatown",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 50.7212,
         "longitude": -2.82527,
@@ -1299,7 +1299,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1316,14 +1316,14 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
       "id": "dorset-monmouth-beach",
       "name": "Monmouth Beach",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 50.71918,
         "longitude": -2.94325,
@@ -1359,7 +1359,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1376,14 +1376,14 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
       "id": "hampshire-weston-shore",
       "name": "Weston Shore",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 50.89055,
         "longitude": -1.38259,
@@ -1416,7 +1416,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1433,14 +1433,14 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
       "id": "hampshire-gypsy-lane-lepe",
       "name": "Gypsy Lane, Lepe",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 50.7768,
         "longitude": -1.3555,
@@ -1479,7 +1479,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1496,14 +1496,14 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
       "id": "west-sussex-shoreham-beach",
       "name": "Shoreham Beach",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": 50.82709,
         "longitude": -0.26205,
@@ -1537,7 +1537,7 @@
       "easy_access": true,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1554,8 +1554,8 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
@@ -1592,7 +1592,7 @@
       "easy_access": true,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1609,7 +1609,7 @@
           }
         },
         "confirmed_source_count": 2,
-        "required_source_count": 2,
+        "required_source_count": 1,
         "threshold_met": true
       }
     },
@@ -1648,7 +1648,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1665,14 +1665,14 @@
           }
         },
         "confirmed_source_count": 2,
-        "required_source_count": 2,
+        "required_source_count": 1,
         "threshold_met": true
       }
     },
     {
       "id": "dorset-bridging-camp-chesil",
       "name": "Bridging Camp, Chesil Beach",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": null,
         "longitude": null,
@@ -1714,7 +1714,7 @@
         "count": 0
       },
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1731,14 +1731,14 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
       "id": "dorset-durdle-door",
       "name": "Durdle Door",
-      "status": "unverified",
+      "status": "verified",
       "location": {
         "latitude": null,
         "longitude": null,
@@ -1777,7 +1777,7 @@
         "count": 0
       },
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1794,8 +1794,8 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
-        "threshold_met": false
+        "required_source_count": 1,
+        "threshold_met": true
       }
     },
     {
@@ -1843,7 +1843,7 @@
       "easy_access": true,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1860,7 +1860,7 @@
           }
         },
         "confirmed_source_count": 0,
-        "required_source_count": 2,
+        "required_source_count": 1,
         "threshold_met": false
       }
     },
@@ -1907,7 +1907,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1924,7 +1924,7 @@
           }
         },
         "confirmed_source_count": 0,
-        "required_source_count": 2,
+        "required_source_count": 1,
         "threshold_met": false
       }
     },
@@ -1971,7 +1971,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -1988,7 +1988,7 @@
           }
         },
         "confirmed_source_count": 0,
-        "required_source_count": 2,
+        "required_source_count": 1,
         "threshold_met": false
       }
     },
@@ -2036,7 +2036,7 @@
       "easy_access": false,
       "accessible_access": false,
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -2053,7 +2053,7 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
+        "required_source_count": 1,
         "threshold_met": false
       }
     },
@@ -2107,7 +2107,7 @@
         "count": 0
       },
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -2124,7 +2124,7 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
+        "required_source_count": 1,
         "threshold_met": false
       }
     },
@@ -2177,7 +2177,7 @@
         "count": 0
       },
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -2194,7 +2194,7 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
+        "required_source_count": 1,
         "threshold_met": false
       }
     },
@@ -2247,7 +2247,7 @@
         "count": 0
       },
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -2264,7 +2264,7 @@
           }
         },
         "confirmed_source_count": 1,
-        "required_source_count": 2,
+        "required_source_count": 1,
         "threshold_met": false
       }
     },
@@ -2326,7 +2326,7 @@
         "count": 0
       },
       "verification": {
-        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "rule": "A named fishing mark explicitly published by Sea Angler qualifies as verified; otherwise, at least 2 of the three approved references must list the same named mark",
         "checked_at": "2026-10-11",
         "sources": {
           "british_sea_fishing": {
@@ -2343,7 +2343,7 @@
           }
         },
         "confirmed_source_count": 2,
-        "required_source_count": 2,
+        "required_source_count": 1,
         "threshold_met": true
       }
     }
