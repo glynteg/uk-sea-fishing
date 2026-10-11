@@ -235,3 +235,20 @@ Benllech Bay; Cemlyn Beach; Garth Pier; Calshot; Sandwich Bay; Blue Anchor; Whit
 - **Moelfre**
 
 These seven remain unverified until a Sea Angler article/report explicitly names them as fishing venues or at least two approved references positively confirm the same named mark. A mark's verified status confirms published fishing-venue evidence only; it does not automatically prove that current access, parking, safety, coordinates, or every species/tip is up to date.
+
+
+## TripAdvisor cross-reference check — 11 October 2026
+
+TripAdvisor has been added to the source fields for all 37 existing marks. Its evidence is useful for identifying venues and checking visitor reports, but a general attraction page is not enough to establish that the named place is a fishing mark. Only count TripAdvisor where the page explicitly identifies the same named venue as a fishing location; visitor questions or generic sightseeing pages are supporting context, not automatic verification.
+
+### Pages found for currently unverified records
+- **Southsea Castle:** https://www.tripadvisor.co.uk/Attraction_Review-g186298-d216061-Reviews-Southsea_Castle-Portsmouth_Hampshire_England.html — attraction/history page; does not itself establish a fishing mark.
+- **Portchester Castle:** https://www.tripadvisor.co.uk/Attraction_Review-g1651504-d215577-Reviews-Portchester_Castle-Portchester_Hampshire_England.html — attraction page; does not itself establish a fishing mark.
+- **Round Tower, Portsmouth:** https://www.tripadvisor.co.uk/Attraction_Review-g186298-d12495141-Reviews-The_Round_Tower-Portsmouth_Hampshire_England.html — attraction page; does not itself establish a fishing mark.
+- **Beaumaris Pier:** https://www.tripadvisor.co.uk/Attraction_Review-g552018-d3475745-Reviews-Beaumaris_Pier-Beaumaris_Anglesey_North_Wales_Wales.html and https://www.tripadvisor.co.uk/FAQ-g552018-d3475745-Beaumaris_Pier.html — pier listing and fishing-related visitor questions exist, but the material reviewed does not independently confirm current permission to fish.
+- **Red Wharf Bay:** listed in TripAdvisor's Anglesey attractions/pier-and-boardwalks page, https://www.tripadvisor.co.uk/Attractions-g186442-Activities-c47-t51-Anglesey_North_Wales_Wales.html — general attraction listing; fishing use is not established by that page alone.
+- **Moelfre:** https://www.tripadvisor.co.uk/Attraction_Review-g552028-d21241478-Reviews-Moelfre_Beach-Moelfre_Anglesey_North_Wales_Wales.html — general beach/visitor page; not enough on its own to verify the fishing mark.
+- **Victoria Pier, Portsmouth:** no clear TripAdvisor result confirming it as a fishing venue was established in this search.
+
+### Decision
+These pages are recorded as research leads, not as proof of fishing access. The seven records listed as unverified remain unverified for now. Continue checking TripAdvisor for explicit fishing-venue descriptions and use official/local sources separately for current access and restrictions.
