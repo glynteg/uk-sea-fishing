@@ -92,3 +92,14 @@ Example: `"rating": { "average": 4.5, "count": 12 }`.
 For an established fishing mark, treat it as normally fishable unless a specific closure, seasonal restriction, site rule, or safety warning is documented. Piers and managed sites can close temporarily, particularly in winter or bad weather, so tell anglers to check current local notices before travelling. This is a practical default, **not** proof of legal permission at every exact position. Record known restrictions prominently and do not imply that a whole pier or site is open if only a marked section or time window is permitted.
 
 **Example — Calshot:** Hampshire County Council says fishing is not allowed on the jetty or along the creek side at any time, and fishing is allowed to the left of the jetty after 9pm. Link the official angling locations/map and show these restrictions clearly.
+
+
+### Facebook and angler reports
+
+Facebook is a useful research source for finding and corroborating fishing marks, especially local sea-angling groups, club pages, and dated first-hand reports. It can help establish that anglers fish a named venue and can provide recent catch reports or changes to access and restrictions.
+
+- Record the exact public post or group URL, post date, and what the post actually supports.
+- Prefer first-hand reports from identifiable local clubs/anglers and multiple independent reports over copied posts or vague comments.
+- A catch photo, a nearby landmark mention, or a comment saying “good mark” does not by itself prove the exact fishing position, legal permission, safe access, or all species listed.
+- Facebook is a corroborating research source; it does not automatically replace the Sea Angler exception or the two-of-three approved-reference rule. If future policy changes allow strong Facebook evidence to count toward verification, define the minimum evidence standard first.
+- Use recent Facebook posts to flag access changes and temporary closures, but still prefer official site/harbour notices for restrictions.
