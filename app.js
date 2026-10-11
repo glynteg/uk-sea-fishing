@@ -127,11 +127,17 @@ function refreshMarkResults(){
    return {...m,_distance:hasMapCoordinates(m)?milesBetween(radiusCentre.lat,radiusCentre.lon,lat,lon):Infinity};
   }).filter(m=>m._distance<=radius).sort((a,b)=>a._distance-b._distance);
  }
- renderMarks(marks);renderMapMarkers(marks);
- if(fishingMap&&county){
-  const located=marks.filter(m=>m.status==="verified"&&Number.isFinite(Number(m.location?.latitude))&&Number.isFinite(Number(m.location?.longitude)));
-  if(located.length){const bounds=L.latLngBounds(located.map(m=>[+m.location.latitude,+m.location.longitude]));if(bounds.isValid())fishingMap.fitBounds(bounds,{padding:[35,35],maxZoom:9});}
+ renderMarks(marks);
+ // For searches, zoom to matching verified locations before drawing pins. This
+ // switches the map from UK-wide county clusters to individual fishing marks.
+ if(fishingMap&&(q||county)){
+  const located=marks.filter(m=>m.status==="verified"&&hasMapCoordinates(m));
+  if(located.length){
+   const bounds=L.latLngBounds(located.map(m=>[+m.location.latitude,+m.location.longitude]));
+   if(bounds.isValid())fishingMap.fitBounds(bounds,{padding:[35,35],maxZoom:q?12:9});
+  }
  }
+ renderMapMarkers(marks);
  const s=document.getElementById("result-summary");
  if(s)s.textContent=radiusCentre?marks.length+" verified mark"+(marks.length===1?"":"s")+" within "+radius+" miles":marks.length+" mark"+(marks.length===1?"":"s")+" shown";
 }
