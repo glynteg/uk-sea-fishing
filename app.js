@@ -45,8 +45,9 @@ function renderMapMarkers(marks){
  mapVisibleMarks=marks;
  mapMarkers.forEach(m=>m.remove()); mapMarkers=[];
  const mapped=marks.filter(m=>m.status==="verified"&&Number.isFinite(Number(m.location?.latitude))&&Number.isFinite(Number(m.location?.longitude)));
- // At UK-wide zoom, use one numbered summary pin per county/area. At closer zoom, show each verified mark.
- if(fishingMap.getZoom()<8){
+ const selectedCounty=document.getElementById("county-filter")?.value||"";
+ // At UK-wide zoom, use county summary pins. Once a county is selected, always show its individual verified marks.
+ if(fishingMap.getZoom()<8&&!selectedCounty){
   const groups=new Map();
   mapped.forEach(mark=>{
    const county=countyOf(mark);
@@ -86,6 +87,12 @@ function renderMapMarkers(marks){
 function countyOf(mark){
  const area=mark.location?.area||"";
  return area.split(",").pop().trim()||"Unknown";
+}
+
+function focusMapAtTop(){
+ const shell=document.querySelector(".map-shell");
+ if(shell)shell.scrollIntoView({behavior:"smooth",block:"start"});
+ setTimeout(()=>{if(fishingMap)fishingMap.invalidateSize();},350);
 }
 
 function milesBetween(a,b,c,d){
@@ -145,13 +152,14 @@ function openAreaGuide(area){
  const marks=allMarks.filter(m=>m.status==="verified"&&markAreaName(m)===area);
  if(fishingMap){
   const located=marks.filter(m=>Number.isFinite(Number(m.location?.latitude))&&Number.isFinite(Number(m.location?.longitude)));
-  if(located.length){const bounds=L.latLngBounds(located.map(m=>[+m.location.latitude,+m.location.longitude]));if(bounds.isValid())fishingMap.fitBounds(bounds,{padding:[35,35],maxZoom:9});document.querySelector(".map-shell")?.scrollIntoView({behavior:"smooth",block:"center"});setTimeout(()=>fishingMap.invalidateSize(),250);}
+  if(located.length){renderMapMarkers(marks);const bounds=L.latLngBounds(located.map(m=>[+m.location.latitude,+m.location.longitude]));if(bounds.isValid())fishingMap.fitBounds(bounds,{padding:[35,35],maxZoom:9});focusMapAtTop();}
  }
  const species=[...new Set(marks.flatMap(m=>m.species||[]))].sort((a,b)=>a.localeCompare(b));
  const markRows=marks.map(m=>'<article class="area-mark"><div><strong>'+escapeHtml(m.name)+'</strong><span class="badge verified">Verified mark</span></div><p>'+escapeHtml(m.description||"No description recorded.")+'</p>'+(m.parking?'<p><strong>Parking:</strong> '+escapeHtml(m.parking)+'</p>':'')+(m.access?'<p><strong>Access:</strong> '+escapeHtml(m.access)+'</p>':'')+(m.source?.url?'<p><a href="'+escapeHtml(m.source.url)+'" target="_blank" rel="noopener noreferrer">View source / verification ↗</a></p>':'')+'</article>').join("");
  detail.hidden=false;
  detail.innerHTML='<div class="area-detail-head"><div><p class="eyebrow">AREA ENCYCLOPAEDIA</p><h3>'+escapeHtml(area)+'</h3><p>One place for the fishing information currently recorded for this area.</p></div><button type="button" class="secondary" id="close-area-guide">Close</button></div><div class="area-action-grid"><button type="button" class="area-action" data-area-action="weather"><span>☁️</span><strong>Weather</strong><small>Local 36-hour forecast</small></button><button type="button" class="area-action" data-area-action="tides"><span>🌊</span><strong>Tides</strong><small>Official tide predictions</small></button><button type="button" class="area-action" data-area-action="fish"><span>🐟</span><strong>Fish ID</strong><small>Species and restrictions</small></button></div><div class="area-info-grid"><section class="area-info"><h4>Fishing marks</h4><p>'+marks.length+' verified mark'+(marks.length===1?'':'s')+' currently recorded for '+escapeHtml(area)+'.</p>'+markRows+'</section><section class="area-info"><h4>Species recorded</h4>'+(species.length?'<div class="species-chips">'+species.map(s=>'<span>'+escapeHtml(s)+'</span>').join('')+'</div>':'<p>No species information has been verified for this area yet.</p>')+'<h4>Bait & tactics</h4><p>Area-specific bait and tactics will only be published when supported by a reliable source or clearly labelled angler contribution. No local advice has been independently verified for this area yet.</p><h4>Local knowledge & gallery</h4><p>Photos and angler tips can be collected here. Community contributions will be labelled unverified until checked.</p><button type="button" class="secondary" data-area-action="gallery">Open angler gallery</button><button type="button" class="secondary" data-area-action="submit">Suggest local information</button></section></div>';
- detail.scrollIntoView({behavior:"smooth",block:"start"});
+ // Keep the map at the top of the screen; the area details remain available below it.
+ if(fishingMap)focusMapAtTop();else detail.scrollIntoView({behavior:"smooth",block:"start"});
  detail.querySelector("#close-area-guide")?.addEventListener("click",()=>{detail.hidden=true;document.getElementById("area-directory")?.scrollIntoView({behavior:"smooth",block:"center"})});
  detail.querySelectorAll("[data-area-action]").forEach(button=>button.addEventListener("click",()=>{
   const action=button.dataset.areaAction;
@@ -249,7 +257,15 @@ document.getElementById("use-location")?.addEventListener("click",()=>{
 });
 document.getElementById("clear-radius")?.addEventListener("click",()=>{radiusCentre=null;if(place)place.value="";document.getElementById("radius-status").textContent="Nearby search cleared.";refreshMarkResults()});
 document.getElementById("radius-filter")?.addEventListener("change",refreshMarkResults);
-document.getElementById("county-filter")?.addEventListener("change",refreshMarkResults);
+document.getElementById("county-filter")?.addEventListener("change",()=>{
+ radiusCentre=null;
+ const placeInput=document.getElementById("radius-place");if(placeInput)placeInput.value="";
+ const search=document.getElementById("search");if(search)search.value="";
+ refreshMarkResults();
+ const county=document.getElementById("county-filter")?.value;
+ const status=document.getElementById("radius-status");if(status)status.textContent=county?"Showing verified fishing marks recorded in "+county+".":"Showing marks from across the UK.";
+ if(county)focusMapAtTop();
+});
 document.getElementById("search")?.addEventListener("input",refreshMarkResults);
 document.getElementById("easy-access-filter")?.addEventListener("change",refreshMarkResults);
 document.getElementById("accessible-filter")?.addEventListener("change",refreshMarkResults);
