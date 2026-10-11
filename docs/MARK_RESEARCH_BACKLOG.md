@@ -215,3 +215,23 @@ No candidate in this backlog should appear as a verified mark solely because it 
 - Mousehole harbour/Penlee Point: credible named leads but different access/hazard profiles; avoid treating them as one point.
 - North Cornwall leads: useful research queue, not yet verified app records.
 - No new candidates in this batch have been added to `data/marks.json`.
+
+
+## Existing live-mark cross-reference audit — 11 October 2026
+
+The live `data/marks.json` directory was audited against the agreed rule: a mark is verified only when at least two of British Sea Fishing, The Beach Guide, and Sea Angler explicitly list that named fishing mark. A nearby landmark, a broad regional guide, or a source outside these three does not count. Per-mark results are stored in each record's `verification` object.
+
+### Confirmed against two approved references
+- **Sandwich Bay** — British Sea Fishing's South East guide and Sea Angler's dedicated Sandwich Bay mark page.
+- **Llandudno Pier** — British Sea Fishing's Wales guide and Sea Angler's dedicated Llandudno Pier page.
+- **Pendine Beach** — British Sea Fishing's Wales guide and Sea Angler's dedicated Pendine Beach page.
+- **Goldcliff Beach** — British Sea Fishing's Wales guide and Sea Angler's dedicated Goldcliff Beach page.
+- **Rottingdean** — British Sea Fishing's South East guide and Sea Angler's dedicated Rottingdean page.
+- **Selsey West Beach** — British Sea Fishing's Selsey beaches entry and Sea Angler's 2024 “Top 10 smashing smoothhound venues” article, which specifically identifies Selsey's west beach.
+- **Holyhead Breakwater** — British Sea Fishing's Wales guide and Sea Angler's dedicated Holyhead Breakwater page.
+
+### Remaining records
+- The other 30 live records are now labelled `unverified` until the two-source threshold can be positively established.
+- The Beach Guide check is recorded as `null` where a specific fishing-mark listing could not yet be conclusively confirmed. This is **not** a claim that the mark is absent from The Beach Guide; it means the audit still needs checking.
+- Other reliable sources remain useful for access, safety, parking and species facts, but do not count toward this particular three-reference rule.
+- Do not restore a record to `verified` unless its `verification.sources` records at least two positively confirmed approved references. Continue the audit mark-by-mark, especially for the 30 pending records.
