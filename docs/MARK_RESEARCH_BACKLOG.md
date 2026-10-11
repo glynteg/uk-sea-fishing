@@ -186,3 +186,32 @@ No candidate in this backlog should appear as a verified mark solely because it 
 - Dorset Council's sea/shore fishing page is useful for general conservation context but does not establish access permission at an individual beach or structure: https://www.dorsetcouncil.gov.uk/w/sea-and-shore-fishing
 - A fishing guide's directions or a parking mention may become outdated. Keep changing charges and hours linked to current official pages where possible, and never imply that private harbour, pier, slipway or marina structures are open to anglers without explicit confirmation.
 - No new candidates in this batch have been added to `data/marks.json`.
+
+
+## Fourth research batch — Cornwall candidates (11 October 2026)
+
+### Bude Breakwater / Bude harbour — North Cornwall
+- Cornwall Online's sea-fishing guide lists Bude Breakwater as a beach/harbour fishing area and describes nearby North Cornwall marks: https://www.cornwall-online.co.uk/waterside/fishing.htm
+- Cornwall Council's harbour service confirms the breakwater is a low structure that can be awash in swell, and notes heavy ground swell/breaking seas can make harbour entry unsafe: https://www.cornwallharbours.co.uk/our-harbours/bude/
+- Decision: credible candidate, but treat breakwater exposure as a key hazard. Confirm the exact public fishing section, parking and any harbour restrictions before adding; do not imply the low wall is safe in rough conditions.
+
+### Mousehole harbour and Penlee Point — West Cornwall
+- Visit Cornwall confirms Mousehole has small sandy beaches inside the harbour quays that are only accessible at low tide, a pebble beach east toward Penlee Point, and car parks in/around the village: https://www.visitcornwall.com/things-to-do/beaches/mousehole-harbour-and-beach
+- Visit Cornwall's west Cornwall fishing guide names Penlee Point as a rock-fishing mark and also lists Prussia Cove/Cudden Point and marks between Mousehole and Lamorna: https://www.visitcornwall.tv/west-cornwall-fishing-guide/
+- Decision: Mousehole is a useful named candidate, but separate the harbour beaches from the exposed Penlee Point rocks. The official visitor page establishes geography/parking, not fishing permission on every harbour structure. Verify exact fishable public areas and rock access before adding.
+
+### North Cornwall venue leads — Trevose, Park Head, Rumps Point, Daymer Bay, Widemouth Bay
+- Cornwall Online lists these named venues as sea-fishing leads and provides broad source-reported species context: https://www.cornwall-online.co.uk/waterside/fishing.htm
+- The guide warns that some platforms and headlands require caution; locations on cliffs or wave-cut platforms must not be described as easy access without an exact access check.
+- Decision: research candidates only. Resolve exact positions, overlap with neighbouring beaches, current parking and public access before adding; don't copy a broad regional species list into every individual mark.
+
+### Cornwall rules and conservation cross-check
+- Cornwall IFCA publishes current byelaws and recreational-fishing guidance, including local minimum-size and bass information: https://www.cornwall-ifca.gov.uk/recreational and https://www.cornwall-ifca.gov.uk/byelaws_regulations
+- Cornwall IFCA identifies Marine Conservation Zones and other protected areas, including the Manacles, Mount's Bay, Runnel Stone, and Padstow Bay and Surrounds: https://www.cornwall-ifca.gov.uk/marine-protected-areas
+- Decision: check local IFCA restrictions and conservation designations against a mark's actual location before writing fish-retention or shellfish advice. A regional rule page should not be paraphrased as applying uniformly to every estuary or protected area.
+
+### Fourth-batch decisions
+- Bude Breakwater: credible candidate; safety and precise access check needed.
+- Mousehole harbour/Penlee Point: credible named leads but different access/hazard profiles; avoid treating them as one point.
+- North Cornwall leads: useful research queue, not yet verified app records.
+- No new candidates in this batch have been added to `data/marks.json`.
