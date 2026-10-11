@@ -272,7 +272,7 @@ document.getElementById("county-filter")?.addEventListener("change",()=>{
  if(county)focusMapAtTop();
 });
 document.getElementById("search")?.addEventListener("input",()=>{refreshMarkResults();});
-document.getElementById("search")?.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();refreshMarkResults();document.querySelector("#panel-marks .mark-card")?.scrollIntoView({behavior:"smooth",block:"start"});}});
+document.getElementById("search")?.addEventListener("keydown",e=>{if(e.key!=="Enter")return;e.preventDefault();const q=e.currentTarget.value.trim().toLowerCase();const fishMatch=typeof fishRules!=="undefined"&&q?fishRules.some(f=>[f.name,f.scientific].some(v=>String(v||"").toLowerCase()===q||String(v||"").toLowerCase().startsWith(q))):false;if(fishMatch){const fishSearch=document.getElementById("fish-search");if(fishSearch){fishSearch.value=e.currentTarget.value.trim();fishSearch.dispatchEvent(new Event("input",{bubbles:true}));}navigate("fish-id");return;}refreshMarkResults();document.querySelector("#panel-marks .mark-card")?.scrollIntoView({behavior:"smooth",block:"start"});});
 
 document.getElementById("easy-access-filter")?.addEventListener("change",refreshMarkResults);
 document.getElementById("accessible-filter")?.addEventListener("change",refreshMarkResults);
