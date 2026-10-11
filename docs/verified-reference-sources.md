@@ -19,14 +19,14 @@ Do not infer exact coordinates from a place name. If a reliable location cannot 
 
 ## Where's The Fish? — UK sea fishing map
 
-- **Status:** Accepted as a research reference for identifying named sea-fishing marks and finding leads for further checks.
+- **Status:** Accepted as a source for verifying named sea-fishing venues when an individual page explicitly identifies the place as a sea-fishing mark.
 - **Website:** Where's The Fish?
 - **URL:** https://wheresthefish.uk/map
 - **Coverage shown by the site:** UK coastal marks, region/county browsing, GPS locations, species lists, access notes, local mark guides, tides and weather/sea-condition forecasts.
 
 ### How to use this source
 
-Use its named marks and location pages as research leads. A listing can support a mark being treated as a fishing venue when the individual page explicitly identifies the named place as a sea-fishing mark. Record this site as the source and check important details against additional reliable sources where possible.
+A named place explicitly identified on an individual page as a sea-fishing mark can be marked **verified as a fishing venue** in the app, with this website recorded as the source. A second source is not required just to verify that the venue is a fishing mark. This verification applies to the venue only, not automatically to every detail shown.
 
 Do **not** treat forecast scores as a guarantee of catches or safety. Independently check exact coordinates, current access or closures, parking, hazards, child suitability, disabled access, and any legal size/bag limits or seasonal restrictions. The map's existence does not by itself verify every detail for every mark.
 
