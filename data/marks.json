@@ -3,7 +3,8 @@
   "rules": {
     "verified": "A fishing mark explicitly named in a Sea Angler fishing-mark article, venue guide, or catch report qualifies as verified. Other marks require at least two matching explicit fishing-venue listings across British Sea Fishing, The Beach Guide, and TripAdvisor. A general TripAdvisor attraction page alone does not verify fishing use.",
     "community_unverified": "Submitted by an angler but not independently checked.",
-    "rejected": "Not suitable for publication."
+    "rejected": "Not suitable for publication.",
+    "access": "Treat an established fishing mark as normally fishable unless a specific closure, seasonal restriction, site rule, or safety warning is documented. Piers and other managed sites may close temporarily, particularly in winter or bad weather; advise users to check current local notices before travel. This default is not proof of legal permission at every exact position. Record known restrictions explicitly."
   },
   "marks": [
     {
@@ -227,7 +228,7 @@
         "SeaAngler reports the venue generally fishes during the last three hours of the flood and first couple of hours of the ebb.",
         "SeaAngler recommends night sessions."
       ],
-      "access": "The venue includes shingle beaches. Hampshire County Council confirms accessible parking and wheelchair access at the Activities Centre, but this does not establish wheelchair access to the fishing position.",
+      "access": "Hampshire County Council identifies designated angling locations and restrictions at Calshot: fishing is not allowed on the jetty or along the creek side at any time; fishing is allowed to the left of the jetty after 9pm. Check the official angling map and current site/marine rules before fishing. Shingle beach access and conditions vary.",
       "photos": [],
       "source": {
         "type": "fishing_publication",
@@ -236,10 +237,12 @@
         "url": "https://www.seaangler.co.uk/spot/calshot-sea-fishing-mark/",
         "location_reference": "British Beaches, Calshot Beach, approximate beach midpoint",
         "current_location_reference": "Hampshire County Council Calshot visitor information",
-        "checked_at": "2026-10-04"
+        "checked_at": "2026-10-04",
+        "current_access_reference": "Hampshire County Council official Calshot angling locations and restrictions",
+        "current_access_url": "https://www.hants.gov.uk/thingstodo/calshot/visit/angling"
       },
-      "parking": "Hampshire County Council confirms parking at Calshot Activities Centre; current local parking arrangements should be checked before travel.",
-      "parking_cost": "check current local charges",
+      "parking": "Hampshire County Council confirms parking at Calshot Activities Centre; pay via the site's parking machines and check current charges and site opening/gate times before visiting.",
+      "parking_cost": "paid parking; check current charges",
       "access_difficulty": "moderate",
       "easy_access": false,
       "accessible_access": false,
@@ -266,7 +269,8 @@
         },
         "confirmed_source_count": 1,
         "required_source_count": 1,
-        "threshold_met": true
+        "threshold_met": true,
+        "access_note": "Fishing venue is documented, but fishing is restricted to designated locations/times: not on the jetty or creek side; left of the jetty after 9pm per Hampshire County Council."
       }
     },
     {
