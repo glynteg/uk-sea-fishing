@@ -9,7 +9,7 @@
     {
       "id": "anglesey-benllech-bay",
       "name": "Benllech Bay",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 53.3180556,
         "longitude": -4.2147222,
@@ -47,12 +47,33 @@
       "access_difficulty": "easy",
       "easy_access": true,
       "accessible_access": false,
-      "access_what3words": "fewest.campfires.product"
+      "access_what3words": "fewest.campfires.product",
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/benllech-bay-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "anglesey-cemlyn-beach",
       "name": "Cemlyn Beach",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 53.4086111,
         "longitude": -4.5058333,
@@ -86,12 +107,33 @@
       "access_difficulty": "moderate",
       "easy_access": false,
       "accessible_access": false,
-      "access_what3words": "shaky.clubbing.absorb"
+      "access_what3words": "shaky.clubbing.absorb",
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/fishing-news/uk-sea-fishing-catch-reports-5-1-10/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "bangor-garth-pier",
       "name": "Garth Pier",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 53.2384944,
         "longitude": -4.1241,
@@ -124,12 +166,33 @@
       "parking_cost": "£2; Blue Badge holders free",
       "access_difficulty": "unknown",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/fishing-news/book-this-pier-for-just-a-quid/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "hampshire-calshot-beach",
       "name": "Calshot",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 50.8080556,
         "longitude": -1.3166667,
@@ -167,7 +230,28 @@
       "parking_cost": "check current local charges",
       "access_difficulty": "moderate",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/calshot-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "kent-sandwich-bay",
@@ -209,12 +293,33 @@
       "parking_cost": "paid estate access",
       "access_difficulty": "difficult",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": true,
+            "url": "https://britishseafishing.co.uk/south-east-england/"
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/sandwich-bay-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 2,
+        "required_source_count": 2,
+        "threshold_met": true
+      }
     },
     {
       "id": "somerset-blue-anchor",
       "name": "Blue Anchor",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 51.1827,
         "longitude": -3.398,
@@ -253,12 +358,33 @@
       "parking_cost": "free",
       "access_difficulty": "moderate",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/blue-anchor-sea-fishing-marks/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "somerset-white-mark-gasworks",
       "name": "White Mark & Gasworks",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 51.21456,
         "longitude": -3.47655,
@@ -297,12 +423,33 @@
       "parking_cost": "pay and display",
       "access_difficulty": "moderate",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/white-mark-gasworks-sea-fishing-marks/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "somerset-bossington",
       "name": "Bossington",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 51.21987,
         "longitude": -3.57995,
@@ -341,12 +488,33 @@
       "parking_cost": "£2 for two hours; £5 all day; free for National Trust members and Blue Badge holders",
       "access_difficulty": "difficult",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/bossington-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "dorset-cheyne-section",
       "name": "Cheyne Section",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 50.531615,
         "longitude": -2.437923,
@@ -383,12 +551,33 @@
       "parking_cost": "free roadside parking reported by SeaAngler; other nearby parking may have separate charges",
       "access_difficulty": "difficult",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/cheyne-section-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "wales-rhos-on-sea",
       "name": "Rhos-on-Sea",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 53.30959,
         "longitude": -3.73631,
@@ -422,7 +611,28 @@
       "parking_cost": "not stated",
       "access_difficulty": "easy",
       "easy_access": true,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/rhos-on-sea-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "wales-llandudno-pier",
@@ -467,12 +677,33 @@
       "parking_cost": "check current local charges",
       "access_difficulty": "unknown",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": true,
+            "url": "https://britishseafishing.co.uk/wales/"
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/llandudno-pier-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 2,
+        "required_source_count": 2,
+        "threshold_met": true
+      }
     },
     {
       "id": "wales-llanddulas",
       "name": "Llanddulas",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 53.28966,
         "longitude": -3.64146,
@@ -511,7 +742,28 @@
       "parking_cost": "not stated",
       "access_difficulty": "moderate",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/llanddulas-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "wales-pendine-beach",
@@ -549,12 +801,33 @@
       "parking_cost": "not stated",
       "access_difficulty": "moderate",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": true,
+            "url": "https://britishseafishing.co.uk/wales/"
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/pendine-beach-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 2,
+        "required_source_count": 2,
+        "threshold_met": true
+      }
     },
     {
       "id": "wales-the-knap",
       "name": "The Knap",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 51.39083,
         "longitude": -3.29222,
@@ -590,7 +863,28 @@
       "parking_cost": "not stated",
       "access_difficulty": "easy",
       "easy_access": true,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/the-knap-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "wales-goldcliff-beach",
@@ -629,12 +923,33 @@
       "parking_cost": "free",
       "access_difficulty": "difficult",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": true,
+            "url": "https://britishseafishing.co.uk/wales/"
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/goldcliff-beach-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 2,
+        "required_source_count": 2,
+        "threshold_met": true
+      }
     },
     {
       "id": "wales-talacre",
       "name": "Talacre",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 53.34784,
         "longitude": -3.32663,
@@ -669,12 +984,33 @@
       "parking_cost": "not stated",
       "access_difficulty": "moderate",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/talacre-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "scotland-burrow-head",
       "name": "Burrow Head",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 54.67778,
         "longitude": -4.39361,
@@ -717,12 +1053,33 @@
       "parking_cost": "check current local arrangements",
       "access_difficulty": "difficult",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/burrow-head-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "yorkshire-saltwick-bay",
       "name": "Saltwick Bay",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 54.48536,
         "longitude": -0.58174,
@@ -753,12 +1110,33 @@
       "parking_cost": "not stated",
       "access_difficulty": "moderate",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/saltwick-bay-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "cornwall-carn-du-lamorna",
       "name": "Carn Du, Lamorna",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 50.0612823,
         "longitude": -5.551373,
@@ -794,12 +1172,33 @@
       "parking_cost": "check current local charges",
       "access_difficulty": "difficult",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/carn-du-sea-fishing-mark-lamorna/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "dorset-eype",
       "name": "Eype",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 50.7145,
         "longitude": -2.782,
@@ -837,12 +1236,33 @@
       "parking_cost": "not stated",
       "access_difficulty": "moderate",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/eype-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "dorset-seatown",
       "name": "Seatown",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 50.7212,
         "longitude": -2.82527,
@@ -877,12 +1297,33 @@
       "parking_cost": "not stated",
       "access_difficulty": "moderate",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/seatown/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "dorset-monmouth-beach",
       "name": "Monmouth Beach",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 50.71918,
         "longitude": -2.94325,
@@ -916,12 +1357,33 @@
       "parking_cost": "check current local charges",
       "access_difficulty": "moderate",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/a-sea-fishing-guide-to-monmouth-beach/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "hampshire-weston-shore",
       "name": "Weston Shore",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 50.89055,
         "longitude": -1.38259,
@@ -952,12 +1414,33 @@
       "parking_cost": "not stated",
       "access_difficulty": "moderate",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/weston-shore-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "hampshire-gypsy-lane-lepe",
       "name": "Gypsy Lane, Lepe",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 50.7768,
         "longitude": -1.3555,
@@ -994,12 +1477,33 @@
       "parking_cost": "free",
       "access_difficulty": "moderate",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/gypsy-lane-sea-fishing-mark-lepe/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "west-sussex-shoreham-beach",
       "name": "Shoreham Beach",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 50.82709,
         "longitude": -0.26205,
@@ -1031,7 +1535,28 @@
       "parking_cost": "not stated",
       "access_difficulty": "easy",
       "easy_access": true,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/shoreham-beach-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "west-sussex-rottingdean",
@@ -1065,7 +1590,28 @@
       "parking_cost": "not stated",
       "access_difficulty": "easy",
       "easy_access": true,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": true,
+            "url": "https://britishseafishing.co.uk/south-east-england/"
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/rottingdean-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 2,
+        "required_source_count": 2,
+        "threshold_met": true
+      }
     },
     {
       "id": "west-sussex-selsey-west-beach",
@@ -1100,12 +1646,33 @@
       "parking_cost": "check current local charges",
       "access_difficulty": "moderate",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": true,
+            "url": "https://britishseafishing.co.uk/south-east-england/"
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/fishing-news/ten-top-smoothound-venues/"
+          }
+        },
+        "confirmed_source_count": 2,
+        "required_source_count": 2,
+        "threshold_met": true
+      }
     },
     {
       "id": "dorset-bridging-camp-chesil",
       "name": "Bridging Camp, Chesil Beach",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": null,
         "longitude": null,
@@ -1145,12 +1712,33 @@
       "rating": {
         "average": 0,
         "count": 0
+      },
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/bridging-camp-section-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
       }
     },
     {
       "id": "dorset-durdle-door",
       "name": "Durdle Door",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": null,
         "longitude": null,
@@ -1187,12 +1775,33 @@
       "rating": {
         "average": 0,
         "count": 0
+      },
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/fishing-news/uk-sea-fishing-catch-reports-27-10-09/"
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
       }
     },
     {
       "id": "hampshire-southsea-castle",
       "name": "Southsea Castle",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 50.7781,
         "longitude": -1.0888,
@@ -1232,12 +1841,33 @@
       "parking_cost": "check current local charges",
       "access_difficulty": "easy",
       "easy_access": true,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": false,
+            "url": null
+          }
+        },
+        "confirmed_source_count": 0,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "hampshire-portchester-castle",
       "name": "Portchester Castle",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 50.837415,
         "longitude": -1.114906,
@@ -1275,12 +1905,33 @@
       "parking_cost": "charged parking near castle",
       "access_difficulty": "moderate",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": false,
+            "url": null
+          }
+        },
+        "confirmed_source_count": 0,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "hampshire-round-tower-portsmouth",
       "name": "Round Tower",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 50.79052,
         "longitude": -1.1088424,
@@ -1318,12 +1969,33 @@
       "parking_cost": "check current local charges",
       "access_difficulty": "moderate",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": false,
+            "url": null
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": false,
+            "url": null
+          }
+        },
+        "confirmed_source_count": 0,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "hampshire-victoria-pier-old-portsmouth",
       "name": "Victoria Pier",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 50.790021246653,
         "longitude": -1.1012049595242,
@@ -1362,12 +2034,33 @@
       "parking_cost": "check current local charges",
       "access_difficulty": "moderate",
       "easy_access": false,
-      "accessible_access": false
+      "accessible_access": false,
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": true,
+            "url": "https://britishseafishing.co.uk/south-east-england/"
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": false,
+            "url": null
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
+      }
     },
     {
       "id": "anglesey-red-wharf-bay",
       "name": "Red Wharf Bay",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 53.2965,
         "longitude": -4.20711,
@@ -1412,12 +2105,33 @@
       "rating": {
         "average": 0,
         "count": 0
+      },
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": true,
+            "url": "https://britishseafishing.co.uk/wales/"
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": false,
+            "url": null
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
       }
     },
     {
       "id": "anglesey-beaumaris-pier",
       "name": "Beaumaris Pier",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 53.26136,
         "longitude": -4.09009,
@@ -1461,12 +2175,33 @@
       "rating": {
         "average": 0,
         "count": 0
+      },
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": true,
+            "url": "https://britishseafishing.co.uk/wales/"
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": false,
+            "url": null
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
       }
     },
     {
       "id": "anglesey-moelfre",
       "name": "Moelfre",
-      "status": "verified",
+      "status": "unverified",
       "location": {
         "latitude": 53.35208,
         "longitude": -4.23523,
@@ -1510,6 +2245,27 @@
       "rating": {
         "average": 0,
         "count": 0
+      },
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": true,
+            "url": "https://britishseafishing.co.uk/wales/"
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": false,
+            "url": null
+          }
+        },
+        "confirmed_source_count": 1,
+        "required_source_count": 2,
+        "threshold_met": false
       }
     },
     {
@@ -1568,6 +2324,27 @@
       "rating": {
         "average": 0,
         "count": 0
+      },
+      "verification": {
+        "rule": "At least 2 of British Sea Fishing, The Beach Guide, and Sea Angler must list the named fishing mark",
+        "checked_at": "2026-10-11",
+        "sources": {
+          "british_sea_fishing": {
+            "listed": true,
+            "url": "https://britishseafishing.co.uk/wales/"
+          },
+          "the_beach_guide": {
+            "listed": null,
+            "note": "Not yet conclusively checked for a fishing-mark listing"
+          },
+          "sea_angler": {
+            "listed": true,
+            "url": "https://www.seaangler.co.uk/spot/holyhead-breakwater-sea-fishing-mark/"
+          }
+        },
+        "confirmed_source_count": 2,
+        "required_source_count": 2,
+        "threshold_met": true
       }
     }
   ]
