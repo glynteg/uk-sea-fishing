@@ -37,6 +37,15 @@ function initialiseMap(){
  const satelliteLayer=L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",{attribution:"Tiles &copy; Esri and its imagery providers",maxZoom:19});
  streetLayer.addTo(fishingMap);
  L.control.layers({"Street map":streetLayer,"Satellite":satelliteLayer},null,{collapsed:false}).addTo(fishingMap);
+ const accuracyLegend=L.control({position:"bottomright"});
+ accuracyLegend.onAdd=function(){
+  const div=L.DomUtil.create("div","accuracy-map-legend");
+  div.style.cssText="background:#fff;padding:9px 11px;border-radius:8px;box-shadow:0 1px 6px #0003;font:12px/1.7 Arial,sans-serif;color:#18323b";
+  div.innerHTML='<strong>Pin accuracy</strong><div><span style="color:#21834a;font-size:16px">●</span> Exact location</div><div><span style="color:#2585c6;font-size:16px">●</span> Approximate location</div><div><span style="color:#e58a16;font-size:16px">●</span> Area only</div>';
+  L.DomEvent.disableClickPropagation(div);
+  return div;
+ };
+ accuracyLegend.addTo(fishingMap);
  fishingMap.setView([54.5,-3.5],5.5); fishingMap.on("zoomend",()=>renderMapMarkers(mapVisibleMarks)); fishingMap.on("dragend",()=>{if(!fishingMap.getBounds().intersects(L.latLngBounds([[49,-12],[61.5,3.5]])))fishingMap.panInsideBounds([[49,-12],[61.5,3.5]],{animate:true});}); renderMapMarkers(allMarks);
 }
 
