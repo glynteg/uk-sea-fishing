@@ -3,10 +3,18 @@
 Each mark must have a clear publication status.
 
 ## Status
-- `verified` — suitable to display as an official verified mark. A recognised fishing publication (for example *Sea Angler* or *Boat Fishing*) may be used as the verification source for a published mark.
+- `verified` — suitable to display as a verified mark only when at least two of the three approved references list the named fishing mark: British Sea Fishing, The Beach Guide, and Sea Angler. A single source is not enough.
+- `unverified` — a named candidate that does not yet meet the two-of-three reference threshold. It may remain visible, but must be labelled unverified.
 - `historical` — a genuine previously documented fishing mark whose current conditions, access or restrictions have not been confirmed recently. Keep it searchable, label it clearly as historical, and do not present it as currently verified.
 - `community_unverified` — submitted by an angler and not yet independently checked.
 - `rejected` — not suitable for publication.
+
+## Three-reference verification rule
+- Approved references: British Sea Fishing (`britishseafishing.co.uk`), The Beach Guide (`thebeachguide.co.uk`), and Sea Angler (`seaangler.co.uk/spot/` plus relevant monthly area catch reports that explicitly name the mark).
+- Count a source only when it explicitly lists the same named fishing mark or a clearly identical venue. A broad county/region page or a nearby landmark does not automatically verify a narrower mark.
+- Record each source as `listed: true`, `listed: false`, or `listed: null` (not yet conclusively checked) under `verification.sources`. Set `verification.threshold_met` to true only when at least two sources are positively confirmed.
+- Other sources can support access, safety, parking, coordinates and species details, but they do not count toward the three-reference threshold.
+- If a mark has fewer than two confirmed approved references, set `status` to `unverified` until further cross-checking is complete.
 
 ## Verification source types
 - `fishing_publication` — named mark published by a recognised specialist fishing magazine or publication.
