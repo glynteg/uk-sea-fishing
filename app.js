@@ -73,28 +73,8 @@ function renderMapMarkers(marks){
    const lon=group.reduce((sum,m)=>sum+Number(m.location.longitude),0)/group.length;
    const icon=L.divIcon({className:"county-count-pin",html:'<span style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:#174f43;color:#fff;border:3px solid #fff;box-shadow:0 2px 8px #0005;font-weight:700;font-size:14px;">'+group.length+'</span>',iconSize:[44,44],iconAnchor:[22,22]});
    const marker=L.marker([lat,lon],{icon}).addTo(fishingMap);
-   marker.bindPopup("<strong>"+escapeHtml(county)+"</strong><br>"+group.length+" verified fishing mark"+(group.length===1?"":"s")+" mapped in this area.<br><em>Zoom in to see individual marks.</em>");
-   marker.on("click",()=>{
-    const countySelect=document.getElementById("county-filter");
-    if(countySelect){
-     const option=[...countySelect.options].find(o=>o.value.toLowerCase()===county.toLowerCase());
-     if(option)countySelect.value=option.value;
-    }
-    const bounds=L.latLngBounds(group.map(m=>[+m.location.latitude,+m.location.longitude]));
-    fishingMap.fitBounds(bounds,{padding:[35,35],maxZoom:9});
-    refreshMarkResults();
-   });
-   mapMarkers.push(marker);
-  });
-  return;
- }
- mapped.forEach(mark=>{
-  const accuracyType=mark.location?.accuracy==="area_only"?"area":mark.location?.accuracy==="approximate_venue_midpoint"?"approximate":"exact";
-  const pinColour=accuracyType==="area"?"#e58a16":accuracyType==="approximate"?"#2585c6":"#21834a";
-  const icon=L.divIcon({className:"accuracy-map-pin",html:'<span style="display:block;width:20px;height:20px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:'+pinColour+';border:2px solid #fff;box-shadow:0 1px 5px #0007;"></span>',iconSize:[26,26],iconAnchor:[13,24]});
-  const marker=L.marker([+mark.location.latitude,+mark.location.longitude],{icon,title:(mark.name||"Fishing mark")+" — "+(accuracyType==="exact"?"Exact location":accuracyType==="approximate"?"Approximate location":"Area only")}).addTo(fishingMap);
-  const accuracy=accuracyType==="approximate"?"<br><strong>Blue pin — approximate location.</strong>":accuracyType==="area"?"<br><strong>Orange pin — area only.</strong>":"<br><strong>Green pin — exact location.</strong>";
-  marker.bindPopup("<strong>"+escapeHtml(mark.name||"Verified mark")+"</strong><br>"+escapeHtml(mark.location?.area||"")+accuracy+'<br><button type="button" class="map-view-mark" data-open-mark="'+escapeHtml(mark.id||"")+'">View fishing mark details</button>');
+   marker.bindPopup("<strong>"+escapeHtml(mark.name||"Verified mark")+"</strong><br>"+escapeHtml(mark.location?.area||"")+accuracy+'<br><button type="button" class="map-view-mark" data-open-mark="'+escapeHtml(mark.id||"")+'">View fishing mark details</button>');
+  marker.on("popupopen",event=>{const button=event.popup.getElement()?.querySelector("[data-open-mark]");if(button)button.addEventListener("click",()=>openFishingMarkDetails(mark.id));});
   marker.on("click",()=>{const card=document.getElementById("mark-"+mark.id);if(card){document.querySelectorAll(".mark-result.map-selected").forEach(x=>x.classList.remove("map-selected"));card.classList.add("map-selected");setTimeout(()=>card.scrollIntoView({behavior:"smooth",block:"center"}),150);}});
   mapMarkers.push(marker);
  });
@@ -306,7 +286,27 @@ async function loadMarks(){
  }catch(e){c.innerHTML='<div class="empty-state"><strong>Fishing marks unavailable</strong><p>Mark data could not be loaded. No unverified information has been added as a fallback.</p></div>'}
 }
 
-document.addEventListener("click",e=>{const open=e.target.closest("[data-open-mark]");if(open){const card=document.getElementById("mark-"+open.dataset.openMark);if(card){document.querySelectorAll(".mark-result.map-selected").forEach(x=>x.classList.remove("map-selected"));card.classList.add("map-selected");card.scrollIntoView({behavior:"smooth",block:"center"});}return;}const b=e.target.closest("[data-report-mark]");if(!b)return;const form=document.getElementById("problem-form");if(form){form.dataset.markId=b.dataset.reportMark;form.dataset.markName=b.dataset.reportName;form.scrollIntoView({behavior:"smooth",block:"center"});const details=form.querySelector('[name="details"]');if(details)details.value="Problem with "+b.dataset.reportName+": ";}});
+function openFishingMarkDetails(markId){
+ if(!markId)return;
+ navigate("marks");
+ let card=document.getElementById("mark-"+markId);
+ if(!card){
+  // A map pin may be opened while a search, county or radius filter is active.
+  // Clear those filters so the selected mark can always be opened from its popup.
+  const search=document.getElementById("search");if(search)search.value="";
+  const county=document.getElementById("county-filter");if(county)county.value="";
+  const place=document.getElementById("radius-place");if(place)place.value="";
+  radiusCentre=null;
+  refreshMarkResults();
+  card=document.getElementById("mark-"+markId);
+ }
+ if(card){
+  document.querySelectorAll(".mark-result.map-selected").forEach(x=>x.classList.remove("map-selected"));
+  card.classList.add("map-selected");
+  setTimeout(()=>card.scrollIntoView({behavior:"smooth",block:"center"}),180);
+ }
+}
+document.addEventListener("click",e=>{const open=e.target.closest("[data-open-mark]");if(open){openFishingMarkDetails(open.dataset.openMark);return;}const b=e.target.closest("[data-report-mark]");if(!b)return;const form=document.getElementById("problem-form");if(form){form.dataset.markId=b.dataset.reportMark;form.dataset.markName=b.dataset.reportName;form.scrollIntoView({behavior:"smooth",block:"center"});const details=form.querySelector('[name="details"]');if(details)details.value="Problem with "+b.dataset.reportName+": ";}});
 
 const SUPABASE_URL="https://movunapqaufbnrapimmo.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY="sb_publishable_d7hVz9GxmJW7Ny2HSocBiA_9DJF80Ba";
