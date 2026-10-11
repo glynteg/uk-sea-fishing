@@ -793,3 +793,8 @@ async function loadConditions(){
 }
 document.getElementById("load-conditions")?.addEventListener("click",loadConditions);
 document.getElementById("conditions-place")?.addEventListener("keydown",e=>{if(e.key==="Enter")loadConditions()});
+
+// Premium is planned but subscriptions and payments are not live yet.
+document.querySelector(".topbar .premium")?.addEventListener("click",()=>{
+ window.alert("UK Sea Fishing Premium is coming later. Planned benefits include saved fishing areas, extended tides and weather, and advanced fishing plans. No subscription or payment is available yet.");
+});
