@@ -80,8 +80,11 @@ function renderMapMarkers(marks){
   return;
  }
  mapped.forEach(mark=>{
-  const marker=L.marker([+mark.location.latitude,+mark.location.longitude]).addTo(fishingMap);
-  const accuracy=mark.location?.accuracy==="approximate_venue_midpoint"?"<br><em>Approximate venue midpoint.</em>":mark.location?.accuracy==="area_only"?"<br><em>Fishing area only — no exact GPS position published.</em>":"";
+  const accuracyType=mark.location?.accuracy==="area_only"?"area":mark.location?.accuracy==="approximate_venue_midpoint"?"approximate":"exact";
+  const pinColour=accuracyType==="area"?"#e58a16":accuracyType==="approximate"?"#2585c6":"#21834a";
+  const icon=L.divIcon({className:"accuracy-map-pin",html:'<span style="display:block;width:20px;height:20px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:'+pinColour+';border:2px solid #fff;box-shadow:0 1px 5px #0007;"></span>',iconSize:[26,26],iconAnchor:[13,24]});
+  const marker=L.marker([+mark.location.latitude,+mark.location.longitude],{icon,title:(mark.name||"Fishing mark")+" — "+(accuracyType==="exact"?"Exact location":accuracyType==="approximate"?"Approximate location":"Area only")}).addTo(fishingMap);
+  const accuracy=accuracyType==="approximate"?"<br><strong>Blue pin — approximate location.</strong>":accuracyType==="area"?"<br><strong>Orange pin — area only.</strong>":"<br><strong>Green pin — exact location.</strong>";
   marker.bindPopup("<strong>"+escapeHtml(mark.name||"Verified mark")+"</strong><br>"+escapeHtml(mark.location?.area||"")+accuracy+'<br><button type="button" class="map-view-mark" data-open-mark="'+escapeHtml(mark.id||"")+'">View fishing mark details</button>');
   marker.on("click",()=>{const card=document.getElementById("mark-"+mark.id);if(card){document.querySelectorAll(".mark-result.map-selected").forEach(x=>x.classList.remove("map-selected"));card.classList.add("map-selected");setTimeout(()=>card.scrollIntoView({behavior:"smooth",block:"center"}),150);}});
   mapMarkers.push(marker);
