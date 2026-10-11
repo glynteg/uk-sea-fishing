@@ -80,11 +80,11 @@ main{max-width:900px;margin:auto;padding-bottom:80px}.hero{background:linear-gra
 
 /* Expandable street / satellite map */
 .map-shell{position:relative}
-.map-fullscreen-button{position:absolute;top:10px;right:10px;z-index:1000;border:1px solid #cbd7da;border-radius:8px;background:#fff;color:#17313b;padding:9px 12px;font-weight:800;box-shadow:0 2px 8px #0002;cursor:pointer}
+.map-fullscreen-button{position:absolute;bottom:12px;left:10px;top:auto;right:auto;z-index:1000;border:1px solid #cbd7da;border-radius:8px;background:#fff;color:#17313b;padding:9px 12px;font-weight:800;box-shadow:0 2px 8px #0002;cursor:pointer}
 .map-fullscreen-button:hover{background:#f0f7f8}
 .map-shell.map-is-fullscreen{position:fixed;inset:0;z-index:9999;width:100vw;height:100vh;height:100dvh;background:#fff}
 .map-shell.map-is-fullscreen .map-container{height:100%;width:100%;border-radius:0}
-.map-shell.map-is-fullscreen .map-fullscreen-button{position:fixed;top:12px;right:12px}
+.map-shell.map-is-fullscreen .map-fullscreen-button{position:fixed;bottom:16px;left:12px;top:auto;right:auto}
 body.map-fullscreen-open{overflow:hidden}
 
 
