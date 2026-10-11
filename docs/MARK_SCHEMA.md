@@ -103,3 +103,22 @@ Facebook is a useful research source for finding and corroborating fishing marks
 - A catch photo, a nearby landmark mention, or a comment saying “good mark” does not by itself prove the exact fishing position, legal permission, safe access, or all species listed.
 - Facebook is a corroborating research source; it does not automatically replace the Sea Angler exception or the two-of-three approved-reference rule. If future policy changes allow strong Facebook evidence to count toward verification, define the minimum evidence standard first.
 - Use recent Facebook posts to flag access changes and temporary closures, but still prefer official site/harbour notices for restrictions.
+
+### Community catch reports and local conditions
+
+Anglers should be able to contribute ongoing updates for an existing mark without changing the mark's verification status. Treat this as a separate, dated community report rather than silently overwriting the verified reference record.
+
+Each report should capture, where the contributor knows it:
+- the mark it relates to and the date/time observed;
+- report type: catch report, sea/weather conditions, water clarity/weed, access/parking update, hazard/restriction, or other local observation;
+- species and catch details, with quantities/size optional and no pressure to disclose a precise personal location;
+- observed conditions and relevant tide stage/time, clearly described as the angler's observation;
+- optional photo or public evidence link;
+- submission timestamp and moderation/publication status.
+
+Display reports as **angler-reported**, with their observation date and a reminder that conditions and catches change. A report from one angler is evidence of that angler's experience, not a guarantee of current catches or conditions. Do not turn a catch report into a permanent species claim for the mark without separate review.
+
+Safety and access reports should be prioritised for review. Keep the report visible as unverified until checked; do not silently replace official access, closure, legal restriction or safety information with community text. Preserve source history and show when an update was submitted. Provide a report/flag option for inaccurate, abusive, misleading or unsafe content.
+
+Community catch and condition updates are a planned workflow, not proof that live shared posting is already enabled in the current app. The current problem-report form sends reports for review; the gallery prototype is not a shared community catch log.
+
