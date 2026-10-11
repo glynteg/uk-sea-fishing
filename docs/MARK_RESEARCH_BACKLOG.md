@@ -157,3 +157,32 @@ No candidate in this backlog should appear as a verified mark solely because it 
 - East Stoke Corner and Sandy Point: credible historic venue leads; exact position and current access remain unverified.
 - Hill Head: another fishing source supports the smoothhound association, but boundary/access checks remain open.
 - No candidate in this batch has been added to data/marks.json.
+
+
+## Third research batch — Dorset and east Devon approaches (11 October 2026)
+
+### Avon Beach — Christchurch, Dorset
+- Sea Angler identifies Avon Beach as a shallow sandy fishing venue and reports pouting, silver eels, flounder, bass and whiting; its 2021 venue page describes a pay-and-display car park and roadside parking, with times potentially variable: https://www.seaangler.co.uk/spot/avon-beach-sea-fishing-mark/
+- Visit Dorset's beach guide independently confirms Avon Beach Car Park, nearby Avon Run Road Car Park, and step-free level access from Avon Beach Car Park: https://www.visit-dorset.com/explore/coast-and-beaches/beach-guide/
+- Status: credible named candidate. Check existing Christchurch-area mark coordinates and current council parking/access details before adding. Treat species as source-reported, not guaranteed.
+
+### Southbourne Beach / Fisherman's Walk — Bournemouth, Dorset
+- Sea Angler's venue article identifies Fisherman's Walk as a section of Southbourne beach roughly a mile east of Boscombe Pier, reports rays, sole, plaice, gurnard, bass and whiting, and describes free roadside parking with a zig-zag path down to the beach: https://www.seaangler.co.uk/spot/southbourne-beach-dorset/
+- The article notes shifting sandbars and gullies, so the exact fishing features can change after beach replenishment and storms.
+- Status: credible candidate; check whether it is sufficiently distinct from existing nearby records and verify current parking/access. Do not present the article's historic session as a current catch report.
+
+### Abbotsbury Beach / Chesil Beach section — Dorset
+- Sea Angler's historical catch reports specifically identify the Abbotsbury end of Chesil Beach and a local feature called Dragon's Teeth: https://www.seaangler.co.uk/fishing-news/uk-sea-fishing-catch-reports-5-1-10/ and https://www.seaangler.co.uk/fishing-news/uk-sea-fishing-catch-reports-10-12-09/
+- Visit Dorset's official beach guide gives Chesil Beach access and safety context, including the adjacent Chesil Car Park and steep shingle/strong undertow warnings: https://www.visit-dorset.com/explore/coast-and-beaches/beach-guide/
+- Status: candidate, but do not create an “Abbotsbury” or “Dragon's Teeth” point from a broad beach name alone. Confirm a defensible location, safe public access, parking, and separation from any existing Chesil-related live mark. Historic reports support past fishing use only.
+
+### Seatown and Eype — retain existing records; improve evidence, do not duplicate
+- Sea Angler has dedicated venue pages for both: https://www.seaangler.co.uk/spot/seatown/ and https://www.seaangler.co.uk/spot/eype-sea-fishing-mark/
+- Visit Dorset describes Eype's small car park and steep steps, and warns of strong undertow and cliff-fall risk: https://www.visit-dorset.com/explore/coast-and-beaches/beach-guide/
+- Status: these names already appear in the live database. Use these sources to review existing records' source links and safety/access notes instead of adding duplicates. Any seasonal claims should remain source-attributed tendencies, not guarantees.
+
+### Cross-cutting access and source-quality notes
+- Visit Dorset's official beach guide documents parking, steps, accessibility and hazards for many coastal venues: https://www.visit-dorset.com/explore/coast-and-beaches/beach-guide/
+- Dorset Council's sea/shore fishing page is useful for general conservation context but does not establish access permission at an individual beach or structure: https://www.dorsetcouncil.gov.uk/w/sea-and-shore-fishing
+- A fishing guide's directions or a parking mention may become outdated. Keep changing charges and hours linked to current official pages where possible, and never imply that private harbour, pier, slipway or marina structures are open to anglers without explicit confirmation.
+- No new candidates in this batch have been added to `data/marks.json`.
