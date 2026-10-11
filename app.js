@@ -4,7 +4,7 @@ buttons.forEach(b=>b.addEventListener("click",()=>navigate(b.dataset.section)));
 let allMarks=[], fishingMap=null, mapMarkers=[], radiusCentre=null, mapVisibleMarks=[];
 
 function navigate(section){
- const panelKey=({weather:"tides",submit:"more","report-problem":"more",home:"marks"})[section]||section;
+ const panelKey=({weather:"tides",submit:"more","report-problem":"more"})[section]||section;
  document.querySelectorAll("[data-tab-panel]").forEach(panel=>panel.classList.toggle("active",panel.dataset.tabPanel===panelKey));
  document.querySelectorAll(".bottom-nav button").forEach(b=>{
   const active=b.dataset.section===panelKey;
