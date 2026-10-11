@@ -116,6 +116,10 @@ function refreshMarkResults(){
   }).filter(m=>m._distance<=radius).sort((a,b)=>a._distance-b._distance);
  }
  renderMarks(marks);renderMapMarkers(marks);
+ if(fishingMap&&county){
+  const located=marks.filter(m=>m.status==="verified"&&Number.isFinite(Number(m.location?.latitude))&&Number.isFinite(Number(m.location?.longitude)));
+  if(located.length){const bounds=L.latLngBounds(located.map(m=>[+m.location.latitude,+m.location.longitude]));if(bounds.isValid())fishingMap.fitBounds(bounds,{padding:[35,35],maxZoom:9});}
+ }
  const s=document.getElementById("result-summary");
  if(s)s.textContent=radiusCentre?marks.length+" verified mark"+(marks.length===1?"":"s")+" within "+radius+" miles":marks.length+" mark"+(marks.length===1?"":"s")+" shown";
 }
@@ -139,6 +143,10 @@ function renderAreaDirectory(){
 function openAreaGuide(area){
  const detail=document.getElementById("area-detail");if(!detail)return;
  const marks=allMarks.filter(m=>m.status==="verified"&&markAreaName(m)===area);
+ if(fishingMap){
+  const located=marks.filter(m=>Number.isFinite(Number(m.location?.latitude))&&Number.isFinite(Number(m.location?.longitude)));
+  if(located.length){const bounds=L.latLngBounds(located.map(m=>[+m.location.latitude,+m.location.longitude]));if(bounds.isValid())fishingMap.fitBounds(bounds,{padding:[35,35],maxZoom:9});document.querySelector(".map-shell")?.scrollIntoView({behavior:"smooth",block:"center"});setTimeout(()=>fishingMap.invalidateSize(),250);}
+ }
  const species=[...new Set(marks.flatMap(m=>m.species||[]))].sort((a,b)=>a.localeCompare(b));
  const markRows=marks.map(m=>'<article class="area-mark"><div><strong>'+escapeHtml(m.name)+'</strong><span class="badge verified">Verified mark</span></div><p>'+escapeHtml(m.description||"No description recorded.")+'</p>'+(m.parking?'<p><strong>Parking:</strong> '+escapeHtml(m.parking)+'</p>':'')+(m.access?'<p><strong>Access:</strong> '+escapeHtml(m.access)+'</p>':'')+(m.source?.url?'<p><a href="'+escapeHtml(m.source.url)+'" target="_blank" rel="noopener noreferrer">View source / verification ↗</a></p>':'')+'</article>').join("");
  detail.hidden=false;
