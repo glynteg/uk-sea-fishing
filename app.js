@@ -118,7 +118,7 @@ function refreshMarkResults(){
  const county=document.getElementById("county-filter")?.value||"";
  const radius=Number(document.getElementById("radius-filter")?.value||10);
  let marks=allMarks.filter(m=>{
-  const text=[m.name,m.description,m.location?.area,...(m.species||[])].join(" ").toLowerCase();
+  const text=[m.name,m.description,m.location?.area,countyOf(m),m.access,m.parking,m.access_notes,m.source,...(Array.isArray(m.species)?m.species:[m.species||""])].filter(Boolean).join(" ").toLowerCase();
   return (!q||text.includes(q))&&(!county||countyOf(m)===county)&&(!document.getElementById("easy-access-filter")?.checked||m.easy_access===true)&&(!document.getElementById("accessible-filter")?.checked||m.accessible_access===true);
  });
  if(radiusCentre){
@@ -271,7 +271,9 @@ document.getElementById("county-filter")?.addEventListener("change",()=>{
  const status=document.getElementById("radius-status");if(status)status.textContent=county?"Showing verified fishing marks recorded in "+county+".":"Showing marks from across the UK.";
  if(county)focusMapAtTop();
 });
-document.getElementById("search")?.addEventListener("input",refreshMarkResults);
+document.getElementById("search")?.addEventListener("input",()=>{refreshMarkResults();});
+document.getElementById("search")?.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();refreshMarkResults();document.querySelector("#panel-marks .mark-card")?.scrollIntoView({behavior:"smooth",block:"start"});}});
+
 document.getElementById("easy-access-filter")?.addEventListener("change",refreshMarkResults);
 document.getElementById("accessible-filter")?.addEventListener("change",refreshMarkResults);
 
