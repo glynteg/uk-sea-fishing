@@ -40,11 +40,16 @@ function initialiseMap(){
  fishingMap.setView([54.5,-3.5],5.5); fishingMap.on("zoomend",()=>renderMapMarkers(mapVisibleMarks)); fishingMap.on("dragend",()=>{if(!fishingMap.getBounds().intersects(L.latLngBounds([[49,-12],[61.5,3.5]])))fishingMap.panInsideBounds([[49,-12],[61.5,3.5]],{animate:true});}); renderMapMarkers(allMarks);
 }
 
+function hasMapCoordinates(mark){
+ const lat=mark?.location?.latitude,lon=mark?.location?.longitude;
+ return lat!==null&&lat!==undefined&&lat!==""&&lon!==null&&lon!==undefined&&lon!==""&&Number.isFinite(Number(lat))&&Number.isFinite(Number(lon))&&Math.abs(Number(lat))<=90&&Math.abs(Number(lon))<=180;
+}
+
 function renderMapMarkers(marks){
  if(!fishingMap)return;
  mapVisibleMarks=marks;
  mapMarkers.forEach(m=>m.remove()); mapMarkers=[];
- const mapped=marks.filter(m=>m.status==="verified"&&Number.isFinite(Number(m.location?.latitude))&&Number.isFinite(Number(m.location?.longitude)));
+ const mapped=marks.filter(m=>m.status==="verified"&&hasMapCoordinates(m));
  const selectedCounty=document.getElementById("county-filter")?.value||"";
  // At UK-wide zoom, use county summary pins. Once a county is selected, always show its individual verified marks.
  if(fishingMap.getZoom()<8&&!selectedCounty){
@@ -119,7 +124,7 @@ function refreshMarkResults(){
  if(radiusCentre){
   marks=marks.map(m=>{
    const lat=Number(m.location?.latitude),lon=Number(m.location?.longitude);
-   return {...m,_distance:Number.isFinite(lat)&&Number.isFinite(lon)?milesBetween(radiusCentre.lat,radiusCentre.lon,lat,lon):Infinity};
+   return {...m,_distance:hasMapCoordinates(m)?milesBetween(radiusCentre.lat,radiusCentre.lon,lat,lon):Infinity};
   }).filter(m=>m._distance<=radius).sort((a,b)=>a._distance-b._distance);
  }
  renderMarks(marks);renderMapMarkers(marks);
@@ -151,7 +156,7 @@ function openAreaGuide(area){
  const detail=document.getElementById("area-detail");if(!detail)return;
  const marks=allMarks.filter(m=>m.status==="verified"&&markAreaName(m)===area);
  if(fishingMap){
-  const located=marks.filter(m=>Number.isFinite(Number(m.location?.latitude))&&Number.isFinite(Number(m.location?.longitude)));
+  const located=marks.filter(m=>hasMapCoordinates(m));
   if(located.length){renderMapMarkers(marks);const bounds=L.latLngBounds(located.map(m=>[+m.location.latitude,+m.location.longitude]));if(bounds.isValid())fishingMap.fitBounds(bounds,{padding:[35,35],maxZoom:9});focusMapAtTop();}
  }
  const species=[...new Set(marks.flatMap(m=>m.species||[]))].sort((a,b)=>a.localeCompare(b));
