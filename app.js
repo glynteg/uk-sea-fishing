@@ -134,7 +134,9 @@ function refreshMarkResults(){
   const located=marks.filter(m=>m.status==="verified"&&hasMapCoordinates(m));
   if(located.length){
    const bounds=L.latLngBounds(located.map(m=>[+m.location.latitude,+m.location.longitude]));
-   if(bounds.isValid())fishingMap.fitBounds(bounds,{padding:[35,35],maxZoom:q?12:9});
+   if(bounds.isValid())fishingMap.fitBounds(bounds,{padding:[20,20],maxZoom:q?15:9});
+    // A single matching mark has identical bounds on both corners, so explicitly zoom closer.
+    if(q&&located.length===1)fishingMap.setView([+located[0].location.latitude,+located[0].location.longitude],15);
   }
  }
  renderMapMarkers(marks);
