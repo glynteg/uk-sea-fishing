@@ -252,3 +252,8 @@ TripAdvisor has been added to the source fields for all 37 existing marks. Its e
 
 ### Decision
 These pages are recorded as research leads, not as proof of fishing access. The seven records listed as unverified remain unverified for now. Continue checking TripAdvisor for explicit fishing-venue descriptions and use official/local sources separately for current access and restrictions.
+
+
+## Facebook research
+
+Use public local sea-angling Facebook groups, fishing-club pages, and dated first-hand reports to discover candidate marks and corroborate recent use, catches, access, and temporary restrictions. Record the exact public URL and post date. Treat vague or copied posts, unlocated catch photos, and unsupported comments as leads only. Facebook does not by itself override the formal verification rule; official sources remain preferred for permission, closures, parking, and safety.
