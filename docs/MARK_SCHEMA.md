@@ -85,3 +85,10 @@ Coordinates and factual fields must come from a trustworthy source or a document
 - Future voting should use authenticated users and protection against repeated or abusive votes.
 
 Example: `"rating": { "average": 4.5, "count": 12 }`.
+
+
+### Practical access assumption
+
+For an established fishing mark, treat it as normally fishable unless a specific closure, seasonal restriction, site rule, or safety warning is documented. Piers and managed sites can close temporarily, particularly in winter or bad weather, so tell anglers to check current local notices before travelling. This is a practical default, **not** proof of legal permission at every exact position. Record known restrictions prominently and do not imply that a whole pier or site is open if only a marked section or time window is permitted.
+
+**Example — Calshot:** Hampshire County Council says fishing is not allowed on the jetty or along the creek side at any time, and fishing is allowed to the left of the jetty after 9pm. Link the official angling locations/map and show these restrictions clearly.
